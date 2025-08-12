@@ -1,0 +1,42 @@
+{
+  "brand_name": "Sidra International",
+  "home": "Home",
+  "about_school": "About School",
+  "our_vision": "Our Vision",
+  "our_mission": "Our Mission",
+  "our_nurseries": "Our Nurseries",
+  "happy_land": "Happy Land",
+  "my_nursery": "My Nursery",
+  "prep": "PREP",
+  "admissions": "Admissions",
+  "company": "Company",
+  "about_sidra": "About Sidra",
+  "company_owners": "Company Owners",
+  "locations": "Locations",
+  "contact": "Contact",
+  "footer": {
+    "school_name": "Sidra International",
+    "school_description": "Inspiring young minds with excellence, character, and compassion. Nurturing future leaders in a global community.",
+    "quick_links": "Quick Links",
+    "home": "Home",
+    "about_school": "About School",
+    "news": "News",
+    "admission": "Admission",
+    "contact": "Contact",
+    "address": "123 Sidra Street, Education City",
+    "email": "Email",
+    "phone": "Phone",
+    "follow_us": "Follow Us",
+    "copyright": "Sidra International School. All rights reserved."
+  },
+  "hero": {
+    "slide1": "Welcome to Sidra International Company",
+    "slide2": "Inspiring Young Minds to Grow and Lead",
+    "slide3": "Modern Classrooms & Facilities",
+    "slide4": "A Nurturing Environment for Every Child"
+  },
+  "our_schools": "Our Schools",
+  "my_nursery_desc": "A nurturing environment that supports early childhood development through play-based learning, starting from 9 months old.",
+  "happy_land_desc": "An engaging space designed to spark creativity, imagination, and joyful exploration for young children.",
+  "visit_site": "Visit Site"
+}
