@@ -63,15 +63,15 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16 w-full">
           {/* Logo + Mobile Language Switcher */}
           <div className="flex items-center space-x-3">
-            <Link to="/" className="flex items-center space-x-2 sm:space-x-3">
+            <Link to="/" className="flex items-center space-x-2 sm:space-x-3 cursor-pointer">
               <img src={Logo} alt="Sidra Logo" className="h-12 w-12 object-contain" />
               <span className="text-sm font-bold sm:text-xl">{t("brand_name")}</span>
             </Link>
             <div className="flex items-center space-x-2 md:hidden ml-2">
-              <button onClick={() => changeLanguage("en")} className="text-xs font-medium px-2 py-1 border rounded-md">
+              <button onClick={() => changeLanguage("en")} className=" cursor-pointer hover:text-blue-500 duration-300 transition-all text-xs font-medium px-2 py-1 border rounded-md">
                 <img src={Us} alt="EN" className="h-4 w-4 inline mr-1" />EN
               </button>
-              <button onClick={() => changeLanguage("ar")} className="text-xs font-medium px-2 py-1 border rounded-md">
+              <button onClick={() => changeLanguage("ar")} className="cursor-pointer  hover:text-blue-500 duration-300 transition-all text-xs font-medium px-2 py-1 border rounded-md">
                 <img src={Kw} alt="AR" className="h-4 w-4 inline mr-1" />AR
               </button>
             </div>
@@ -130,14 +130,16 @@ const Navbar = () => {
 
           {/* Desktop Language + Login */}
           <div className="hidden md:flex items-center space-x-4">
-            <button onClick={() => changeLanguage("en")} className="flex items-center gap-2 px-3 py-1.5 border rounded-md hover:text-indigo-600">
-              <img src={Us} alt="EN" className="h-5 w-5" />EN
+            <button onClick={() => changeLanguage("en")} className="flex items-center gap-2 px-3 py-1.5 border rounded-md
+             hover:text-indigo-600 cursor-pointer">
+              <img src={Us} alt="EN" className="h-5 w-5 cursor-pointer" />EN
             </button>
-            <button onClick={() => changeLanguage("ar")} className="flex items-center gap-2 px-3 py-1.5 border rounded-md hover:text-indigo-600">
-              <img src={Kw} alt="AR" className="h-5 w-5" />AR
+            <button onClick={() => changeLanguage("ar")} className="flex items-center gap-2 px-3 py-1.5 border rounded-md
+             hover:text-indigo-600 cursor-pointer">
+              <img src={Kw} alt="AR" className="h-5 w-5 cursor-pointer" />AR
             </button>
             <Link to="/admin-login">
-              <button className="bg-black text-white py-2 px-4 rounded-md hover:bg-gray-800">
+              <button className="bg-black text-white py-2 px-4 rounded-md hover:bg-gray-800 cursor-pointer">
                 Login
               </button>
             </Link>
@@ -166,7 +168,7 @@ const Navbar = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                       </svg>
                     </summary>
-                    <ul className="pl-4 space-y-1">
+                    <ul className="pl-4 space-y-1 cursor-pointer">
                       {item.submenu.map((sub, subIdx) => (
                         <li key={subIdx}>
                           {sub.external ? (
@@ -174,7 +176,7 @@ const Navbar = () => {
                               {t(sub.titleKey)}
                             </a>
                           ) : (
-                            <Link to={sub.path} className={`block px-2 py-1 ${isActive(sub.path) ? "text-indigo-600" : "hover:text-indigo-600"}`} onClick={() => setMobileOpen(false)}>
+                            <Link to={sub.path} className={`block px-2 py-1  ${isActive(sub.path) ? "text-indigo-600" : "hover:text-indigo-600"}`} onClick={() => setMobileOpen(false)}>
                               {t(sub.titleKey)}
                             </Link>
                           )}
@@ -183,14 +185,14 @@ const Navbar = () => {
                     </ul>
                   </details>
                 ) : (
-                  <Link to={item.path} className={`block px-2 py-2 font-medium ${isActive(item.path) ? "text-indigo-600 underline" : "hover:text-indigo-600"}`} onClick={() => setMobileOpen(false)}>
+                  <Link to={item.path} className={`block px-2 py-2 font-medium cursor-pointer ${isActive(item.path) ? "text-indigo-600 underline cursor-pointer" : "hover:text-indigo-600 cursor-pointer"}`} onClick={() => setMobileOpen(false)}>
                     {t(item.titleKey)}
                   </Link>
                 )}
               </li>
             ))}
             <Link to="/admin-login" className="px-2">
-              <button className="bg-black text-white py-1 px-4 rounded-md w-full">Login</button>
+              <button className="bg-black text-white py-1 px-4 rounded-md w-full cursor-pointer" onClick={()=>setMobileOpen(false)}>Login</button>
             </Link>
           </ul>
         </div>

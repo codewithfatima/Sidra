@@ -15,7 +15,7 @@
   "locations": "Locations",
   "contact": "Contact",
   "footer": {
-    "school_name": "Sidra International",
+    "school_name": "Sidra International Company",
     "school_description": "Inspiring young minds with excellence, character, and compassion. Nurturing future leaders in a global community.",
     "quick_links": "Quick Links",
     "home": "Home",
@@ -27,7 +27,7 @@
     "email": "Email",
     "phone": "Phone",
     "follow_us": "Follow Us",
-    "copyright": "Sidra International School. All rights reserved."
+    "copyright": " All rights reserved."
   },
   "hero": {
     "slide1": "Welcome to Sidra International Company",
@@ -38,5 +38,24 @@
   "our_schools": "Our Schools",
   "my_nursery_desc": "A nurturing environment that supports early childhood development through play-based learning, starting from 9 months old.",
   "happy_land_desc": "An engaging space designed to spark creativity, imagination, and joyful exploration for young children.",
-  "visit_site": "Visit Site"
+  "visit_site": "Visit Site",
+
+  "contactUs": "CONTACT US",
+  "infoText": "If you cannot find the information that you need on our website, please contact us.",
+  "phone": "Phone",
+  "headOffice": "Head Office",
+  "email": "Email",
+  "firstName": "First Name*",
+  "lastName": "Last Name*",
+  "phoneNumber": "Phone Number*",
+  "inquiryType": "Inquiry Type*",
+  "pleaseChoose": "—Please choose an option—",
+  "generalInquiry": "General Inquiry",
+  "customerSupport": "Customer Support",
+  "emailAddress": "Email Address*",
+  "yourMessage": "Your Message*",
+  "sendMessage": "Send Message",
+  "required": "Required",
+  "invalidEmail": "Invalid email address"
+
 }

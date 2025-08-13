@@ -5,18 +5,30 @@ const multer = require('multer');
 require('./config/db');
 const cors = require('cors');
 
-
-
 const newsRoutes = require('./routes/newsRoutes'); 
 const authRoutes = require('./routes/authRoutes');
+const contactRoutes = require('./routes/contactRoutes');
 
 const app = express();
 
 // Middleware
 app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));  // in case you send form data
 
 const fs = require('fs');
+
+app.get('/test-email-config', (req, res) => {
+  res.json({
+    emailUser: process.env.EMAIL_USER || 'not set',
+    emailPassSet: !!process.env.EMAIL_PASS,
+  });
+});
+
+// Check critical env vars on startup
+if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+  console.warn('WARNING: EMAIL_USER or EMAIL_PASS is not set in environment variables.');
+}
 
 // Ensure uploads folder exists
 const uploadDir = path.join(__dirname, 'uploads');
@@ -24,22 +36,19 @@ if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir);
 }
 
-
 // Serve uploads folder statically
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-// Root test route
-app.get('/', (req, res) => {
-  res.send('hello from backend');
-});
-
-// Use news routes under /api/news
+// Use routes
 app.use('/api/news', newsRoutes);
 app.use('/api/admin', authRoutes); 
+app.use('/api/contact', contactRoutes);
+
+console.log('EMAIL_USER:', process.env.EMAIL_USER);
+console.log('EMAIL_PASS:', process.env.EMAIL_PASS ? '*****' : 'NOT SET');
 
 
-
-// Add this error-handling middleware here, at the end:
+// Error handling middleware
 app.use((err, req, res, next) => {
   if (err) {
     if (err instanceof multer.MulterError || err.message === 'Only images are allowed') {

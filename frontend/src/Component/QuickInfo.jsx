@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
 import Happyland from '../../src/assets/Happyland.png';
-import Mynusery from '../../src/assets/Mynusery.png';
+import Mynusery from '../../src/assets/Mynursery.png';
 
 const QuickInfo = () => {
   const { t } = useTranslation();
