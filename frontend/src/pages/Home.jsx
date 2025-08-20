@@ -1,20 +1,22 @@
 import React from 'react'
 import Slider from '../Component/HeroBanner'
-// import WhySidra from './WhySidra'
 import ContactForm from './Contact'
 import QuickInfo from '../Component/QuickInfo'
 import NewsCard from '../Component/NewsCard'
 import GalleryGrid from '../Component/GalleryGrid'
 import ScroltoTop from '../Component/ScroltoTop'
+import OurPartners from './OurPartners'
 
 const Home = () => {
   return (
-    <div>
+    <div className=''>
+    
+
       <Slider />
       <QuickInfo />
-      {/* <WhySidra /> */}
       <NewsCard />
       <GalleryGrid />
+      <OurPartners />
       <ContactForm />
       <ScroltoTop />
     </div>

@@ -7,35 +7,35 @@ export default function AdminLogin() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const navigate = useNavigate();  
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-  e.preventDefault();
-  setError('');
+    e.preventDefault();
+    setError('');
 
-  try {
-    const res = await fetch('http://localhost:5000/api/admin/login', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username, password }),
-    });
+    try {
+      const res = await fetch('http://localhost:5000/api/admin/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password }),
+      });
 
-    const data = await res.json();
+      const data = await res.json();
 
-    if (res.ok) {
-      localStorage.setItem('adminToken', data.token); 
-      toast.success('Admin login successful!');
-      setTimeout(() => {
-        navigate('/admin-news'); 
-      }, 1500);
-    } else {
-      setError(data.message || 'Login failed');
+      if (res.ok) {
+        localStorage.setItem('adminToken', data.token);
+        toast.success('Admin login successful!');
+        setTimeout(() => {
+          navigate('/admin-news');
+        }, 1500);
+      } else {
+        setError(data.message || 'Login failed');
+      }
+    } catch (err) {
+      console.error('Login error:', err);
+      setError('Server error');
     }
-  } catch (err) {
-    console.error('Login error:', err);
-    setError('Server error');
-  }
-};
+  };
 
 
 

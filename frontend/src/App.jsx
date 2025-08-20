@@ -5,13 +5,13 @@ import Home from './pages/Home';
 import Footer from './Component/Footer';
 import ContactForm from './pages/Contact';
 import OurSchool from './pages/OurVision';
-import Owners from './pages/Company/Owners'
 import AboutSidra from './pages/AboutSidra';
 import HappyLand from './pages/Nurseries/HappyLand';
 import MyNursery from './pages/Nurseries/MyNursery';
 import Prep from './pages/Nurseries/Prep'
 import AdminLogin from './pages/Login/AdminLogin';
 import AdminNewsPage from './pages/AdminNewsPage';
+import OurPartners from './pages/OurPartners';
 
 
 const App = () => {
@@ -24,7 +24,7 @@ const App = () => {
         <Route path='/contact' element={<ContactForm />} />
         <Route path="/about/vision" element={<OurSchool />} />
         <Route path="/company" element={<AboutSidra />} />
-        <Route path="/company/owners" element={<Owners />} />
+        <Route path="/company/our-partner" element={<OurPartners />} />
         <Route path="/mynursery" element={<MyNursery />} />
         <Route path="/happyland" element={<HappyLand />} />
         <Route path="/admin-login" element={<AdminLogin />} />\

@@ -1,6 +1,8 @@
 import React, { useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { GrLanguage } from "react-icons/gr";
+import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import Logo from "../../src/assets/logo.png";
 import Us from "../../src/assets/Us.png";
@@ -34,7 +36,6 @@ const navItems = [
     titleKey: "company",
     submenu: [
       { titleKey: "about_sidra", path: "/company" },
-      { titleKey: "company_owners", path: "/company/owners" },
       { titleKey: "locations", path: "/company/locations" },
     ],
   },
@@ -44,6 +45,7 @@ const navItems = [
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [showLangDropdown, setShowLangDropdown] = useState(false);
   const dropdownTimeout = useRef(null);
   const location = useLocation();
   const { t, i18n } = useTranslation();
@@ -55,29 +57,29 @@ const Navbar = () => {
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
     document.documentElement.dir = lng === "ar" ? "rtl" : "ltr";
+    setShowLangDropdown(false);
   };
 
   return (
-    <nav className="bg-white shadow-md fixed w-full z-50 top-0">
+    <nav className="bg-white shadow-md fixed w-full z-50 top-0 font-almarai"> {/* Apply font-almarai globally here */}
       <div className="max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 w-full">
-          {/* Logo + Mobile Language Switcher */}
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
           <div className="flex items-center space-x-3">
-            <Link to="/" className="flex items-center space-x-2 sm:space-x-3 cursor-pointer">
-              <img src={Logo} alt="Sidra Logo" className="h-12 w-12 object-contain" />
-              <span className="text-sm font-bold sm:text-xl">{t("brand_name")}</span>
+            <Link
+              to="/"
+              className="flex items-center space-x-2 sm:space-x-3 hover:text-[#f5bc00] transition-colors duration-300 font-almarai"
+            >
+              <img src={Logo} alt="Logo" className="h-12 w-12 object-contain" />
+              <span className=" sm:text-xl font-bold">
+                <span className="text-black">{t("brand_sidra")}</span>{" "}
+                <span className="text-yellow-400">{t("brand_international")}</span>
+              </span>
+
             </Link>
-            <div className="flex items-center space-x-2 md:hidden ml-2">
-              <button onClick={() => changeLanguage("en")} className=" cursor-pointer hover:text-blue-500 duration-300 transition-all text-xs font-medium px-2 py-1 border rounded-md">
-                <img src={Us} alt="EN" className="h-4 w-4 inline mr-1" />EN
-              </button>
-              <button onClick={() => changeLanguage("ar")} className="cursor-pointer  hover:text-blue-500 duration-300 transition-all text-xs font-medium px-2 py-1 border rounded-md">
-                <img src={Kw} alt="AR" className="h-4 w-4 inline mr-1" />AR
-              </button>
-            </div>
           </div>
 
-          {/* Desktop Menu */}
+          {/* Desktop Nav */}
           <div className="hidden md:flex space-x-8 flex-1 justify-center">
             <ul className="flex space-x-6">
               {navItems.map((item, idx) => (
@@ -94,22 +96,44 @@ const Navbar = () => {
                 >
                   {!!item.submenu ? (
                     <>
-                      <button className={`font-medium ${isSubmenuActive(item.submenu) ? "text-indigo-600" : "text-gray-700 group-hover:text-indigo-600"}`}>
+                      <button
+                        className={`font-almarai text-base font-bold cursor-pointer transition-colors duration-300 ${isSubmenuActive(item.submenu)
+                          ? "text-[#f5bc00]"
+                          : "text-black group-hover:text-[#f5bc00]"
+                          }`}
+                      >
                         {t(item.titleKey)}
-                        <svg className={`ml-1 inline h-4 w-4 transition-transform ${openDropdown === idx ? "rotate-180" : ""}`} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                        <svg
+                          className={`ml-1 inline h-4 w-4 transition-transform ${openDropdown === idx ? "rotate-180" : ""
+                            }`}
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          viewBox="0 0 24 24"
+                        >
                           <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                         </svg>
                       </button>
                       {openDropdown === idx && (
-                        <ul className="absolute left-0 mt-2 w-48 bg-white border rounded-md shadow-lg z-50">
+                        <ul className="absolute left-0 mt-2 w-48 bg-white border border-[#f5bc00] rounded-md shadow-lg z-50 font-almarai">
                           {item.submenu.map((sub, subIdx) => (
                             <li key={subIdx}>
                               {sub.external ? (
-                                <a href={sub.path} target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-gray-700 hover:bg-indigo-100 hover:text-indigo-700" onClick={() => setOpenDropdown(null)}>
+                                <a
+                                  href={sub.path}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="block px-4 py-2 text-black hover:text-yellow-400 hover:bg-yellow-100 rounded-md transition-colors duration-200"
+                                  onClick={() => setOpenDropdown(null)}
+                                >
                                   {t(sub.titleKey)}
                                 </a>
                               ) : (
-                                <Link to={sub.path} className="block px-4 py-2 text-gray-700 hover:bg-indigo-100 hover:text-indigo-700" onClick={() => setOpenDropdown(null)}>
+                                <Link
+                                  to={sub.path}
+                                  className="block px-4 py-2 text-black hover:bg-[#fff8cc] hover:text-[#b8860b] rounded-md transition-colors duration-200"
+                                  onClick={() => setOpenDropdown(null)}
+                                >
                                   {t(sub.titleKey)}
                                 </Link>
                               )}
@@ -119,7 +143,13 @@ const Navbar = () => {
                       )}
                     </>
                   ) : (
-                    <Link to={item.path} className={`font-medium ${isActive(item.path) ? "text-indigo-600" : "text-gray-700 hover:text-indigo-600"}`}>
+                    <Link
+                      to={item.path}
+                      className={`font-almarai font-bold transition-colors duration-300 ${isActive(item.path)
+                        ? "text-[#f5bc00]"
+                        : "text-black hover:text-[#f5bc00]"
+                        }`}
+                    >
                       {t(item.titleKey)}
                     </Link>
                   )}
@@ -128,26 +158,53 @@ const Navbar = () => {
             </ul>
           </div>
 
-          {/* Desktop Language + Login */}
-          <div className="hidden md:flex items-center space-x-4">
-            <button onClick={() => changeLanguage("en")} className="flex items-center gap-2 px-3 py-1.5 border rounded-md
-             hover:text-indigo-600 cursor-pointer">
-              <img src={Us} alt="EN" className="h-5 w-5 cursor-pointer" />EN
+          {/* Language Dropdown */}
+          <div className="relative m-4 font-almarai">
+            <button
+              onClick={() => setShowLangDropdown((prev) => !prev)}
+              className=" bg-yellow-500 text-black rounded-full p-2 hover:bg-black hover:text-white cursor-pointer transition-colors duration-300"
+            >
+              <GrLanguage size={20} />
             </button>
-            <button onClick={() => changeLanguage("ar")} className="flex items-center gap-2 px-3 py-1.5 border rounded-md
-             hover:text-indigo-600 cursor-pointer">
-              <img src={Kw} alt="AR" className="h-5 w-5 cursor-pointer" />AR
-            </button>
-            <Link to="/admin-login">
-              <button className="bg-black text-white py-2 px-4 rounded-md hover:bg-gray-800 cursor-pointer">
-                Login
-              </button>
-            </Link>
+
+            {showLangDropdown && (
+              <div className="absolute right-0 mt-2 w-40 bg-white border border-[#f5bc00] rounded-md shadow-md z-50 font-almarai">
+                <button
+                  onClick={() => changeLanguage("en")}
+                  className="font-almarai flex items-center gap-2 px-3 py-1.5 w-full hover:bg-[#fff8cc] hover:text-[#b8860b] rounded-md cursor-pointer transition-colors duration-200"
+                >
+                  <img src={Us} alt="EN" className="h-5 w-5" />
+                  English
+                </button>
+                <button
+                  onClick={() => changeLanguage("ar")}
+                  className="font-almarai flex items-center gap-2 px-3 py-1.5 w-full hover:bg-[#fff8cc] hover:text-[#b8860b] rounded-md cursor-pointer transition-colors duration-200"
+                >
+                  <img src={Kw} alt="AR" className="h-5 w-5" />
+                  العربية
+                </button>
+              </div>
+            )}
           </div>
 
+          {/* Login */}
+          <Link to="/admin-login" className="hidden md:block font-almarai">
+            <motion.button
+              whileHover={{ scale: 1.1, }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: " spring", stiffness: 300 }}
+              className="bg-yellow-400 text-black py-2 px-4 font-bold rounded-md hover:bg-black hover:text-white cursor-pointer transition-colors duration-300">
+              Login
+            </motion.button>
+          </Link>
+
           {/* Mobile Toggle */}
-          <div className="md:hidden flex items-center">
-            <button onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle menu" className="text-gray-700 hover:text-indigo-600">
+          <div className="md:hidden font-almarai">
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label="Toggle Menu"
+              className="text-yellow-400 hover:text-[#f5bc00] transition-colors duration-300"
+            >
               {mobileOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
             </button>
           </div>
@@ -156,27 +213,50 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-white border-t shadow-md transition-all">
+        <div className="md:hidden bg-white border-t border-[#f5bc00] shadow-md font-almarai">
           <ul className="flex flex-col px-4 py-4 space-y-2">
             {navItems.map((item, idx) => (
               <li key={idx}>
-                {!!item.submenu ? (
+                {item.submenu ? (
                   <details className="group">
-                    <summary className="flex justify-between items-center px-2 py-2 font-medium hover:text-indigo-600 cursor-pointer">
+                    <summary className="flex justify-between items-center px-2 py-2 font-medium cursor-pointer text-black hover:text-[#f5bc00] transition-colors duration-300">
                       {t(item.titleKey)}
-                      <svg className="ml-2 h-4 w-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                      <svg
+                        className="ml-2 h-4 w-4 group-open:rotate-180 transition-transform"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M19 9l-7 7-7-7"
+                        />
                       </svg>
                     </summary>
-                    <ul className="pl-4 space-y-1 cursor-pointer">
+                    <ul className="pl-4 space-y-1 font-almarai">
                       {item.submenu.map((sub, subIdx) => (
                         <li key={subIdx}>
                           {sub.external ? (
-                            <a href={sub.path} target="_blank" rel="noopener noreferrer" className="block px-2 py-1 hover:text-indigo-600" onClick={() => setMobileOpen(false)}>
+                            <a
+                              href={sub.path}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="block px-2 py-1 text-black hover:text-[#f5bc00] transition-colors duration-300"
+                              onClick={() => setMobileOpen(false)}
+                            >
                               {t(sub.titleKey)}
                             </a>
                           ) : (
-                            <Link to={sub.path} className={`block px-2 py-1  ${isActive(sub.path) ? "text-indigo-600" : "hover:text-indigo-600"}`} onClick={() => setMobileOpen(false)}>
+                            <Link
+                              to={sub.path}
+                              className={`block px-2 py-1 ${isActive(sub.path)
+                                ? "text-[#f5bc00]"
+                                : "hover:text-[#f5bc00]"
+                                } transition-colors duration-300`}
+                              onClick={() => setMobileOpen(false)}
+                            >
                               {t(sub.titleKey)}
                             </Link>
                           )}
@@ -185,14 +265,27 @@ const Navbar = () => {
                     </ul>
                   </details>
                 ) : (
-                  <Link to={item.path} className={`block px-2 py-2 font-medium cursor-pointer ${isActive(item.path) ? "text-indigo-600 underline cursor-pointer" : "hover:text-indigo-600 cursor-pointer"}`} onClick={() => setMobileOpen(false)}>
+                  <Link
+                    to={item.path}
+                    className={`block px-2 py-2 font-medium ${isActive(item.path)
+                      ? "text-[#f5bc00]"
+                      : "hover:text-[#f5bc00]"
+                      } transition-colors duration-300`}
+                    onClick={() => setMobileOpen(false)}
+                  >
                     {t(item.titleKey)}
                   </Link>
                 )}
               </li>
             ))}
-            <Link to="/admin-login" className="px-2">
-              <button className="bg-black text-white py-1 px-4 rounded-md w-full cursor-pointer" onClick={()=>setMobileOpen(false)}>Login</button>
+
+            <Link to="/admin-login" className="px-2 mt-3">
+              <button
+                className="bg-[#f5bc00] text-black py-2 px-4 rounded-md w-full hover:bg-yellow-500 transition-colors duration-300"
+                onClick={() => setMobileOpen(false)}
+              >
+                Login
+              </button>
             </Link>
           </ul>
         </div>

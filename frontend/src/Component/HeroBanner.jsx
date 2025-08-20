@@ -38,16 +38,17 @@ const HeroBanner = () => {
 
   return (
     <div className="relative w-full h-[80vh] overflow-hidden">
+
       {/* Image */}
       <img
         src={slides[current].image}
         alt={`Slide ${current + 1}`}
-        className="w-full h-full object-cover transition-opacity duration-700"
+        className="w-full h-full mt-20 object-cover transition-opacity duration-700"
       />
 
       {/* Overlay title */}
-      <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-        <h2 className="text-white text-2xl md:text-4xl font-bold text-center px-4 max-w-2xl">
+      <div className="absolute inset-0 bg-black/70 flex items-center justify-center ">
+        <h2 className="text-yellow-400 text-2xl md:text-4xl font-almarai font-bold text-center px-4 max-w-2xl">
           {t(slides[current].titleKey)}
         </h2>
       </div>
@@ -58,9 +59,9 @@ const HeroBanner = () => {
           <span
             key={index}
             onClick={() => goToSlide(index)}
-            className={`h-3 w-3 transition-all duration-300 border-1 border-blue-800 cursor-pointer rounded-full  ${
-              current === index ? 'bg-white' : 'bg-gray-400'
-            }`}
+            className={`h-3 w-3 transition-all duration-300 border-1 border-yellow-400 cursor-pointer rounded-full  ${current === index ? 'bg-white' : 'bg-gray-400'
+              }`}
+
           ></span>
         ))}
       </div>

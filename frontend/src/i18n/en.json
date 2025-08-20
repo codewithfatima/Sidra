@@ -1,5 +1,6 @@
 {
-  "brand_name": "Sidra International",
+   "brand_sidra": "Sidra",
+  "brand_international": "International",
   "home": "Home",
   "about_school": "About School",
   "our_vision": "Our Vision",
@@ -19,8 +20,8 @@
     "school_description": "Inspiring young minds with excellence, character, and compassion. Nurturing future leaders in a global community.",
     "quick_links": "Quick Links",
     "home": "Home",
-    "about_school": "About School",
     "news": "News",
+    "about_school": "About School",
     "admission": "Admission",
     "contact": "Contact",
     "address": "123 Sidra Street, Education City",
@@ -39,7 +40,6 @@
   "my_nursery_desc": "A nurturing environment that supports early childhood development through play-based learning, starting from 9 months old.",
   "happy_land_desc": "An engaging space designed to spark creativity, imagination, and joyful exploration for young children.",
   "visit_site": "Visit Site",
-
   "contactUs": "CONTACT US",
   "infoText": "If you cannot find the information that you need on our website, please contact us.",
   "phone": "Phone",
@@ -56,6 +56,19 @@
   "yourMessage": "Your Message*",
   "sendMessage": "Send Message",
   "required": "Required",
-  "invalidEmail": "Invalid email address"
-
+  "invalidEmail": "Invalid email address",
+  "latestNews": "Latest News",
+  "noNews": "No news available.",
+  "prev": "Prev",
+  "next": "Next",
+   "ourPartners": "Our Partners",
+  "ourPartnersDesc": "We’re proud to collaborate with industry-leading partners who help us deliver exceptional quality and innovation. Meet the people behind the success.",
+  "partner1Title": "Partner 1",
+  "partner1Name": "John Doe",
+  "partner2Title": "Partner 2",
+  "partner2Name": "Jane Smith",
+  "partner4Name": "Jane Smith",
+  "partner4Title": "Partner 3",
+  "partner3Title": "Partner 3",
+  "partner3Name": "Alice Brown"
 }
