@@ -14,7 +14,7 @@ const app = express();
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));  // in case you send form data
+app.use(express.urlencoded({ extended: true }));  
 
 const fs = require('fs');
 

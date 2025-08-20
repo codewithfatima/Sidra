@@ -4,13 +4,13 @@ const path = require('path');
 // Configure storage for uploaded files
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, 'uploads/'); // Make sure 'uploads' folder exists in your project root
+    cb(null, 'uploads/');
   },
   filename: function (req, file, cb) {
-    // Save file with timestamp + original extension
     cb(null, Date.now() + path.extname(file.originalname));
   },
 });
+
 
 // Filter to accept only images
 const fileFilter = (req, file, cb) => {

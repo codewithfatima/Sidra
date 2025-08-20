@@ -21,7 +21,7 @@ const newsSchema = new mongoose.Schema({
   },
   date: {
     type: String,
-    required: [true, 'Date is required'], // e.g. "02 Aug"
+    required: [true, 'Date is required'], 
   },
 }, { timestamps: true });
 

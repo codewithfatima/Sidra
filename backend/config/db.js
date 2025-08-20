@@ -3,7 +3,7 @@ const MONGO_URL = process.env.MONGO_URL;
 
 
 
-mongoose.connect(MONGO_URL,{
+mongoose.connect(MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     connectTimeoutMS: 10000
