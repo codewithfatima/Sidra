@@ -63,15 +63,15 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-md fixed w-full z-50 top-0 font-almarai"> 
       <div className="max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-16 px-4 sm:px-8" >
           {/* Logo */}
-          <div className="flex items-center space-x-3 ">
+          <div className="flex items-center space-x-3 text-sm sm:text-base -ml-7 ">
             <Link
               to="/"
-              className="flex items-center space-x-2 sm:space-x-2 hover:text-[#f5bc00] transition-colors duration-300 font-almarai"
+              className="flex items-center hover:text-[#f5bc00] transition-colors duration-300 font-almarai"
             >
               <img src={Logo} alt="Logo" className="h-12 w-12 object-contain" />
-              <span className="font-bold">
+              <span className="font-bold text-sm sm:text-base">
                 <span className="text-black text-xl">{t("brand_sidra")}</span>{" "}
                 <span className="text-yellow-500 text-xl">{t("brand_international")}</span>
               </span>
@@ -199,11 +199,11 @@ const Navbar = () => {
           </Link>
 
           {/* Mobile Toggle */}
-          <div className="md:hidden font-almarai ">
+          <div className="md:hidden font-almarai  ">
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle Menu"
-              className="cursor-pointer text-yellow-400 hover:text-[#f5bc00] transition-colors duration-300"
+              className="cursor-pointer text-yellow-400 hover:text-[#f5bc00] transition-colors duration-300 -mr-7"
             >
               {mobileOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
             </button>
