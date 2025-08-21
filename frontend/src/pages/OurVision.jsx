@@ -4,7 +4,7 @@ import MissionImage from '../../src/assets/mission.png';
 
 const OurVision = () => {
   return (
-    <section className="bg-[#151f4b] text-white py-16 px-6 md:px-20 ">
+    <section className="bg-gray-100 text-white py-16 px-6 md:px-20 ">
 
       {/* Animated Heading */}
 

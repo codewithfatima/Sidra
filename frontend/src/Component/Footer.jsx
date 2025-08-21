@@ -8,8 +8,7 @@ const Footer = () => {
   return (
 
     <footer className="bg-black text-yellow-500 w-full border-t-4 border-yellow-500">
-      <div className="px-4 md:px-20 grid grid-cols-1 md:grid-cols-4 gap-10">
-
+      <div className="px-4 md:px-20 grid grid-cols-1 md:grid-cols-4 gap-10 py-15">
 
 
         {/* School Info */}
@@ -51,7 +50,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom line */}
-      <div className="mt-12 text-center text-sm text-gray-300 border-t border-yellow-600 pt-6">
+      <div className="mt-12 pb-5 text-center text-sm text-gray-300 border-t border-yellow-600 pt-6">
         &copy; {new Date().getFullYear()} {t('footer.school_name')} . {t('footer.copyright')}
       </div>
     </footer>
