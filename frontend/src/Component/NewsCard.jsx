@@ -42,7 +42,7 @@ const NewsCard = ({ language = "en" }) => {
   };
 
   return (
-    <section className="bg-yellow-500 py-16 px-4 md:px-20" dir={language === "ar" ? "rtl" : "ltr"}>
+    <section className="bg-[#f5bc00] py-16 px-4 md:px-20" dir={language === "ar" ? "rtl" : "ltr"}>
       <motion.h2
         initial="hidden"
         whileInView="visible"

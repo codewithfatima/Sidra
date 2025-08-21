@@ -61,19 +61,19 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-md fixed w-full z-50 top-0 font-almarai"> {/* Apply font-almarai globally here */}
+    <nav className="bg-white shadow-md fixed w-full z-50 top-0 font-almarai"> 
       <div className="max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-3 ">
             <Link
               to="/"
-              className="flex items-center space-x-2 sm:space-x-3 hover:text-[#f5bc00] transition-colors duration-300 font-almarai"
+              className="flex items-center space-x-2 sm:space-x-2 hover:text-[#f5bc00] transition-colors duration-300 font-almarai"
             >
               <img src={Logo} alt="Logo" className="h-12 w-12 object-contain" />
-              <span className=" sm:text-xl font-bold">
-                <span className="text-black">{t("brand_sidra")}</span>{" "}
-                <span className="text-yellow-400">{t("brand_international")}</span>
+              <span className="font-bold">
+                <span className="text-black text-xl">{t("brand_sidra")}</span>{" "}
+                <span className="text-yellow-500 text-xl">{t("brand_international")}</span>
               </span>
 
             </Link>
@@ -162,7 +162,7 @@ const Navbar = () => {
           <div className="relative m-4 font-almarai">
             <button
               onClick={() => setShowLangDropdown((prev) => !prev)}
-              className=" bg-yellow-500 text-black rounded-full p-2 hover:bg-black hover:text-white cursor-pointer transition-colors duration-300"
+              className="bg-yellow-500 text-white rounded-full p-2 hover:bg-black hover:text-white cursor-pointer transition-colors duration-300"
             >
               <GrLanguage size={20} />
             </button>
@@ -199,11 +199,11 @@ const Navbar = () => {
           </Link>
 
           {/* Mobile Toggle */}
-          <div className="md:hidden font-almarai">
+          <div className="md:hidden font-almarai ">
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle Menu"
-              className="text-yellow-400 hover:text-[#f5bc00] transition-colors duration-300"
+              className="cursor-pointer text-yellow-400 hover:text-[#f5bc00] transition-colors duration-300"
             >
               {mobileOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
             </button>
@@ -218,7 +218,7 @@ const Navbar = () => {
             {navItems.map((item, idx) => (
               <li key={idx}>
                 {item.submenu ? (
-                  <details className="group">
+                 <details className="group">
                     <summary className="flex justify-between items-center px-2 py-2 font-medium cursor-pointer text-black hover:text-[#f5bc00] transition-colors duration-300">
                       {t(item.titleKey)}
                       <svg
@@ -281,7 +281,7 @@ const Navbar = () => {
 
             <Link to="/admin-login" className="px-2 mt-3">
               <button
-                className="bg-[#f5bc00] text-black py-2 px-4 rounded-md w-full hover:bg-yellow-500 transition-colors duration-300"
+                className="bg-[#f5bc00] font-bold text-black py-2 px-4 rounded-md w-full hover:bg-yellow-500 transition-colors duration-300"
                 onClick={() => setMobileOpen(false)}
               >
                 Login

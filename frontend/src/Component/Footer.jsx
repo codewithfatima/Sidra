@@ -6,7 +6,7 @@ const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className="bg-black text-yellow-400 py-12 px-6 md:px-20 border border-t-4 border-yellow-500 ">
+    <footer className="bg-black text-yellow-500 py-12 px-6 md:px-20 border border-t-4 border-yellow-500 ">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* School Info */}
         <div>
@@ -28,7 +28,7 @@ const Footer = () => {
 
         {/* Contact Info */}
         <div>
-          <h3 className="text-lg font-semibold mb-3 text-yellow-400">{t('footer.contact')}</h3>
+          <h3 className="text-lg font-semibold mb-3 text-yellow-500">{t('footer.contact')}</h3>
           <p className="text-gray-300 mt-2">{t('footer.address')}</p>
           <p className="text-gray-300 mt-2">{t('footer.email')}: info@sidraschool.edu</p>
           <p className="text-gray-300">{t('footer.phone')}: +123 456 7890</p>
@@ -36,12 +36,12 @@ const Footer = () => {
 
         {/* Social Links */}
         <div>
-          <h3 className="text-lg font-semibold mb-3 text-yellow-400">{t('footer.follow_us')}</h3>
+          <h3 className="text-lg font-semibold mb-3 text-yellow-500">{t('footer.follow_us')}</h3>
           <div className="flex space-x-4 text-xl ">
-            <a href="#" className="text-gray-300 hover:text-[#f5bc00]"><FaFacebookF /></a>
-            <a href="#" className="text-gray-300 hover:text-[#f5bc00]"><FaTwitter /></a>
-            <a href="#" className="text-gray-300 hover:text-[#f5bc00]"><FaInstagram /></a>
-            <a href="#" className="text-gray-300 hover:text-[#f5bc00]"><FaLinkedinIn /></a>
+            <a href="#" className="text-white hover:bg-gray-200 hover:text-black bg-yellow-500 rounded-full px-4 py-4"><FaFacebookF /></a>
+            <a href="#" className="text-white hover:bg-gray-200 hover:text-black bg-yellow-500 rounded-full px-4 py-4"><FaTwitter /></a>
+            <a href="#" className="text-white hover:bg-gray-200 hover:text-black bg-yellow-500 rounded-full px-4 py-4"><FaInstagram /></a>
+            <a href="#" className="text-white hover:bg-gray-200 hover:text-black bg-yellow-500 rounded-full px-4 py-4"><FaLinkedinIn /></a>
           </div>
         </div>
       </div>

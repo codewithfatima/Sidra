@@ -50,7 +50,7 @@ const QuickInfo = () => {
               boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1)',
               transition: { type: 'spring', stiffness: 300, damping: 20 },
             }}
-            className="bg-yellow-100 p-4 rounded-lg shadow-md cursor-pointer border border-yellow-400"
+            className=" px-4 py-6 rounded-lg shadow-md cursor-pointer border border-yellow-400"
           >
 
 
@@ -69,7 +69,7 @@ const QuickInfo = () => {
                   rel="noopener noreferrer"
                   className="text-black font-bold transition bg-yellow-500 px-5 py-2 rounded-full "
                 >
-                  {t('visit_site')}  →
+                  {t('visit_site')}  
                 </a>
               ) : (
                 <Link
