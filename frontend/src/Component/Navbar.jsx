@@ -11,33 +11,33 @@ import Kw from "../../src/assets/Kw.png";
 const navItems = [
   { titleKey: "home", path: "/" },
   {
-    titleKey: "About",
+    titleKey: "about_us",
     submenu: [
       { titleKey: "our_vision", path: "/about/vision" },
       { titleKey: "our_mission", path: "/about/mission" },
+      { titleKey: "our_values", path: "/about/values" },
     ],
   },
   {
-    titleKey: "our_schools",
+    titleKey: "our_sectors",
     submenu: [
       {
         titleKey: "happy_land",
-        path: "https://www.happylandkw.com/",
-        external: true,
+        path: '/happyland'
       },
       {
         titleKey: "my_nursery",
-        path: "https://mynurserykw.com/",
-        external: true,
+        path: '/mynursery',
       },
     ],
   },
   {
-    titleKey: "company",
-    submenu: [
-      { titleKey: "about_sidra", path: "/company" },
-      { titleKey: "locations", path: "/company/locations" },
-    ],
+    titleKey: 'news'
+    // titleKey: "company",
+    // submenu: [
+    //   { titleKey: "about_sidra", path: "/company" },
+    //   { titleKey: "locations", path: "/company/locations" },
+    // ],
   },
   { titleKey: "contact", path: "/contact" },
 ];
@@ -123,7 +123,7 @@ const Navbar = () => {
                                   href={sub.path}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="block px-4 py-2 text-black hover:text-yellow-400 hover:bg-yellow-100 rounded-md transition-colors duration-200"
+                                  className="block px-4 py-2 text-black hover:text-[#b8860b] hover:bg-yellow-100 rounded-md transition-colors duration-200"
                                   onClick={() => setOpenDropdown(null)}
                                 >
                                   {t(sub.titleKey)}

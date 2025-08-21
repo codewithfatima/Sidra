@@ -85,7 +85,6 @@ const Contact = () => {
           initial= "hidden"
           whileInView= "visible"
           variants={zoomInVariants}
-          transition={{ duration: 0.6, delay: 0.3 }}
         >
           {/* First and Last Name */}
           <div className="flex flex-col md:flex-row gap-4">
