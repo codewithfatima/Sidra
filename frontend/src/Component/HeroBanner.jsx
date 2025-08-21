@@ -48,7 +48,7 @@ const HeroBanner = () => {
 
       {/* Overlay title */}
       <div className="absolute inset-0 bg-black/70 flex items-center justify-center ">
-        <h2 className="text-yellow-400 text-2xl md:text-4xl font-almarai font-bold text-center px-4 max-w-2xl">
+        <h2 className="text-yellow-500 text-2xl md:text-4xl font-almarai font-bold text-center px-4 max-w-2xl">
           {t(slides[current].titleKey)}
         </h2>
       </div>

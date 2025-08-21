@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { slideUpVariants, zoomInVariants } from './variants'
+import { slideUpVariants, zoomInVariants } from './variants';
 
 import Happyland from '../../src/assets/Happyland.png';
 import Mynusery from '../../src/assets/Mynursery.png';
@@ -26,21 +26,25 @@ const QuickInfo = () => {
   ];
 
   return (
-    <section className=" py-16 px-6 md:px-20">
+    <section className="relative py-16 px-6 md:px-20 bg-white overflow-hidden">
+
+      {/* 💬 Section Heading */}
       <motion.h2
         initial="hidden"
         whileInView="visible"
         variants={slideUpVariants}
-        className="text-center text-3xl md:text-4xl font-bold font-almarai text-black mb-12 "
+        className="text-center text-3xl md:text-4xl font-bold font-almarai text-black mb-12 relative z-10"
       >
         {t('our_schools')}
         <span className='block w-20 h-1 bg-yellow-500 rounded-lg mx-auto mt-3'></span>
       </motion.h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-7xl mx-auto">
-        {infoData.map((item, index) => (
 
+      {/* 🧩 School Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-7xl mx-auto relative z-10">
+        {infoData.map((item, index) => (
           <motion.div
+            key={index}
             initial="hidden"
             whileInView="visible"
             variants={zoomInVariants}
@@ -50,10 +54,8 @@ const QuickInfo = () => {
               boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1)',
               transition: { type: 'spring', stiffness: 300, damping: 20 },
             }}
-            className=" px-4 py-6 rounded-lg shadow-md cursor-pointer border border-yellow-400"
+            className="px-4 py-6 rounded-lg shadow-md cursor-pointer border border-yellow-400 bg-white"
           >
-
-
             <div className="flex flex-col items-center text-center">
               <img
                 src={item.image}
@@ -67,14 +69,14 @@ const QuickInfo = () => {
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-black font-bold transition bg-yellow-500 px-5 py-2 rounded-full "
+                  className="text-black font-bold transition bg-yellow-500 px-5 py-2 rounded-full hover:bg-yellow-400"
                 >
-                  {t('visit_site')}  
+                  {t('visit_site')}
                 </a>
               ) : (
                 <Link
                   to={item.link}
-                  className="text-yellow-400 font-bold transition bg-black rounded-full px-5 py-2 "
+                  className="text-yellow-400 font-bold transition bg-black rounded-full px-5 py-2"
                 >
                   {t('visit_site')} →
                 </Link>
