@@ -37,7 +37,7 @@ const HeroBanner = () => {
   };
 
   return (
-    <div className="relative w-full h-[90vh] ">
+    <div className="relative w-full h-[90vh] overflow-hidden ">
 
       {/* Image */}
        <img
