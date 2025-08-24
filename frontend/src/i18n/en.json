@@ -71,5 +71,14 @@
   "partner4Name": "Jane Smith",
   "partner4Title": "Partner 3",
   "partner3Title": "Partner 3",
-  "partner3Name": "Alice Brown"
+  "partner3Name": "Alice Brown",
+  "ourMission": {
+    "title": "The company's mission can be stated as follows:",
+    "paragraph1": "Excellence in providing innovative educational services and distinguished care for children under the educational supervision of specialists in education, sociology, and psychology.",
+    "paragraph2": "Providing training and consulting services locally and internationally in educational, psychological, administrative, and leadership fields, as well as small projects and personal skill development in business and investment, in cooperation with a group of experienced and well-recognized specialists and consultants.",
+    "paragraph3": "Offering an institutional model capable of overcoming challenges and achieving the company’s goals, while marketing this professional model (Business Model) as a tool for those interested in establishing, operating, and managing nurseries.",
+    "paragraph4": "Placing the company on the map of solid business and elevating performance to the ranks of leading institutions locally and abroad, with a focus on sustainable growth and rewarding returns."
+  }
+
+
 }

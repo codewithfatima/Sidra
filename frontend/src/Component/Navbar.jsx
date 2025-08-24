@@ -64,6 +64,7 @@ const Navbar = () => {
     <nav className="bg-white shadow-md fixed w-full z-50 top-0 font-almarai">
       <div className="max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 px-4 sm:px-8" >
+
           {/* Logo */}
           <div className="flex items-center space-x-3 text-sm sm:text-base -ml-7 ">
             <Link

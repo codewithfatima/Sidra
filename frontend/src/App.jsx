@@ -12,6 +12,7 @@ import Prep from './pages/Nurseries/Prep'
 import AdminLogin from './pages/Login/AdminLogin';
 import AdminNewsPage from './pages/AdminNewsPage';
 import OurPartners from './pages/OurPartners';
+import OurMission from './pages/OurMission';
 
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
         <Route path='/our-school' element={<OurSchool />} />
         <Route path='/contact' element={<ContactForm />} />
         <Route path="/about/vision" element={<OurSchool />} />
+        <Route path="/about/mission" element={<OurMission />} />
         <Route path="/company" element={<AboutSidra />} />
         <Route path="/company/our-partner" element={<OurPartners />} />
         <Route path="/mynursery" element={<MyNursery />} />
