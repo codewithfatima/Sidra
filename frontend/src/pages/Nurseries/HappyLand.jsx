@@ -18,16 +18,16 @@ const HappyLand = () => {
 
     <div className='bg-gray-100 min-h-screen flex items-center justify-center '>
       <motion.div
-        initial="visible"
-        whileInView="visible"
-        variants={zoomInVariants}
+        initial={{ scale: 0.8, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.8 }}
         whileHover={{
           scale: 1.05,
           rotateY: 10,
           boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
           transition: { type: 'spring', stiffness: 300, damping: 20 },
         }}
-       className="m-5 w-full max-w-full sm:max-w-xl lg:max-w-6xl px-4 sm:px-8 py-6 sm:py-10  bg-white border-3 border-yellow-400 rounded-lg text-center"
+        className="m-5 w-full max-w-full sm:max-w-xl lg:max-w-6xl px-4 sm:px-8 py-6 sm:py-10  bg-white border-3 border-yellow-400 rounded-lg text-center"
 
       >
         <img
