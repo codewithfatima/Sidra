@@ -15,12 +15,10 @@ const HappyLand = () => {
   };
 
   return (
-    <div className="bg-yellow-200  min-h-screen flex items-center justify-center ">
-  
 
+    <div className='bg-gray-100 min-h-screen flex items-center justify-center'>
       <motion.div
-      initial = "visible"
-        // initial="hidden"
+        initial="visible"
         whileInView="visible"
         variants={zoomInVariants}
         whileHover={{
@@ -29,14 +27,13 @@ const HappyLand = () => {
           boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
           transition: { type: 'spring', stiffness: 300, damping: 20 },
         }}
-      className=" flex flex-col items-center text-center border-3 border-yellow-500 rounded-lg p-6 
-      shadow-md cursor-pointer bg-white m-5"
+       className="w-full max-w-full sm:max-w-xl lg:max-w-6xl px-4 sm:px-8 py-6 sm:py-10 bg-white border-3 border-yellow-400 rounded-lg text-center"
 
       >
         <img
           src={school.image}
           alt={`${school.title} - nursery in Kuwait`}
-          className="w-48 h-48 object-cover rounded-lg mb-4"
+          className="w-48 h-48 object-cover rounded-lg mb-4 mx-auto"
         />
         <h3 className="text-2xl font-bold text-black mb-5">{school.title}</h3>
         <p className="text-gray-600 text-xl mb-6">{school.desc}</p>
@@ -49,6 +46,7 @@ const HappyLand = () => {
           {t('visit_site')}
         </a>
       </motion.div>
+
     </div>
   );
 };

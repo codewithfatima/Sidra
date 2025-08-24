@@ -36,7 +36,7 @@ const QuickInfo = () => {
         className="text-center text-3xl md:text-4xl font-bold font-almarai text-black mb-12 relative z-10"
       >
         {t('our_schools')}
-        <span className='block w-20 h-1 bg-yellow-500 rounded-lg mx-auto mt-3'></span>
+        <span className='block w-20 h-1 bg-[#f5bc00] rounded-lg mx-auto mt-3'></span>
       </motion.h2>
 
 

@@ -150,7 +150,7 @@ const Contact = () => {
 
           <button
             type="submit"
-            className='bg-yellow-500 font-semibold cursor-pointer text-black px-6 py-2 rounded-xl hover:bg-black hover:text-white transition-colors duration-300 w-full'
+            className='bg-[#f5bc00] font-semibold cursor-pointer text-black px-6 py-2 rounded-xl hover:bg-black hover:text-white transition-colors duration-300 w-full'
           >
             {t('sendMessage')}
           </button>
