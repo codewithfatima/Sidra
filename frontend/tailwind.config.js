@@ -5,6 +5,9 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+       primeYellow: "#d67a0aff", // your custom yellow
+     },
       fontFamily: {
         almarai: ['Almarai', 'sans-serif'],
       },
