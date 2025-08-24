@@ -16,7 +16,7 @@ const HappyLand = () => {
 
   return (
 
-    <div className='bg-gray-100 min-h-screen flex items-center justify-center'>
+    <div className='bg-gray-100 min-h-screen flex items-center justify-center '>
       <motion.div
         initial="visible"
         whileInView="visible"
@@ -27,7 +27,7 @@ const HappyLand = () => {
           boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
           transition: { type: 'spring', stiffness: 300, damping: 20 },
         }}
-       className="w-full max-w-full sm:max-w-xl lg:max-w-6xl px-4 sm:px-8 py-6 sm:py-10 bg-white border-3 border-yellow-400 rounded-lg text-center"
+       className="m-5 w-full max-w-full sm:max-w-xl lg:max-w-6xl px-4 sm:px-8 py-6 sm:py-10  bg-white border-3 border-yellow-400 rounded-lg text-center"
 
       >
         <img
