@@ -64,15 +64,15 @@ const Contact = () => {
           <div className="mt-6 space-y-3 text-gray-700 text-sm">
             <div className="flex items-center gap-3">
               <span className="text-lg text-yellow-500 "><IoCall /></span>
-              <span className='font-almarai tracking-wider'>+1 (555) 123-4567</span>
+              <span className='font-almarai tracking-wider'>{t('contactus.phone')}</span>
             </div>
             <div className="flex items-center gap-3">
               <span className="text-lg text-yellow-500 "><MdOutlineMailOutline /></span>
-              <span className='font-almarai tracking-wider'>contact@example.com</span>
+              <span className='font-almarai tracking-wider'>{t('contactus.email')}</span>
             </div>
             <div className="flex items-center gap-3">
               <span className="text-lg text-yellow-500"><GrLocationPin /></span>
-              <span className='font-almarai tracking-wider '>1234 Elm Street, Some City, ST 12345</span>
+              <span className='font-almarai tracking-wider '>{t('contactus.address')}</span>
             </div>
           </div>
         </motion.div>

@@ -1,5 +1,5 @@
 {
-   "brand_sidra": "Sidra",
+  "brand_sidra": "Sidra",
   "brand_international": "International",
   "home": "Home",
   "about_us": "About Us",
@@ -25,9 +25,9 @@
     "about_school": "About School",
     "admission": "Admission",
     "contact": "Contact",
-    "address": "123 Sidra Street, Education City",
-    "email": "Email",
-    "phone": "Phone",
+    "address": "Qibla, Fahad Al Salem Street, Block 11, Sheikha Tower, 7th Floor",
+    "email": "info@sidra-kw.com",
+    "phone": "+695 68889799",
     "follow_us": "Follow Us",
     "copyright": " All rights reserved."
   },
@@ -43,7 +43,7 @@
   "visit_site": "Visit Site",
   "contactUs": "CONTACT US",
   "infoText": "If you cannot find the information that you need on our website, please contact us.",
-  "phone": "Phone",
+    "phone": "Phone",
   "headOffice": "Head Office",
   "email": "Email",
   "firstName": "First Name*",
@@ -62,7 +62,7 @@
   "noNews": "No news available.",
   "prev": "Prev",
   "next": "Next",
-   "ourPartners": "Our Partners",
+  "ourPartners": "Our Partners",
   "ourPartnersDesc": "We’re proud to collaborate with industry-leading partners who help us deliver exceptional quality and innovation. Meet the people behind the success.",
   "partner1Title": "Partner 1",
   "partner1Name": "John Doe",
@@ -78,7 +78,10 @@
     "paragraph2": "Providing training and consulting services locally and internationally in educational, psychological, administrative, and leadership fields, as well as small projects and personal skill development in business and investment, in cooperation with a group of experienced and well-recognized specialists and consultants.",
     "paragraph3": "Offering an institutional model capable of overcoming challenges and achieving the company’s goals, while marketing this professional model (Business Model) as a tool for those interested in establishing, operating, and managing nurseries.",
     "paragraph4": "Placing the company on the map of solid business and elevating performance to the ranks of leading institutions locally and abroad, with a focus on sustainable growth and rewarding returns."
+  },
+  "contactus": {
+    "phone": "+965 68889799",
+    "email": "info@sidra-kw.com",
+    "address": "Qibla, Fahad Al Salem Street, Block 11, Sheikha Tower, 7th Floor"
   }
-
-
 }

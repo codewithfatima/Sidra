@@ -22,9 +22,8 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-3 text-[#f5bc00]">{t('footer.quick_links')}</h3>
           <ul className="space-y-2 text-gray-300 ">
             <li><a href="/" className="hover:text-[#f5bc00]">{t('home')}</a></li>
-            <li><a href="/about-school" className="hover:text-[#f5bc00]">{t('about_school')}</a></li>
-            <li><a href="/news" className="hover:text-[#f5bc00]">{t('news')}</a></li>
-            <li><a href="/admission" className="hover:text-[#f5bc00]">{t('admission')}</a></li>
+            <li><a href="/about-" className="hover:text-[#f5bc00]">{t('about_us')}</a></li>
+              <li><a href="/contact" className="hover:text-[#f5bc00]">{t('our_sectors')}</a></li>
             <li><a href="/contact" className="hover:text-[#f5bc00]">{t('contact')}</a></li>
           </ul>
         </div>
@@ -33,8 +32,8 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-3 text-[#f5bc00]">{t('footer.contact')}</h3>
           <p className="text-gray-300 mt-2">{t('footer.address')}</p>
-          <p className="text-gray-300 mt-2">{t('footer.email')}: info@sidraschool.edu</p>
-          <p className="text-gray-300">{t('footer.phone')}: +123 456 7890</p>
+          <p className="text-gray-300 mt-2">{t('footer.email')}</p>
+          <p className="text-gray-300">{t('footer.phone')}</p>
         </div>
 
         {/* Social Links */}
