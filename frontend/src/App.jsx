@@ -4,7 +4,6 @@ import Navbar from './Component/Navbar';
 import Home from './pages/Home';
 import Footer from './Component/Footer';
 import ContactForm from './pages/Contact';
-import OurSchool from './pages/OurVision';
 import AboutSidra from './pages/AboutSidra';
 import HappyLand from './pages/Nurseries/HappyLand';
 import MyNursery from './pages/Nurseries/MyNursery';
