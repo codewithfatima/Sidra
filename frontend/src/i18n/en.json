@@ -43,7 +43,7 @@
   "visit_site": "Visit Site",
   "contactUs": "CONTACT US",
   "infoText": "If you cannot find the information that you need on our website, please contact us.",
-    "phone": "Phone",
+  "phone": "Phone",
   "headOffice": "Head Office",
   "email": "Email",
   "firstName": "First Name*",
@@ -84,47 +84,45 @@
     "email": "info@sidra-kw.com",
     "address": "Qibla, Fahad Al Salem Street, Block 11, Sheikha Tower, 7th Floor"
   },
-  "valuesTitle": "Our Values",
-  "competitivenessParagraph": "Competitiveness means the ability of an individual, organization, or country to excel in a certain field compared to others. In short, it is your ability to be better than your competitors in offering a product, service, or value.",
-  "competitivenessDimensionsTitle": "Dimensions of Competitiveness:",
-  "competitivenessDimensions": {
+  "ourValuesTitle": "Our Values",
+  "competitivenessText": "Competitiveness means the ability of an individual, organization, or country to excel in a particular time or field compared to others. In short, it's your ability to be better than your competitors in offering a product, service, or value.",
+  "competitivenessDimensions": "Dimensions of Competitiveness:",
+  "competitivenessList": {
     "quality": "Offering products or services with higher quality than competitors.",
-    "cost": "Ability to offer appropriate prices while maintaining profitability.",
-    "innovation": "Introducing new ideas and solutions that make the customer prefer you over others.",
+    "cost": "Ability to offer suitable prices while maintaining profitability.",
+    "innovation": "Introducing new ideas and solutions that make customers prefer you.",
     "efficiency": "Completing tasks faster and more accurately than others.",
-    "brand": "The strength of trust and loyalty associated with your name."
+    "reputation": "The strength of trust and loyalty associated with your name."
   },
-  "profitabilityParagraph": "Profitability means a project’s or company’s ability to generate profits, i.e., revenues (income) are higher than costs and expenses.",
-  "profitabilityDimensionsTitle": "Dimensions of Profitability:",
-  "profitabilityDimensions": {
-    "grossProfit": "The difference between revenues and the direct cost of goods or services.",
-    "operatingProfit": "What remains after deducting operating expenses like salaries and rent.",
-    "netProfit": "The final amount after deducting all expenses including taxes and interest."
+  "profitabilityText": "Profitability means the ability of a project or company to generate profit, i.e., revenues (income) are greater than costs and expenses.",
+  "profitabilityDimensions": "Dimensions of Profitability:",
+  "profitabilityList": {
+    "grossProfit": "The difference between revenue and direct cost of goods or services.",
+    "operatingProfit": "What's left after deducting operating expenses like salaries and rent.",
+    "netProfit": "The final amount after deducting all expenses, including taxes and interest."
   },
-  "growthParagraph1": "Growth in business means an increase or expansion in the size or performance of the company over time.",
-  "growthParagraph2": "In other words: it is the quantitative or qualitative development that shows the company's progress compared to its previous state.",
-  "measurementIndicatorsTitle": "Measurement Indicators:",
-  "measurementIndicators": {
+  "growthText": "In the business world, growth means increasing or expanding the size or performance of the company over time.",
+  "growthMeaning": "In other words, it's the quantitative or qualitative development that achieves progress for the company compared to its previous state.",
+  "growthIndicatorsTitle": "Growth Indicators:",
+  "growthIndicators": {
     "revenueGrowth": "Percentage increase in income compared to the previous year.",
     "profitGrowth": "Development of net profit over a certain period.",
-    "customerGrowth": "Such as an increase in the number of parents or product subscribers.",
-    "marketShare": "Has your market share increased compared to before?",
-    "assetGrowth": "Such as owning new branches or more equipment."
+    "customerGrowth": "Increase in number of parents or subscribers to a product.",
+    "marketShareGrowth": "Is your market share larger than before?",
+    "assetGrowth": "Like acquiring new branches or more equipment."
   },
-  "impactParagraph1": "Impact means the result or deep effect that an action, decision, or project leaves on people, society, the market, or the environment.",
-  "impactParagraph2": "It’s not just about the profits or direct growth we achieve, but the tangible and sustainable change we leave in others and in our surrounding environment.",
+  "impactText1": "Impact means the result or deep effect that an action, decision, or project leaves on people, society, the market, or the environment.",
+  "impactText2": "It’s not only about profits or direct growth, but also the tangible and sustainable change we leave in others and our surroundings.",
   "impactDimensionsTitle": "Impact Dimensions",
-  "impactDimensions": {
-    "social": "Improving people's lives, supporting families and communities.",
-    "economic": "Creating jobs, increasing income and investment, stimulating the local economy.",
-    "educational": "Raising awareness and thinking among children or employees, spreading new values and skills.",
-    "environmental": "Reducing waste, relying on eco-friendly practices.",
+  "impactList": {
+    "social": "Improving people’s lives, supporting families and the community.",
+    "economic": "Creating jobs, increasing income and investment, boosting the local economy.",
+    "educational": "Raising awareness and thinking of children or employees, spreading new values and skills.",
+    "environmental": "Reducing waste, relying on environmentally friendly practices.",
     "emotional": "Building trust and loyalty, inspiring others to follow the same path.",
-    "cognitive": "Developing thinking and the ability to understand and comprehend, love of learning.",
-    "behavioral": "Instilling positive habits like cooperation and time respect, reducing negative behaviors.",
-    "ethical": "Promoting values such as honesty, integrity, responsibility, and belonging.",
-    "psychological": "Building self-confidence, expressing emotions, and enhancing the sense of security."
+    "cognitive": "Developing thinking, comprehension, and love of learning.",
+    "behavioral": "Instilling positive habits like cooperation and respecting time, reducing negative behaviors.",
+    "moral": "Promoting values like honesty, integrity, responsibility, and belonging.",
+    "psychological": "Building self-confidence, emotional expression, and enhancing the sense of security."
   }
-
-
 }
