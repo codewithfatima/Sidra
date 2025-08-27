@@ -17,7 +17,7 @@
   "locations": "Locations",
   "contact": "Contact",
   "footer": {
-    "school_name": "Sidra International Company",
+    "school_name": "Check it carefully",
     "school_description": "Inspiring young minds with excellence, character, and compassion. Nurturing future leaders in a global community.",
     "quick_links": "Quick Links",
     "home": "Home",
@@ -88,41 +88,64 @@
   "competitivenessText": "Competitiveness means the ability of an individual, organization, or country to excel in a particular time or field compared to others. In short, it's your ability to be better than your competitors in offering a product, service, or value.",
   "competitivenessDimensions": "Dimensions of Competitiveness:",
   "competitivenessList": {
+    "qualityLabel": "Quality:",
     "quality": "Offering products or services with higher quality than competitors.",
+    "costLabel": "Cost:",
     "cost": "Ability to offer suitable prices while maintaining profitability.",
+    "innovationLabel": "Innovation:",
     "innovation": "Introducing new ideas and solutions that make customers prefer you.",
+    "efficiencyLabel": "Efficiency:",
     "efficiency": "Completing tasks faster and more accurately than others.",
+    "reputationLabel": "Reputation:",
     "reputation": "The strength of trust and loyalty associated with your name."
   },
   "profitabilityText": "Profitability means the ability of a project or company to generate profit, i.e., revenues (income) are greater than costs and expenses.",
   "profitabilityDimensions": "Dimensions of Profitability:",
   "profitabilityList": {
+    "grossProfitLabel": "Gross Profit:",
     "grossProfit": "The difference between revenue and direct cost of goods or services.",
+    "operatingProfitLabel": "Operating Profit:",
     "operatingProfit": "What's left after deducting operating expenses like salaries and rent.",
+    "netProfitLabel": "Net Profit:",
     "netProfit": "The final amount after deducting all expenses, including taxes and interest."
   },
   "growthText": "In the business world, growth means increasing or expanding the size or performance of the company over time.",
   "growthMeaning": "In other words, it's the quantitative or qualitative development that achieves progress for the company compared to its previous state.",
   "growthIndicatorsTitle": "Growth Indicators:",
   "growthIndicators": {
+    "revenueGrowthLabel": "Revenue Growth:",
     "revenueGrowth": "Percentage increase in income compared to the previous year.",
+    "profitGrowthLabel": "Profit Growth:",
     "profitGrowth": "Development of net profit over a certain period.",
+    "customerGrowthLabel": "Customer Growth:",
     "customerGrowth": "Increase in number of parents or subscribers to a product.",
+    "marketShareGrowthLabel": "Market Share Growth:",
     "marketShareGrowth": "Is your market share larger than before?",
+    "assetGrowthLabel": "Asset Growth:",
     "assetGrowth": "Like acquiring new branches or more equipment."
   },
   "impactText1": "Impact means the result or deep effect that an action, decision, or project leaves on people, society, the market, or the environment.",
   "impactText2": "It’s not only about profits or direct growth, but also the tangible and sustainable change we leave in others and our surroundings.",
   "impactDimensionsTitle": "Impact Dimensions",
   "impactList": {
+    "socialLabel": "Social:",
     "social": "Improving people’s lives, supporting families and the community.",
+    "economicLabel": "Economic:",
     "economic": "Creating jobs, increasing income and investment, boosting the local economy.",
+    "educationalLabel": "Educational:",
     "educational": "Raising awareness and thinking of children or employees, spreading new values and skills.",
+    "environmentalLabel": "Environmental:",
     "environmental": "Reducing waste, relying on environmentally friendly practices.",
+    "emotionalLabel": "Emotional:",
     "emotional": "Building trust and loyalty, inspiring others to follow the same path.",
+    "cognitiveLabel": "Cognitive:",
     "cognitive": "Developing thinking, comprehension, and love of learning.",
+    "behavioralLabel": "Behavioral:",
     "behavioral": "Instilling positive habits like cooperation and respecting time, reducing negative behaviors.",
+    "moralLabel": "Moral:",
     "moral": "Promoting values like honesty, integrity, responsibility, and belonging.",
+    "psychologicalLabel": "Psychological:",
     "psychological": "Building self-confidence, emotional expression, and enhancing the sense of security."
   }
+
 }
