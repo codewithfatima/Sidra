@@ -14,6 +14,7 @@ import OurPartners from './pages/OurPartners';
 import OurMission from './pages/OurMission';
 import OurValues from './pages/OurValues';
 import OurVision from './pages/OurVision';
+import ScrollToTop from './Component/ScroltoTop';
 
 
 const App = () => {
@@ -35,6 +36,7 @@ const App = () => {
         <Route path="/prep" element={<Prep />} />
       </Routes>
       <Footer />
+      <ScrollToTop />
     </Router>
   );
 };
