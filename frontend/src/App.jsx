@@ -35,8 +35,8 @@ const App = () => {
         <Route path="/admin-news" element={<AdminNewsPage />} />
         <Route path="/prep" element={<Prep />} />
       </Routes>
-      <Footer />
       <ScrollToTop />
+      <Footer />
     </Router>
   );
 };
