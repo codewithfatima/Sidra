@@ -67,6 +67,8 @@ const OurValues = () => {
           <li className='text-lg'><strong className='text-yellow-600 text-lg font-semibold'>الأثر القيمي والأخلاقي: </strong> تعزيز قيم مثل الصدق، الأمانة، المسؤولية، والانتماء.</li>
           <li className='text-lg'><strong className='text-yellow-600 text-lg font-semibold'>الأثر النفسي والعاطفي: </strong> بناء الثقة بالنفس، التعبير عن المشاعر، وتعزيز الشعور بالأمان.</li>
         </ul>
+
+
       </div>
     </div>
   )
