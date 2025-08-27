@@ -1,14 +1,50 @@
 const mongoose = require('mongoose');
 
+// const newsSchema = new mongoose.Schema({
+//   title: {
+//     type: String,
+//     required: [true, 'Title is required'],
+//     trim: true,
+//   },
+//   desc: {
+//     type: String,
+//     required: [true, 'Description is required'],
+//     trim: true,
+//   },
+//   image: {
+//     type: String,
+//     required: [true, 'Image is required'],
+//   },
+//   type: {
+//     type: String,
+//     default: 'news',
+//   },
+//   date: {
+//     type: String,
+//     required: [true, 'Date is required'], 
+//   },
+// }, { timestamps: true });
+
+// const News = mongoose.model('News', newsSchema);
+
+
 const newsSchema = new mongoose.Schema({
   title: {
     type: String,
     required: [true, 'Title is required'],
     trim: true,
   },
+  title_ar: {
+    type: String,
+    trim: true,
+  },
   desc: {
     type: String,
     required: [true, 'Description is required'],
+    trim: true,
+  },
+  desc_ar: {
+    type: String,
     trim: true,
   },
   image: {
@@ -21,9 +57,10 @@ const newsSchema = new mongoose.Schema({
   },
   date: {
     type: String,
-    required: [true, 'Date is required'], 
+    required: [true, 'Date is required'],
   },
 }, { timestamps: true });
+
 
 const News = mongoose.model('News', newsSchema);
 

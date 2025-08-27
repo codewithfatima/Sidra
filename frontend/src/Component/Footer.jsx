@@ -23,7 +23,6 @@ const Footer = () => {
           <ul className="space-y-2 text-gray-300 ">
             <li><a href="/" className="hover:text-[#f5bc00]">{t('home')}</a></li>
             <li><a href="/about-" className="hover:text-[#f5bc00]">{t('about_us')}</a></li>
-              <li><a href="/contact" className="hover:text-[#f5bc00]">{t('our_sectors')}</a></li>
             <li><a href="/contact" className="hover:text-[#f5bc00]">{t('contact')}</a></li>
           </ul>
         </div>
@@ -32,7 +31,7 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-3 text-[#f5bc00]">{t('footer.contact')}</h3>
           <p className="text-gray-300 mt-2">{t('footer.address')}</p>
-          <p className="text-gray-300 mt-2">{t('footer.email')}</p>
+          <p className="text-gray-300 mt-2 mb-2">{t('footer.email')}</p>
           <p className="text-gray-300">{t('footer.phone')}</p>
         </div>
 
@@ -49,7 +48,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom line */}
-      <div className="mt-12 pb-5 text-center text-sm text-gray-300 border-t border[#f5bc00] pt-6">
+      <div className="mt-12 pb-5 text-center text-sm text-gray-300 border-t border-yellow-500 pt-6">
         &copy; {new Date().getFullYear()} {t('footer.school_name')} . {t('footer.copyright')}
       </div>
     </footer>

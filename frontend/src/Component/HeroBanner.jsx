@@ -4,8 +4,8 @@ import Pic1 from '../../src/assets/Pic1.jpg';
 import Pic2 from '../../src/assets/Pic22.gif';
 
 const slides = [
-  { image: Pic1, titleKey: 'hero.slide1', link: 'https://www.happylandkw.com/' },
   { image: Pic2, titleKey: 'hero.slide2', link: 'https://mynurserykw.com/' },
+  { image: Pic1, titleKey: 'hero.slide1', link: 'https://www.happylandkw.com/' },
 ];
 
 const HeroBanner = () => {

@@ -15,14 +15,48 @@ const getNews = async (req, res) => {
 };
 
 // ✅ Create news
+// const createNews = async (req, res) => {
+//   try {
+//     const news = await News.create(req.body);
+//     res.status(201).json(news);
+//   } catch (error) {
+//     res.status(400).json({ message: error.message });
+//   }
+// };
+
+// ✅ Create news with Arabic fields
 const createNews = async (req, res) => {
   try {
-    const news = await News.create(req.body);
+    const {
+      title,
+      title_ar,
+      desc,
+      desc_ar,
+      image,
+      type,
+      date
+    } = req.body;
+
+    if (!title || !desc || !image || !date) {
+      return res.status(400).json({ message: 'Missing required fields' });
+    }
+
+    const news = await News.create({
+      title,
+      title_ar,
+      desc,
+      desc_ar,
+      image,
+      type: type || 'news',
+      date
+    });
+
     res.status(201).json(news);
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
 };
+
 
 // ✅ Update news
 const updateNews = async (req, res) => {

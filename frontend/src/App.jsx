@@ -13,6 +13,8 @@ import AdminLogin from './pages/Login/AdminLogin';
 import AdminNewsPage from './pages/AdminNewsPage';
 import OurPartners from './pages/OurPartners';
 import OurMission from './pages/OurMission';
+import OurValues from './pages/OurValues';
+import OurVision from './pages/OurVision';
 
 
 const App = () => {
@@ -22,8 +24,9 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/contact' element={<ContactForm />} />
-        <Route path="/about/vision" element={<OurSchool />} />
+        <Route path="/about/vision" element={<OurVision />} />
         <Route path="/about/mission" element={<OurMission />} />
+        <Route path='/about/values' element={<OurValues />} />
         <Route path="/company" element={<AboutSidra />} />
         <Route path="/company/our-partner" element={<OurPartners />} />
         <Route path="/mynursery" element={<MyNursery />} />

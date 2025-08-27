@@ -39,22 +39,22 @@ const Contact = () => {
     <div dir={isArabic ? 'rtl' : 'ltr'}>
       <div className="flex flex-col md:flex-row justify-center items-center px-6 py-12 bg-gray-100 gap-12">
 
-       
+
         {/* Contact Info Section */}
         <motion.div
           className={`md:w-1/3 space-y-6 text-center ${isArabic ? 'md:text-right' : 'md:text-left'} mt-10`}
-          initial= "hidden"
+          initial="hidden"
           animate={{ opacity: 1, x: 0 }}
-          whileInView = "visible"
+          whileInView="visible"
           viewport={{ amount: 0.5, once: false }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          variants={ zoomInVariants}
+          variants={zoomInVariants}
         >
-          <motion.h2 
-          initial= "hidden"
-          whileInView= "visible"
-          variants={slideUpVariants}
-          className="text-3xl font-bold text-black relative inline-block">
+          <motion.h2
+            initial="hidden"
+            whileInView="visible"
+            variants={slideUpVariants}
+            className="text-3xl font-bold text-black relative inline-block">
             {t('contactUs')}
             <span className={`block w-16 h-1 bg-yellow-500 mt-2 transform ${isArabic ? 'mr-9' : 'ml-9'} origin-left rounded-md`}></span>
           </motion.h2>
@@ -82,8 +82,8 @@ const Contact = () => {
         <motion.form
           onSubmit={formik.handleSubmit}
           className="md:w-1/2 bg-white/60 backdrop-blur-lg rounded-2xl p-8 shadow-lg w-full space-y-4 lg:mt-10"
-          initial= "hidden"
-          whileInView= "visible"
+          initial="hidden"
+          whileInView="visible"
           variants={zoomInVariants}
         >
           {/* First and Last Name */}
@@ -92,7 +92,7 @@ const Contact = () => {
               name="firstName"
               type="text"
               placeholder={t('firstName')}
-              className="w-full p-3 rounded-full border border-gray-300 focus:outline-none"
+              className="w-full px-3 py-3 rounded-full border border-gray-300 focus:outline-none "
               value={formik.values.firstName}
               onChange={formik.handleChange}
             />

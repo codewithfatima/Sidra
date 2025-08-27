@@ -43,9 +43,9 @@ const OurMission = () => {
           <img
             src={Our1}
             alt={t('ourMission.imageAlt') || "Company Mission"}
-            className={`w-full h-[600px] border-4 border-yellow-400 object-cover shadow-lg
+            className={`w-[100] h-[600px] border-4 border-yellow-400 object-cover shadow-lg
               rounded-tr-3xl rounded-br-3xl
-              ${isRTL ? 'rounded-tr-none rounded-tl-3xl rounded-bl-3xl rounded-br-none' : ''}`} // flip border radius in rtl
+              ${isRTL ? 'rounded-tr-none rounded-tl-3xl rounded-bl-3xl rounded-br-none' : ''}`} 
           />
         </motion.div>
 

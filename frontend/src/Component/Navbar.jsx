@@ -33,11 +33,6 @@ const navItems = [
   },
   {
     titleKey: 'news'
-    // titleKey: "company",
-    // submenu: [
-    //   { titleKey: "about_sidra", path: "/company" },
-    //   { titleKey: "locations", path: "/company/locations" },
-    // ],
   },
   { titleKey: "contact", path: "/contact" },
 ];
@@ -213,7 +208,6 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      {/* Mobile Menu with Smooth Slide + Fade Animation */}
       <div
         className={`
     md:hidden bg-white border-t border-[#f5bc00] shadow-md font-almarai
@@ -259,8 +253,8 @@ const Navbar = () => {
                           <Link
                             to={sub.path}
                             className={`block px-2 py-1 ${isActive(sub.path)
-                                ? 'text-[#f5bc00]'
-                                : 'hover:text-[#f5bc00]'
+                              ? 'text-[#f5bc00]'
+                              : 'hover:text-[#f5bc00]'
                               } transition-colors duration-300`}
                             onClick={() => setMobileOpen(false)}
                           >
@@ -275,8 +269,8 @@ const Navbar = () => {
                 <Link
                   to={item.path}
                   className={`block px-2 py-2 font-medium ${isActive(item.path)
-                      ? 'text-[#f5bc00]'
-                      : 'hover:text-[#f5bc00]'
+                    ? 'text-[#f5bc00]'
+                    : 'hover:text-[#f5bc00]'
                     } transition-colors duration-300`}
                   onClick={() => setMobileOpen(false)}
                 >

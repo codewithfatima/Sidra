@@ -7,6 +7,7 @@ export default function AdminLogin() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -27,7 +28,7 @@ export default function AdminLogin() {
         toast.success('Admin login successful!');
         setTimeout(() => {
           navigate('/admin-news');
-        }, 1500);
+        }, 2000);
       } else {
         setError(data.message || 'Login failed');
       }
