@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import Vision from '../../src/assets/vision.png';
 import Nusery from '../../src/assets/Nusery.png';
 import { useTranslation } from 'react-i18next';
-import Perp from '../../src/assets/Perp.png'
+import Perp from '../../src/assets/perp.png'
 import Nuser from '../../src/assets/Nuser.png'
 
 const OurVision = () => {
