@@ -9,7 +9,7 @@ const OurMission = () => {
 
   return (
     <div className='min-h-screen bg-yellow-50 py-25 px-4 sm:px-6 lg:px-8 mt-10'>
-      <div 
+      <div
         className={`max-w-5xl mx-auto flex flex-col items-center
           ${isRTL ? 'text-right' : 'text-left'}`}
       >
@@ -23,8 +23,8 @@ const OurMission = () => {
           <h2 className="text-3xl font-bold text-gray-800 mb-6">
             {t('ourMission.title')}
           </h2>
-          <p 
-            className="text-lg text-gray-700 leading-loose" 
+          <p
+            className="text-lg text-gray-700 leading-loose"
             style={{ direction: isRTL ? 'rtl' : 'ltr' }}
           >
             {t('ourMission.paragraph1')}<br /><br />

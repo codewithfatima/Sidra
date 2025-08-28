@@ -1,11 +1,11 @@
 export const slideUpVariants = {
-  hidden: { y: 50, opacity: 0 }, // Start slightly below with no opacity
+  hidden: { y: 50, opacity: 0 }, 
   visible: {
-    y: 0, // Final position
-    opacity: 1, // Fully visible
+    y: 0, 
+    opacity: 1,
     transition: {
       staggerChildern: 2,
-      duration: 1.5, // Duration of the slide-up animation
+      duration: 1.5, 
       ease: "easeOut",
     },
   },
@@ -13,13 +13,13 @@ export const slideUpVariants = {
 
 
 export const zoomInVariants = {
-  hidden: { scale: 0.5, opacity: 0 }, // Start smaller with no opacity
+  hidden: { scale: 0.5, opacity: 0 }, 
   visible: {
-    scale: 1, // Full size
-    opacity: 1, // Fully visible
+    scale: 1, 
+    opacity: 1, 
     transition: {
       staggerChildern: 2,
-      duration: 1.2, // Duration of the zoom-in animation
+      duration: 1.2, 
       ease: "easeOut",
     },
   },
