@@ -53,9 +53,10 @@ const OurVision = () => {
 
         {/* mynusery */}
         <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}>
+          initial='hidden'
+          whileInView="visible"
+          variants={slideUpVariants}
+        >
           <h1 className='text-4xl font-bold text-center mt-25'>{t('my_nursery_title')}</h1>
           <span className='bg-yellow-500 w-20 h-1 rounded-full block mt-3 mx-auto'></span>
 
@@ -140,7 +141,7 @@ const OurVision = () => {
             />
           </motion.div>
 
-          <ul className='list-disc list-inside text-lg space-y-4 mt-10' >
+          <ul className='animate-fade-in list-disc list-inside text-lg space-y-4 mt-10' >
             {t('perp_points', { returnObjects: true }).map((point, idx) => (
 
               <li key={idx}>{point}</li>
