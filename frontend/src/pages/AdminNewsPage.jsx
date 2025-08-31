@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-// ✅ Use environment variable with fallback
+
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 export default function AdminNewsPage() {

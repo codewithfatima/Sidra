@@ -7,7 +7,7 @@ import { FaCalendarAlt } from "react-icons/fa";
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 const ITEMS_PER_PAGE = 6;
 
-// Optional: helper to translate text
+
 const translateText = async (text, targetLang = 'ar') => {
   if (!text) return '';
   try {
@@ -172,9 +172,8 @@ const NewsCard = ({ language = "en" }) => {
               <button
                 key={i}
                 onClick={() => goToPage(i + 1)}
-                className={`px-3 py-1 rounded ${
-                  currentPage === i + 1 ? "bg-blue-500 text-white" : "bg-gray-200"
-                }`}
+                className={`px-3 py-1 rounded ${currentPage === i + 1 ? "bg-blue-500 text-white" : "bg-gray-200"
+                  }`}
               >
                 {i + 1}
               </button>
@@ -186,9 +185,9 @@ const NewsCard = ({ language = "en" }) => {
               className="px-3 py-1 rounded bg-gray-300 disabled:opacity-50"
             >
               {language === "ar" ? "التالي" : "Next"}
-             
+
             </button>
-            
+
           </div>
         )}
       </section>

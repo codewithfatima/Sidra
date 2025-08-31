@@ -8,7 +8,10 @@ const OurMission = () => {
   const isRTL = i18n.dir() === 'rtl';
 
   return (
-    <div className='min-h-screen bg-yellow-50 py-25 px-4 sm:px-6 lg:px-8 mt-10'>
+
+    // <div className='min-h-screen bg-yellow-50 py-25 px-4 sm:px-6 lg:px-8 mt-10'>
+<div className='min-h-screen bg-gradient-to-br from-yellow-100 via-yellow-100 to-yellow-300 py-25 px-4 sm:px-6 lg:px-8 mt-10'>
+
       <div
         className={`max-w-5xl mx-auto flex flex-col items-center
           ${isRTL ? 'text-right' : 'text-left'}`}
