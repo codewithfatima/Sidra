@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import Pic1 from '../../src/assets/Pic1.jpg';
+import Pic1 from '../../src/assets/Pic2.jpg';
 import Pic2 from '../../src/assets/Pic22.gif';
 
 const slides = [

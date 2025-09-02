@@ -13,7 +13,7 @@ const OurValues = () => {
       initial={{ y: 50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8 }}
-      className={`min-h-screen bg-yellow-100 px-8 py-12 ${isRTL ? 'text-right' : 'text-left'} sm:px-6 md:px-10 lg:px-16 text-black leading-relaxed`}>
+      className={`min-h-screen bg-yellow-50 px-8 py-12 ${isRTL ? 'text-right' : 'text-left'} sm:px-6 md:px-10 lg:px-16 text-black leading-relaxed`}>
 
       <h1 className='text-5xl font-bold mt-20 text-center sm:text-4xl md:text-5xl'>
         {t("ourValuesTitle")}

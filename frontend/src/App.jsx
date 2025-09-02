@@ -4,17 +4,16 @@ import Navbar from './Component/Navbar';
 import Home from './pages/Home';
 import Footer from './Component/Footer';
 import ContactForm from './pages/Contact';
-import AboutSidra from './pages/AboutSidra';
 import HappyLand from './pages/Nurseries/HappyLand';
 import MyNursery from './pages/Nurseries/MyNursery';
 import Prep from './pages/Nurseries/Prep'
 import AdminLogin from './pages/Login/AdminLogin';
 import AdminNewsPage from './pages/AdminNewsPage';
-import OurPartners from './pages/OurPartners';
 import OurMission from './pages/OurMission';
 import OurValues from './pages/OurValues';
 import OurVision from './pages/OurVision';
 import ScrollToTop from './Component/ScroltoTop';
+import NewsCard from './Component/NewsCard';
 
 
 const App = () => {
@@ -27,8 +26,7 @@ const App = () => {
         <Route path="/about/vision" element={<OurVision />} />
         <Route path="/about/mission" element={<OurMission />} />
         <Route path='/about/values' element={<OurValues />} />
-        <Route path="/company" element={<AboutSidra />} />
-        <Route path="/company/our-partner" element={<OurPartners />} />
+        <Route path="/news" element={<NewsCard />} />
         <Route path="/mynursery" element={<MyNursery />} />
         <Route path="/happyland" element={<HappyLand />} />
         <Route path="/admin-login" element={<AdminLogin />} />\

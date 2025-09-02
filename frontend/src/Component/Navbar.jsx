@@ -32,7 +32,7 @@ const navItems = [
     ],
   },
   {
-    titleKey: 'news'
+    titleKey: 'news' , path:"/news"
   },
   { titleKey: "contact", path: "/contact" },
 ];

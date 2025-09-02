@@ -41,12 +41,14 @@ const Footer = () => {
           <div className="flex space-x-4 text-xl ">
             <a href="#" className="text-white hover:bg-gray-200 hover:text-black bg-yellow-500 rounded-full px-4 py-4"><FaFacebookF /></a>
             <a href="#" className="text-white hover:bg-gray-200 hover:text-black bg-yellow-500 rounded-full px-4 py-4"><FaTwitter /></a>
-            <a href="#" className="text-white hover:bg-gray-200 hover:text-black bg-yellow-500 rounded-full px-4 py-4"><FaInstagram /></a>
+            <a href="https://www.instagram.com/sidra_int/?utm_source=ig_web_button_share_sheet&igsh=MTVhZHR3ZDJmNmZqZQ%3D%3D#"
+              target='_blank'
+              className="text-white hover:bg-gray-200 hover:text-black bg-yellow-500 rounded-full px-4 py-4"><FaInstagram /></a>
             <a href="#" className="text-white hover:bg-gray-200 hover:text-black bg-yellow-500 rounded-full px-4 py-4"><FaLinkedinIn /></a>
           </div>
         </div>
-      </div>
 
+    </div>
       {/* Bottom line */}
       <div className="mt-12 pb-5 text-center text-sm text-gray-300 border-t border-yellow-500 pt-6">
         &copy; {new Date().getFullYear()} {t('footer.school_name')} . {t('footer.copyright')}

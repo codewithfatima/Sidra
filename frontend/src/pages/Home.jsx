@@ -4,12 +4,14 @@ import ContactForm from './Contact'
 import NewsCard from '../Component/NewsCard'
 import ScroltoTop from '../Component/ScroltoTop'
 import Locations from './Company/Locations'
+import ImageGallery from './ImageGallery'
 
 const Home = () => {
   return (
     <div >
       <Slider />
       <NewsCard />
+      <ImageGallery />
       <Locations />
       <ContactForm />
       <ScroltoTop />

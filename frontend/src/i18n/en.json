@@ -17,7 +17,7 @@
   "locations": "Locations",
   "contact": "Contact",
   "footer": {
-    "school_name": "Check it carefully",
+    "school_name": "Sidra International",
     "school_description": "Inspiring young minds with excellence, character, and compassion. Nurturing future leaders in a global community.",
     "quick_links": "Quick Links",
     "home": "Home",
@@ -29,7 +29,8 @@
     "email": "info@sidra-kw.com",
     "phone": "+695 68889799",
     "follow_us": "Follow Us",
-    "copyright": " All rights reserved."
+    "copyright": " All rights reserved.",
+    "Developed":"Fatima"
   },
   "hero": {
     "slide1": "Welcome to Sidra International Company",
@@ -211,7 +212,31 @@
     "Stand out with luxurious food packaging and presentation.",
     "Grow revenue via healthy food box projects, app orders, buffets, new products, and new sales channels."
   ],
-  "location": "Location"
+  "location": "Location",
+  "gallery": {
+    "title": "Our Gallery",
+    "categories": {
+      "children": "Children",
+      "events": "Events",
+      "courses": "Courses"
+    },
+    "subcategories": {
+      "Graduation Day": "Graduation Day",
+      "Pajama Day": "Pajama Day",
+      "Greening Day": "Greening Day",
+      "Palastine Day": "Palestine Day"
+    },
+    "alt": {
+      "child_classroom": "Child in classroom",
+      "child_playing_outside": "Child playing outside",
+      "graduation": "Graduation ceremony",
+      "pajamas": "Kids in pajamas",
+      "greening": "Greening Day celebration",
+      "plasticine": "Kids playing with plasticine",
+      "art_class": "Art class in progress"
+    }
+  }
+
 
 
 

@@ -17,6 +17,7 @@ export default function AdminNewsPage() {
     fetchNews();
   }, []);
 
+  
   const fetchNews = async () => {
     try {
       const res = await fetch(`${API_URL}/api/news`);
