@@ -3,26 +3,26 @@ import { slideUpVariants, zoomInVariants } from '../Component/variants';
 // import 'react-image-lightbox/style.css';
 import { useTranslation } from 'react-i18next';
 import { motion } from "framer-motion";
-// import Ch4 from '../assets/Ch4.jpg';
-import Ch5 from '../assets/Ch5.jpg';
-import Ch6 from '../assets/Ch6.jpg';
-import Ch7 from '../assets/Ch7.jpg';
-import Ch8 from '../assets/Ch8.jpg';
-import Ch9 from '../assets/Ch9.jpg';
-import Ch10 from '../assets/Ch10.jpg';
-import Ch11 from '../assets/Ch11.jpg';
-import Ch12 from '../assets/Ch12.jpg';
-import Ch13 from '../assets/Ch13.jpg';
-import Ch15 from '../assets/Ch15.jpg';
-import Ch16 from '../assets/Ch16.jpg';
-import Ch17 from '../assets/Ch17.jpg';
-import Ch18 from '../assets/Ch18.jpg';
-import Ch22 from '../assets/Ch22.jpg';
-import Ch23 from '../assets/Ch23.jpg';
-import Ch24 from '../assets/Ch24.jpg';
-import Ch27 from '../assets/Ch27.jpg';
-import Ch28 from '../assets/Ch28.jpg';
-import Ch29 from '../assets/Ch29.jpg';
+import Ch4 from '../../src/assets/Ch4.jpg';
+// import Ch5 from '../assets/Ch5.jpg';
+// import Ch6 from '../assets/Ch6.jpg';
+// import Ch7 from '../assets/Ch7.jpg';
+// import Ch8 from '../assets/Ch8.jpg';
+// import Ch9 from '../assets/Ch9.jpg';
+// import Ch10 from '../assets/Ch10.jpg';
+// import Ch11 from '../assets/Ch11.jpg';
+// import Ch12 from '../assets/Ch12.jpg';
+// import Ch13 from '../assets/Ch13.jpg';
+// import Ch15 from '../assets/Ch15.jpg';
+// import Ch16 from '../assets/Ch16.jpg';
+// import Ch17 from '../assets/Ch17.jpg';
+// import Ch18 from '../assets/Ch18.jpg';
+// import Ch22 from '../assets/Ch22.jpg';
+// import Ch23 from '../assets/Ch23.jpg';
+// import Ch24 from '../assets/Ch24.jpg';
+// import Ch27 from '../assets/Ch27.jpg';
+// import Ch28 from '../assets/Ch28.jpg';
+// import Ch29 from '../assets/Ch29.jpg';
 import Ch31 from '../assets/Ch31.jpg';
 
 
@@ -33,135 +33,135 @@ const imageData = [
     //     alt: 'Child in classroom',
     // },
 
-    {
-        category: 'children',
-        src: Ch22,
-        alt: 'Child playing outside',
-    },
-    {
-        category: 'children',
-        src: Ch23,
-        alt: 'Child playing outside',
-    },
-    {
-        category: 'children',
-        src: Ch24,
-        alt: 'Child playing outside',
-    },
+    // {
+    //     category: 'children',
+    //     src: Ch22,
+    //     alt: 'Child playing outside',
+    // },
+    // {
+    //     category: 'children',
+    //     src: Ch23,
+    //     alt: 'Child playing outside',
+    // },
+    // {
+    //     category: 'children',
+    //     src: Ch24,
+    //     alt: 'Child playing outside',
+    // },
     
+    {
+        category: 'events',
+        subcategory: 'Graduation Day',
+        src: Ch4,
+        alt: 'Graduation ceremony',
+    }, 
     // {
     //     category: 'events',
     //     subcategory: 'Graduation Day',
-    //     src: Ch4,
+    //     src: Ch5,
     //     alt: 'Graduation ceremony',
-    // }, 
-    {
-        category: 'events',
-        subcategory: 'Graduation Day',
-        src: Ch5,
-        alt: 'Graduation ceremony',
-    }, {
-        category: 'events',
-        subcategory: 'Graduation Day',
-        src: Ch6,
-        alt: 'Graduation ceremony',
-    }, {
-        category: 'events',
-        subcategory: 'Graduation Day',
-        src: Ch27,
-        alt: 'Graduation ceremony',
-    }, {
-        category: 'events',
-        subcategory: 'Graduation Day',
-        src: Ch29,
-        alt: 'Graduation ceremony',
-    },
+    // }, {
+    //     category: 'events',
+    //     subcategory: 'Graduation Day',
+    //     src: Ch6,
+    //     alt: 'Graduation ceremony',
+    // }, {
+    //     category: 'events',
+    //     subcategory: 'Graduation Day',
+    //     src: Ch27,
+    //     alt: 'Graduation ceremony',
+    // }, {
+    //     category: 'events',
+    //     subcategory: 'Graduation Day',
+    //     src: Ch29,
+    //     alt: 'Graduation ceremony',
+    // },
   
-    {
-        category: 'events',
-        subcategory: 'Graduation Day',
-        src: Ch31,
-        alt: 'Graduation ceremony',
-    },
-    {
-        category: 'events',
-        subcategory: 'Graduation Day',
-        src: Ch28,
-        alt: 'Graduation ceremony',
-    },
+    // {
+    //     category: 'events',
+    //     subcategory: 'Graduation Day',
+    //     src: Ch31,
+    //     alt: 'Graduation ceremony',
+    // },
+    // {
+    //     category: 'events',
+    //     subcategory: 'Graduation Day',
+    //     src: Ch28,
+    //     alt: 'Graduation ceremony',
+    // },
 
 
-    //pajamadaay
+    // //pajamadaay
    
-      {
-        category: 'events',
-        subcategory: 'Pajama Day',
-        src: Ch7,
-        alt: 'Kids in pajamas',
-    },
-      {
-        category: 'events',
-        subcategory: 'Pajama Day',
-        src: Ch8,
-        alt: 'Kids in pajamas',
-    },
-    // greening day
-    {
-        category: 'events',
-        subcategory: 'Greening Day',
-        src: Ch16,
-        alt: 'Kids in pajamas',
-    },
-    {
-        category: 'events',
-        subcategory: 'Greening Day',
-        src: Ch17,
-        alt: 'Kids in pajamas',
-    },
-    {
-        category: 'events',
-        subcategory: 'Greening Day',
-        src: Ch18,
-        alt: 'Kids in pajamas',
-    },
+    //   {
+    //     category: 'events',
+    //     subcategory: 'Pajama Day',
+    //     src: Ch7,
+    //     alt: 'Kids in pajamas',
+    // },
+    //   {
+    //     category: 'events',
+    //     subcategory: 'Pajama Day',
+    //     src: Ch8,
+    //     alt: 'Kids in pajamas',
+    // },
+    // // greening day
+    // {
+    //     category: 'events',
+    //     subcategory: 'Greening Day',
+    //     src: Ch16,
+    //     alt: 'Kids in pajamas',
+    // },
+    // {
+    //     category: 'events',
+    //     subcategory: 'Greening Day',
+    //     src: Ch17,
+    //     alt: 'Kids in pajamas',
+    // },
+    // {
+    //     category: 'events',
+    //     subcategory: 'Greening Day',
+    //     src: Ch18,
+    //     alt: 'Kids in pajamas',
+    // },
 
-    //plastine day
-    {
-        category: 'events',
-        subcategory: 'Palastine Day',
-        src: Ch9,
-        alt: 'Kids playing with plasticine',
-    },
-    {
-        category: 'events',
-        subcategory: 'Palastine Day',
-        src: Ch10,
-        alt: 'Kids playing with plasticine',
-    },
-    {
-        category: 'events',
-        subcategory: 'Palastine Day',
-        src: Ch11,
-        alt: 'Kids playing with plasticine',
-    },
-    {
-        category: 'events',
-        subcategory: 'Palastine Day',
-        src: Ch15,
-        alt: 'Kids playing with plasticine',
-    },
-    {
-        category: 'events',
-        subcategory: 'Palastine Day',
-        src: Ch12,
-        alt: 'Kids playing with plasticine',
-    },
-    {
-        category: 'events',
-        subcategory: 'Palastine Day',
-        src: Ch13,
-        alt: 'Kids playing with plasticine',
-    },
+    // //plastine day
+    // {
+    //     category: 'events',
+    //     subcategory: 'Palastine Day',
+    //     src: Ch9,
+    //     alt: 'Kids playing with plasticine',
+    // },
+    // {
+    //     category: 'events',
+    //     subcategory: 'Palastine Day',
+    //     src: Ch10,
+    //     alt: 'Kids playing with plasticine',
+    // },
+    // {
+    //     category: 'events',
+    //     subcategory: 'Palastine Day',
+    //     src: Ch11,
+    //     alt: 'Kids playing with plasticine',
+    // },
+    // {
+    //     category: 'events',
+    //     subcategory: 'Palastine Day',
+    //     src: Ch15,
+    //     alt: 'Kids playing with plasticine',
+    // },
+    // {
+    //     category: 'events',
+    //     subcategory: 'Palastine Day',
+    //     src: Ch12,
+    //     alt: 'Kids playing with plasticine',
+    // },
+    // {
+    //     category: 'events',
+    //     subcategory: 'Palastine Day',
+    //     src: Ch13,
+    //     alt: 'Kids playing with plasticine',
+    // },
     // {
     //     category: 'events',
     //     subcategory: 'Palastine Day',
