@@ -3,7 +3,7 @@ import { slideUpVariants, zoomInVariants } from '../Component/variants';
 // import 'react-image-lightbox/style.css';
 import { useTranslation } from 'react-i18next';
 import { motion } from "framer-motion";
-import Ch4 from '../../src/assets/Ch4.jpg';
+import Ch4 from '../../src/assets/Ch4.png'
 // import Ch5 from '../assets/Ch5.jpg';
 // import Ch6 from '../assets/Ch6.jpg';
 // import Ch7 from '../assets/Ch7.jpg';
