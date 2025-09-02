@@ -3,9 +3,6 @@ import { slideUpVariants, zoomInVariants } from '../Component/variants';
 // import 'react-image-lightbox/style.css';
 import { useTranslation } from 'react-i18next';
 import { motion } from "framer-motion";
-// import Ch1 from '../../src/assets/Ch1.jpg'
-import Ch2 from '../../src/assets/Ch2.jpg';
-import Ch3 from '../../src/assets/Ch3.jpg';
 import Ch4 from '../../src/assets/Ch4.jpg';
 import Ch5 from '../../src/assets/Ch5.jpg';
 import Ch6 from '../../src/assets/Ch6.jpg';
@@ -16,21 +13,16 @@ import Ch10 from '../../src/assets/Ch10.jpg';
 import Ch11 from '../../src/assets/Ch11.jpg';
 import Ch12 from '../../src/assets/Ch12.jpg';
 import Ch13 from '../../src/assets/Ch13.jpg';
-import Ch14 from '../../src/assets/Ch14.jpg';
 import Ch15 from '../../src/assets/Ch15.jpg';
 import Ch16 from '../../src/assets/Ch16.jpg';
 import Ch17 from '../../src/assets/Ch17.jpg';
 import Ch18 from '../../src/assets/Ch18.jpg';
-import Ch19 from '../../src/assets/Ch19.jpg';
-import Ch20 from '../../src/assets/Ch20.jpg';
-import Ch21 from '../../src/assets/Ch21.jpg';
 import Ch22 from '../../src/assets/Ch22.jpg';
 import Ch23 from '../../src/assets/Ch23.jpg';
 import Ch24 from '../../src/assets/Ch24.jpg';
 import Ch27 from '../../src/assets/Ch27.jpg';
 import Ch28 from '../../src/assets/Ch28.jpg';
 import Ch29 from '../../src/assets/Ch29.jpg';
-import Ch30 from '../../src/assets/Ch30.jpg';
 import Ch31 from '../../src/assets/Ch31.jpg';
 
 
