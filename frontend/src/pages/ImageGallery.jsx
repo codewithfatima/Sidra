@@ -3,7 +3,7 @@ import { slideUpVariants, zoomInVariants } from '../Component/variants';
 // import 'react-image-lightbox/style.css';
 import { useTranslation } from 'react-i18next';
 import { motion } from "framer-motion";
-import Ch4 from '../assets/Ch4.jpg';
+// import Ch4 from '../assets/Ch4.jpg';
 import Ch5 from '../assets/Ch5.jpg';
 import Ch6 from '../assets/Ch6.jpg';
 import Ch7 from '../assets/Ch7.jpg';
@@ -49,12 +49,13 @@ const imageData = [
         alt: 'Child playing outside',
     },
     
+    // {
+    //     category: 'events',
+    //     subcategory: 'Graduation Day',
+    //     src: Ch4,
+    //     alt: 'Graduation ceremony',
+    // }, 
     {
-        category: 'events',
-        subcategory: 'Graduation Day',
-        src: Ch4,
-        alt: 'Graduation ceremony',
-    }, {
         category: 'events',
         subcategory: 'Graduation Day',
         src: Ch5,
