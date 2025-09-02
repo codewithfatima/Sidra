@@ -190,6 +190,7 @@ const ImageGallery = () => {
                 <span className='bg-yellow-500 w-25 h-1 block rounded-lg mx-auto mt-2'></span>
             </motion.h2>
 
+{/* subcategory */}
             {['children', 'events', 'courses'].map((section) => (
                 <motion.div
                     initial='hidden'
