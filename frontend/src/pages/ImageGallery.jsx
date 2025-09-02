@@ -27,27 +27,27 @@ import Ch31 from '../assets/Ch31.jpg';
 
 
 const imageData = [
-    // {
-    //     category: 'children',
-    //     src: Ch1,
-    //     alt: 'Child in classroom',
-    // },
+    {
+        category: 'children',
+        src: Ch1,
+        alt: 'Child in classroom',
+    },
 
-    // {
-    //     category: 'children',
-    //     src: Ch22,
-    //     alt: 'Child playing outside',
-    // },
-    // {
-    //     category: 'children',
-    //     src: Ch23,
-    //     alt: 'Child playing outside',
-    // },
-    // {
-    //     category: 'children',
-    //     src: Ch24,
-    //     alt: 'Child playing outside',
-    // },
+    {
+        category: 'children',
+        src: Ch22,
+        alt: 'Child playing outside',
+    },
+    {
+        category: 'children',
+        src: Ch23,
+        alt: 'Child playing outside',
+    },
+    {
+        category: 'children',
+        src: Ch24,
+        alt: 'Child playing outside',
+    },
     
     {
         category: 'events',
@@ -55,119 +55,119 @@ const imageData = [
         src: Ch4,
         alt: 'Graduation ceremony',
     }, 
-    // {
-    //     category: 'events',
-    //     subcategory: 'Graduation Day',
-    //     src: Ch5,
-    //     alt: 'Graduation ceremony',
-    // }, {
-    //     category: 'events',
-    //     subcategory: 'Graduation Day',
-    //     src: Ch6,
-    //     alt: 'Graduation ceremony',
-    // }, {
-    //     category: 'events',
-    //     subcategory: 'Graduation Day',
-    //     src: Ch27,
-    //     alt: 'Graduation ceremony',
-    // }, {
-    //     category: 'events',
-    //     subcategory: 'Graduation Day',
-    //     src: Ch29,
-    //     alt: 'Graduation ceremony',
-    // },
+    {
+        category: 'events',
+        subcategory: 'Graduation Day',
+        src: Ch5,
+        alt: 'Graduation ceremony',
+    }, {
+        category: 'events',
+        subcategory: 'Graduation Day',
+        src: Ch6,
+        alt: 'Graduation ceremony',
+    }, {
+        category: 'events',
+        subcategory: 'Graduation Day',
+        src: Ch27,
+        alt: 'Graduation ceremony',
+    }, {
+        category: 'events',
+        subcategory: 'Graduation Day',
+        src: Ch29,
+        alt: 'Graduation ceremony',
+    },
   
-    // {
-    //     category: 'events',
-    //     subcategory: 'Graduation Day',
-    //     src: Ch31,
-    //     alt: 'Graduation ceremony',
-    // },
-    // {
-    //     category: 'events',
-    //     subcategory: 'Graduation Day',
-    //     src: Ch28,
-    //     alt: 'Graduation ceremony',
-    // },
+    {
+        category: 'events',
+        subcategory: 'Graduation Day',
+        src: Ch31,
+        alt: 'Graduation ceremony',
+    },
+    {
+        category: 'events',
+        subcategory: 'Graduation Day',
+        src: Ch28,
+        alt: 'Graduation ceremony',
+    },
 
 
     // //pajamadaay
    
-    //   {
-    //     category: 'events',
-    //     subcategory: 'Pajama Day',
-    //     src: Ch7,
-    //     alt: 'Kids in pajamas',
-    // },
-    //   {
-    //     category: 'events',
-    //     subcategory: 'Pajama Day',
-    //     src: Ch8,
-    //     alt: 'Kids in pajamas',
-    // },
+      {
+        category: 'events',
+        subcategory: 'Pajama Day',
+        src: Ch7,
+        alt: 'Kids in pajamas',
+    },
+      {
+        category: 'events',
+        subcategory: 'Pajama Day',
+        src: Ch8,
+        alt: 'Kids in pajamas',
+    },
     // // greening day
-    // {
-    //     category: 'events',
-    //     subcategory: 'Greening Day',
-    //     src: Ch16,
-    //     alt: 'Kids in pajamas',
-    // },
-    // {
-    //     category: 'events',
-    //     subcategory: 'Greening Day',
-    //     src: Ch17,
-    //     alt: 'Kids in pajamas',
-    // },
-    // {
-    //     category: 'events',
-    //     subcategory: 'Greening Day',
-    //     src: Ch18,
-    //     alt: 'Kids in pajamas',
-    // },
+    {
+        category: 'events',
+        subcategory: 'Greening Day',
+        src: Ch16,
+        alt: 'Kids in pajamas',
+    },
+    {
+        category: 'events',
+        subcategory: 'Greening Day',
+        src: Ch17,
+        alt: 'Kids in pajamas',
+    },
+    {
+        category: 'events',
+        subcategory: 'Greening Day',
+        src: Ch18,
+        alt: 'Kids in pajamas',
+    },
 
-    // //plastine day
-    // {
-    //     category: 'events',
-    //     subcategory: 'Palastine Day',
-    //     src: Ch9,
-    //     alt: 'Kids playing with plasticine',
-    // },
-    // {
-    //     category: 'events',
-    //     subcategory: 'Palastine Day',
-    //     src: Ch10,
-    //     alt: 'Kids playing with plasticine',
-    // },
-    // {
-    //     category: 'events',
-    //     subcategory: 'Palastine Day',
-    //     src: Ch11,
-    //     alt: 'Kids playing with plasticine',
-    // },
-    // {
-    //     category: 'events',
-    //     subcategory: 'Palastine Day',
-    //     src: Ch15,
-    //     alt: 'Kids playing with plasticine',
-    // },
-    // {
-    //     category: 'events',
-    //     subcategory: 'Palastine Day',
-    //     src: Ch12,
-    //     alt: 'Kids playing with plasticine',
-    // },
-    // {
-    //     category: 'events',
-    //     subcategory: 'Palastine Day',
-    //     src: Ch13,
-    //     alt: 'Kids playing with plasticine',
-    // },
-    // {
-    //     category: 'events',
-    //     subcategory: 'Palastine Day',
-    //     src: Ch14,
-    //     alt: 'Kids playing with plasticine',
-    // },
+    //plastine day
+    {
+        category: 'events',
+        subcategory: 'Palastine Day',
+        src: Ch9,
+        alt: 'Kids playing with plasticine',
+    },
+    {
+        category: 'events',
+        subcategory: 'Palastine Day',
+        src: Ch10,
+        alt: 'Kids playing with plasticine',
+    },
+    {
+        category: 'events',
+        subcategory: 'Palastine Day',
+        src: Ch11,
+        alt: 'Kids playing with plasticine',
+    },
+    {
+        category: 'events',
+        subcategory: 'Palastine Day',
+        src: Ch15,
+        alt: 'Kids playing with plasticine',
+    },
+    {
+        category: 'events',
+        subcategory: 'Palastine Day',
+        src: Ch12,
+        alt: 'Kids playing with plasticine',
+    },
+    {
+        category: 'events',
+        subcategory: 'Palastine Day',
+        src: Ch13,
+        alt: 'Kids playing with plasticine',
+    },
+    {
+        category: 'events',
+        subcategory: 'Palastine Day',
+        src: Ch14,
+        alt: 'Kids playing with plasticine',
+    },
 
     {
         category: 'courses',
