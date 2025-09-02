@@ -163,12 +163,12 @@ const imageData = [
         src: Ch13,
         alt: 'Kids playing with plasticine',
     },
-    {
-        category: 'events',
-        subcategory: 'Palastine Day',
-        src: Ch14,
-        alt: 'Kids playing with plasticine',
-    },
+    // {
+    //     category: 'events',
+    //     subcategory: 'Palastine Day',
+    //     src: Ch14,
+    //     alt: 'Kids playing with plasticine',
+    // },
 
     {
         category: 'courses',
