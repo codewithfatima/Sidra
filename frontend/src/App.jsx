@@ -14,6 +14,8 @@ import OurValues from './pages/OurValues';
 import OurVision from './pages/OurVision';
 import ScrollToTop from './Component/ScroltoTop';
 import NewsCard from './Component/NewsCard';
+import ImageGallery from './pages/ImageGallery';
+import EventGalleryPage from './pages/EventGalleryPage';
 
 
 const App = () => {
@@ -29,9 +31,11 @@ const App = () => {
         <Route path="/news" element={<NewsCard />} />
         <Route path="/mynursery" element={<MyNursery />} />
         <Route path="/happyland" element={<HappyLand />} />
-        <Route path="/admin-login" element={<AdminLogin />} />\
+        <Route path="/admin-login" element={<AdminLogin />} />
         <Route path="/admin-news" element={<AdminNewsPage />} />
         <Route path="/prep" element={<Prep />} />
+        <Route path="/gallery" element={<ImageGallery />} />
+        <Route path="/events/:subcategory" element={<EventGalleryPage />} />
       </Routes>
       <ScrollToTop />
       <Footer />
