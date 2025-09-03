@@ -17,7 +17,7 @@ export default function AdminNewsPage() {
     fetchNews();
   }, []);
 
-  
+
   const fetchNews = async () => {
     try {
       const res = await fetch(`${API_URL}/api/news`);
@@ -80,6 +80,38 @@ export default function AdminNewsPage() {
     setEditingId(news._id);
     setImageFile(null);
   };
+
+
+  const handleDelete = async (id) => {
+  if (!window.confirm("Are you sure you want to delete this news?")) return;
+
+  try {
+    const token = localStorage.getItem("adminToken");
+
+    const url = `${API_URL.replace(/\/$/, "")}/api/news/${id}`;
+    console.log("Deleting:", url);
+
+    const res = await fetch(url, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",   // ✅ add this
+        Authorization: `Bearer ${token}`,     // ✅ token
+      },
+    });
+
+    if (res.ok) {
+      toast.success("News deleted successfully!");
+      fetchNews(); // refresh list
+    } else {
+      const data = await res.json();
+      toast.error(data.message || "Failed to delete news.");
+    }
+  } catch (err) {
+    console.error("Delete error:", err);
+    toast.error("Server error");
+  }
+};
+
 
   return (
     <div className="min-h-screen pt-30 p-8 text-blue-900 max-w-3xl mx-auto w-full">
@@ -162,13 +194,20 @@ export default function AdminNewsPage() {
                 >
                   Edit
                 </button>
+
+                <button
+                  onClick={() => handleDelete(news._id)}
+                  className="text-red-400 hover:underline"
+                >
+                  Delete
+                </button>
               </li>
             ))}
           </ul>
         )}
       </div>
 
-    <ToastContainer position="top-right" />
+      <ToastContainer position="top-right" />
 
     </div>
   );

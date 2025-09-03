@@ -89,7 +89,7 @@ const ImageGallery = () => {
                             <p className="text-gray-600 text-lg font-bold mb-4">
                               {t('photos')}
                             </p>
-                            <div className="flex gap-3">
+                            <div className="flex flex-wrap gap-3">
                                 {[...new Set(imageData
                                     .filter((img) => img.category === section && img.subcategory)
                                     .map((img) => img.subcategory))].map((subcat, index) => (
