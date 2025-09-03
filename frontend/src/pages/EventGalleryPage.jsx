@@ -3,8 +3,10 @@ import { useParams } from 'react-router-dom';
 import imageData from './ImageData';
 import { Link } from 'react-router-dom'
 import { FaArrowLeftLong } from "react-icons/fa6";
+import { useTranslation } from 'react-i18next';
 
 const EventGalleryPage = () => {
+    const { t, i18n } = useTranslation();
     const { subcategory } = useParams();
 
     const normalizedSubcategory = subcategory.toLowerCase().replace(/\s+/g, '');
@@ -16,19 +18,25 @@ const EventGalleryPage = () => {
             img.subcategory.toLowerCase().replace(/\s+/g, '') === normalizedSubcategory
     );
 
-    const readableTitle = filteredImages[0]?.subcategory || 'Event Gallery';
+    // const readableTitle = filteredImages[0]?.subcategory || 'Event Gallery';
+ 
+    const subcatKey = filteredImages[0]?.subcategory; 
+const heading = subcatKey ? t(`galleryy.events.${subcatKey}`) : t('galleryy.title');
+
+
+
 
     return (
         <div className="px-4 py-10 max-w-7xl mx-auto mt-15">
 
-            <h2 className="text-3xl font-bold mb-6 text-center">{readableTitle}
+            <h2 className="text-3xl font-bold mb-6 text-center">{heading}
                 <span className='bg-yellow-500 w-20 h-1 block text-center rounded-lg mx-auto mt-2' ></span>
             </h2>
 
             <Link to='/gallery' className=' '>
                <span className='w-60 bg-yellow-500 px-3 py-2 flex items-center gap-3 text-black font-bold mb-5 hover:underline'> 
                 <FaArrowLeftLong />
-                Go Back To Gallery Page
+               {t('gallerys')}
                 </span>
             </Link>
 

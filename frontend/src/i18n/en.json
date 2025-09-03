@@ -30,7 +30,7 @@
     "phone": "+695 68889799",
     "follow_us": "Follow Us",
     "copyright": " All rights reserved.",
-    "Developed":"Fatima"
+    "Developed": "Fatima"
   },
   "hero": {
     "slide1": "Welcome to Sidra International Company",
@@ -235,13 +235,29 @@
       "plasticine": "Kids playing with plasticine",
       "art_class": "Art class in progress"
     },
+    "gallerys": "Go Back To Gallery Page",
     "photos": "Click below to view our events photos.."
-  }
-
-
-
-
-
-
-
+  },
+  "galleryy": {
+    "title": "Our Gallery",
+    "categories": {
+      "children": "Children",
+      "events": "Events",
+      "courses": "Courses"
+    },
+    "events": {
+      "palestineDay": "Palestine Day",
+      "pajamaDay": "Pajama Day",
+      "greeningDay": "Greening Day",
+      "graduationDay": "Graduation Day",
+      "careerWeek": "Career Week"
+    },
+    "images": {
+      "childClassroom": "Child in classroom",
+      "childOutside": "Child playing outside",
+      "childPlaying": "Child playing outside",
+      "course1": "Course 1"
+    }
+  },
+  "photos": "Photos"
 }

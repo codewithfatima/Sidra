@@ -7,7 +7,7 @@
   "our_values": "قيمنا",
   "our_vision": "رؤيتنا",
   "about_school": "عن المدرسة",
- "our_sectors": "قطاعاتنا",
+  "our_sectors": "قطاعاتنا",
   "happy_land": "هابي لاند",
   "my_nursery": "ماي نرسري",
   "admissions": "القبول",
@@ -17,7 +17,7 @@
   "locations": "المواقع",
   "contact": "التواصل",
   "footer": {
-    "school_name":" سدرة العالمية",
+    "school_name": " سدرة العالمية",
     "school_description": "إلهام العقول الشابة بالتميز والشخصية والتعاطف. تنشئة قادة المستقبل في مجتمع عالمي.",
     "quick_links": "روابط سريعة",
     "home": "الرئيسية",
@@ -27,7 +27,7 @@
     "contact": "اتصل بنا",
     "address": "القبلة ، شارع فهد السالم ، قطعة 11 ، برج شيخة الدور 7",
     "email": "info@sidra-kw.com",
-    "phone" :" 68889799",
+    "phone": " 68889799",
     "follow_us": "تابعنا",
     "copyright": " جميع الحقوق محفوظة."
   },
@@ -241,13 +241,27 @@
       "art_class": "حصة فنية جارية"
     }
   },
-   "photos": "انقر أدناه لعرض صور فعالياتنا.."
-  
-
-
-
-
-
-
+  "photos": "انقر أدناه لعرض صور فعالياتنا..",
+  "gallerys": " العودة إلى صفحة المعرض",
+  "galleryy": {
+    "title": "معرض الصور",
+    "categories": {
+      "children": "الأطفال",
+      "events": "الفعاليات",
+      "courses": "الدورات"
+    },
+    "events": {
+      "palestineDay": "يوم فلسطين",
+      "pajamaDay": "يوم البيجاما",
+      "greeningDay": "يوم التشجير",
+      "graduationDay": "يوم التخرج",
+      "careerWeek": "أسبوع المهنة"
+    },
+    "images": {
+      "childClassroom": "طفل في الصف",
+      "childOutside": "طفل يلعب في الخارج",
+      "childPlaying": "طفل يلعب",
+      "course1": "دورة 1"
+    }
+  }
 }
-

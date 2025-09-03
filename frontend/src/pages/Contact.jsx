@@ -7,6 +7,7 @@ import { slideUpVariants, zoomInVariants } from '../Component/variants'
 import { MdOutlineMailOutline } from "react-icons/md";
 import { GrLocationPin } from "react-icons/gr";
 
+
 import axios from 'axios';
 
 const Contact = () => {
@@ -33,6 +34,8 @@ const Contact = () => {
         alert('Failed to send message. Please try again later.');
       }
     },
+    
+
   });
 
   return (

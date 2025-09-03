@@ -30,66 +30,66 @@ const imageData = [
     // Graduation Day
     {
         category: 'events',
-        subcategory: 'Graduation Day',
+        subcategory: 'graduationDay',
         src: Ch4,
         alt: 'Graduation Day Image 1',
     },
     {
         category: 'events',
-        subcategory: 'Graduation Day',
+        subcategory: 'graduationDay',
         src: Ch5,
         alt: 'Graduation Day Image 2',
     },
     {
         category: 'events',
-        subcategory: 'Graduation Day',
+        subcategory: 'graduationDay',
         src: Ch6,
         alt: 'Graduation Day Image 3',
     },
     {
         category: 'events',
-        subcategory: 'Graduation Day',
+        subcategory: 'graduationDay',
         src: Ch25,
         alt: 'Graduation Day Image 3',
     },
     {
         category: 'events',
-        subcategory: 'Graduation Day',
+        subcategory: 'graduationDay',
         src: Ch26,
         alt: 'Graduation Day Image 3',
     },
     {
         category: 'events',
-        subcategory: 'Graduation Day',
+        subcategory: 'graduationDay',
         src: Ch27,
         alt: 'Graduation Day Image 3',
     },
     {
         category: 'events',
-        subcategory: 'Graduation Day',
+        subcategory: 'graduationDay',
         src: Ch28,
         alt: 'Graduation Day Image 3',
     },
     {
         category: 'events',
-        subcategory: 'Graduation Day',
+        subcategory: 'graduationDay',
         src: Ch29,
         alt: 'Graduation Day Image 3',
     },
     {
         category: 'events',
-        subcategory: 'Graduation Day',
+        subcategory: 'graduationDay',
         src: Ch30,
         alt: 'Graduation Day Image 3',
     },
     {
         category: 'events',
-        subcategory: 'Graduation Day',
+        subcategory: 'graduationDay',
         src: Ch31,
         alt: 'Graduation Day Image 3',
     }, {
         category: 'events',
-        subcategory: 'Graduation Day',
+        subcategory: 'graduationDay',
         src: Ch32,
         alt: 'Graduation Day Image 3',
     },
@@ -97,93 +97,93 @@ const imageData = [
     // Pajama Day
     {
         category: 'events',
-        subcategory: 'Pajama Day',
+        subcategory: 'pajamaDay',
         src: Ch7,
         alt: 'Pajama Day Image 1',
     },
     {
         category: 'events',
-        subcategory: 'Pajama Day',
+        subcategory: 'pajamaDay',
         src: Ch8,
         alt: 'Pajama Day Image 2',
     },
     {
         category: 'events',
-        subcategory: 'Pajama Day',
+        subcategory: 'pajamaDay',
         src: Ch41,
         alt: 'Pajama Day Image 2',
     },
     // Palestine Day
     {
         category: 'events',
-        subcategory: 'Palestine Day',
+        subcategory: 'palestineDay',
         src: Ch9,
         alt: 'Palestine Day Image 1',
     },
     {
         category: 'events',
-        subcategory: 'Palestine Day',
+        subcategory: 'palestineDay',
         src: Ch10,
         alt: 'Palestine Day Image 2',
     },
     {
         category: 'events',
-        subcategory: 'Palestine Day',
+        subcategory: 'palestineDay',
         src: Ch11,
         alt: 'Palestine Day Image 2',
     },
     {
         category: 'events',
-        subcategory: 'Palestine Day',
+        subcategory: 'palestineDay',
         src: Ch12,
         alt: 'Palestine Day Image 2',
     },
     {
         category: 'events',
-        subcategory: 'Palestine Day',
+        subcategory: 'palestineDay',
         src: Ch13,
         alt: 'Palestine Day Image 2',
     },
     {
         category: 'events',
-        subcategory: 'Palestine Day',
+        subcategory: 'palestineDay',
         src: Ch14,
         alt: 'Palestine Day Image 2',
     },
     {
         category: 'events',
-        subcategory: 'Palestine Day',
+        subcategory: 'palestineDay',
         src: Ch15,
         alt: 'Palestine Day Image 2',
     },
     // Greening Day
     {
         category: 'events',
-        subcategory: 'Greening Day',
+        subcategory: 'greeningDay',
         src: Ch16,
         alt: 'Greening Day Image 1',
     },
     {
         category: 'events',
-        subcategory: 'Greening Day',
+        subcategory: 'greeningDay',
         src: Ch16,
         alt: 'Greening Day Image 1',
     },
     {
         category: 'events',
-        subcategory: 'Greening Day',
+        subcategory: 'greeningDay',
         src: Ch17,
         alt: 'Greening Day Image 1',
     },
     {
         category: 'events',
-        subcategory: 'Greening Day',
+        subcategory: 'greeningDay',
         src: Ch19,
         alt: 'Greening Day Image 1',
     },
     {
         category: 'events',
-        subcategory: 'Greening Day',
+        subcategory: 'greeningDay',
         src: Ch18,
         alt: 'Greening Day Image 1',
     },
@@ -191,16 +191,18 @@ const imageData = [
     //career weak 
     {
         category: 'events',
-        subcategory: 'Career Weak',
+        subcategory: 'careerWeek',
         src: Ch20,
         alt: 'Greening Day Image 1',
     },
     {
         category: 'events',
-        subcategory: 'Career Weak',
+        subcategory: 'careerWeek',
         src: Ch21,
         alt: 'Greening Day Image 1',
     },
+
+
 ];
 
 export default imageData;
