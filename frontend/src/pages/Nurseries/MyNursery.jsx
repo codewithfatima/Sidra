@@ -2,14 +2,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { slideUpVariants, zoomInVariants } from '../../Component/variants.js';;
-import MyNurserys from '../../../src/assets/Mynursery.png';
+import MyNusery from '../../../src/assets/MyNusery.png';
 
 const MyNursery = () => {
   const { t } = useTranslation();
 
 
   const school = {
-    image: MyNurserys,
+    image: MyNusery,
     title: t('my_nursery'),
     desc: t('my_nursery_desc'),
     link: 'https://mynurserykw.com/',
@@ -29,13 +29,13 @@ const MyNursery = () => {
           boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
           transition: { type: 'spring', stiffness: 300, damping: 20 },
         }}
-        className="m-5 w-full sm:max-w-xl md:max-w-2xl lg:max-w-7xl px-4 sm:px-8 py-6 sm:py-10 bg-gray-50 border-3 border-yellow-400 rounded-lg text-center"
+        className="m-5 w-full sm:max-w-xl md:max-w-2xl lg:max-w-7xl px-4 sm:px-8 py-6 sm:py-10 bg-white border-3 border-yellow-400 rounded-lg text-center"
 
       >
         <img
           src={school.image}
           alt={`${school.title} - nursery in Kuwait`}
-          className="w-32 sm:w-40 md:w-48 lg:w-56 h-auto object-cover rounded-lg mb-6 mx-auto"
+          className="w-32 sm:w-40 md:w-48 lg:w-56 h-auto object-cover rounded-lg mb- mx-auto"
         />
         <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-yellow-700 mb-4">{school.title}</h3>
         <p className="text-gray-700 text-base sm:text-lg md:text-xl mb-8">{school.desc}</p>
