@@ -38,7 +38,7 @@ const OurVision = () => {
             <img
               src={Vision}
               alt="Nursery"
-              className="h-auto object-cover max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl"
+              className="h-auto object-cover max-w-xs sm:max-w-[20px] md:max-w-md lg:max-w-lg xl:max-w-xl"
             />
           </motion.div>
 

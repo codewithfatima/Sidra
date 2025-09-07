@@ -18,10 +18,9 @@ const EventGalleryPage = () => {
             img.subcategory.toLowerCase().replace(/\s+/g, '') === normalizedSubcategory
     );
 
-    // const readableTitle = filteredImages[0]?.subcategory || 'Event Gallery';
- 
-    const subcatKey = filteredImages[0]?.subcategory; 
-const heading = subcatKey ? t(`galleryy.events.${subcatKey}`) : t('galleryy.title');
+
+    const subcatKey = filteredImages[0]?.subcategory;
+    const heading = subcatKey ? t(`galleryy.events.${subcatKey}`) : t('galleryy.title');
 
 
 
@@ -34,9 +33,9 @@ const heading = subcatKey ? t(`galleryy.events.${subcatKey}`) : t('galleryy.titl
             </h2>
 
             <Link to='/gallery' className=' '>
-               <span className='w-60 bg-yellow-500 px-3 py-2 flex items-center gap-3 text-black font-bold mb-5 hover:underline'> 
-                <FaArrowLeftLong />
-               {t('gallerys')}
+                <span className='w-60 bg-yellow-500 rounded-lg px-3 py-2 flex items-center gap-3 text-black font-bold mb-5 cursor-pointer hover:bg-yellow-500'>
+                    <FaArrowLeftLong />
+                    {t('gallerys')}
                 </span>
             </Link>
 

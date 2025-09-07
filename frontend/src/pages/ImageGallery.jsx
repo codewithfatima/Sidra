@@ -104,7 +104,7 @@ const ImageGallery = () => {
                     <motion.div 
                       key={index}
                       whileHover={{ scale: 1.05 }}
-                      className="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer"
+                      className="cursor-pointer relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer"
                       onClick={() => setSelectedImg(img)}
                     >
                       <img
