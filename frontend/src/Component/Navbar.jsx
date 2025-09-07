@@ -235,20 +235,20 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      <div
+      {/* {/* Mobile Menu */}
+      {/* <div
         className={`
     md:hidden bg-white border-t border-[#f5bc00] shadow-md font-almarai
     transition-all duration-500 ease-in-out overflow-hidden
     ${mobileOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}
   `}
       >
-        <ul className="flex flex-col px-3 py-4 space-y-2">
+        <ul className="flex flex-col px-3 py-4 space-y-2 ">
           {navItems.map((item, idx) => (
             <li key={idx}>
               {item.submenu ? (
                 <details className="group">
-                  <summary className="flex justify-between items-center px-2 py-2 text-md font-bold  cursor-pointer text-black hover:text-[#f5bc00] transition-colors duration-300">
+                  <summary className="flex justify-between items-center h-16  px-4 sm:px-8 py-2 text-md font-bold  cursor-pointer text-black hover:text-[#f5bc00] transition-colors duration-300">
                     {t(item.titleKey)}
                     <svg
                       className="ml-2 h-4 w-4 group-open:rotate-180 transition-transform duration-300"
@@ -296,7 +296,7 @@ const Navbar = () => {
               ) : (
                 <Link
                   to={item.path}
-                  className={`block px-2 py-2 text-md font-bold ${isActive(item.path)
+                  className={`block px-2 py-2 font-bold ${isActive(item.path)
                     ? 'text-[#f5bc00]'
                     : 'hover:text-[#f5bc00]'
                     } transition-colors duration-300`}
@@ -317,7 +317,80 @@ const Navbar = () => {
             </button>
           </Link>
         </ul>
-      </div>
+      </div>  */}
+{/* Mobile Menu */}
+<div className={`md:hidden ${mobileOpen ? 'block' : 'hidden'} bg-white border-t border-[#f5bc00] shadow-md font-almarai`}>
+  <ul className="flex flex-col px-4 py-4 space-y-2">
+    {navItems.map((item, idx) => (
+      <li key={idx}>
+        {item.submenu ? (
+          <details className="group">
+            <summary className="flex justify-between items-center px-2 py-3 text-md font-bold cursor-pointer text-black hover:text-[#f5bc00] transition-colors duration-300">
+              {t(item.titleKey)}
+              <svg
+                className="ml-2 h-4 w-4 group-open:rotate-180 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <ul className="pl-4 space-y-1 font-almarai pb-2">
+              {item.submenu.map((sub, subIdx) => (
+                <li key={subIdx}>
+                  {sub.external ? (
+                    <a
+                      href={sub.path}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block px-2 py-2 text-black hover:text-[#f5bc00] transition-colors duration-300"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      {t(sub.titleKey)}
+                    </a>
+                  ) : (
+                    <Link
+                      to={sub.path}
+                      className={`block font-bold text-md px-2 py-2 ${
+                        isActive(sub.path) ? 'text-[#f5bc00]' : 'hover:text-[#f5bc00]'
+                      } transition-colors duration-300`}
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      {t(sub.titleKey)}
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </details>
+        ) : (
+          <Link
+            to={item.path}
+            className={`block px-2 py-3 font-bold ${
+              isActive(item.path) ? 'text-[#f5bc00]' : 'hover:text-[#f5bc00]'
+            } transition-colors duration-300`}
+            onClick={() => setMobileOpen(false)}
+          >
+            {t(item.titleKey)}
+          </Link>
+        )}
+      </li>
+    ))}
+
+    <li className="px-2 pt-2">
+      <Link to="/admin-login">
+        <button
+          className="bg-[#f5bc00] font-bold text-black py-2 px-4 rounded-md w-full hover:bg-yellow-500 transition-colors duration-300"
+          onClick={() => setMobileOpen(false)}
+        >
+          Login
+        </button>
+      </Link>
+    </li>
+  </ul>
+</div>
 
 
     </nav>
