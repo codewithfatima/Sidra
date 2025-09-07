@@ -58,16 +58,16 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-md fixed w-full z-50 top-0 font-almarai">
       <div className="max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-18 px-4 sm:px-8" >
+        <div className="flex justify-between items-center h-16 px-4 sm:px-8" >
 
           {/* Logo */}
-          <div className="flex items-center space-x-3 text-sm sm:text-base ">
+          {/* <div className="flex items-center space-x-3 text-sm sm:text-base ">
             <Link
               to="/"
               className="flex items-center hover:text-[#f5bc00] transition-colors duration-300 font-almarai"
             >
               <img src={Logo} alt="Logo" className="h-15 w-15 object-contain" />
-              <span className="font-bold  text-center align-center">
+              <span className="font-bold text-center align-center">
                 <span className="text-black sm:text-xl lg:text-2xl ">
                   {t("brand_sidra")}
                 </span>{" "}
@@ -79,7 +79,29 @@ const Navbar = () => {
               </span>
 
             </Link>
-          </div>
+          </div> */}
+
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-sm sm:text-base">
+  <Link
+    to="/"
+    className="flex items-center space-x-2 hover:text-[#f5bc00] transition-colors duration-300 font-almarai"
+  >
+    <img
+      src={Logo}
+      alt="Logo"
+      className="h-10 w-10 sm:h-12 sm:w-12 lg:h-16 lg:w-16 object-contain"
+    />
+    <span className="flex flex-col sm:flex-row sm:items-center font-bold text-center">
+      <span className="text-black text-base sm:text-xl lg:text-2xl">
+        {t("brand_sidra")}
+      </span>{" "}
+      <span className="text-yellow-500 text-base sm:text-xl lg:text-2xl sm:ml-2">
+        {t("brand_international")}
+      </span>
+    </span>
+  </Link>
+</div>
+
 
           {/* Desktop Nav */}
           <div className="hidden md:flex space-x-8 flex-1 justify-center">
