@@ -32,7 +32,7 @@ const navItems = [
     ],
   },
   {
-    titleKey: 'news' , path:"/news"
+    titleKey: 'news', path: "/news"
   },
   { titleKey: "contact", path: "/contact" },
 ];
@@ -58,18 +58,24 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-md fixed w-full z-50 top-0 font-almarai">
       <div className="max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 px-4 sm:px-8" >
+        <div className="flex justify-between items-center h-18 px-4 sm:px-8" >
 
           {/* Logo */}
-          <div className="flex items-center space-x-3 text-sm sm:text-base -ml-7 ">
+          <div className="flex items-center space-x-3 text-sm sm:text-base ">
             <Link
               to="/"
               className="flex items-center hover:text-[#f5bc00] transition-colors duration-300 font-almarai"
             >
-              <img src={Logo} alt="Logo" className="h-12 w-12 object-contain" />
-              <span className="font-bold text-sm sm:text-base">
-                <span className="text-black text-xl">{t("brand_sidra")}</span>{" "}
-                <span className="text-yellow-500 text-xl">{t("brand_international")}</span>
+              <img src={Logo} alt="Logo" className="h-15 w-15 object-contain" />
+              <span className="font-bold  text-center align-center">
+                <span className="text-black sm:text-xl lg:text-2xl ">
+                  {t("brand_sidra")}
+                </span>{" "}
+                <span className="text-yellow-500 sm:text-xl lg:text-2xl">
+                  {t("brand_international")}
+                </span>
+
+
               </span>
 
             </Link>
@@ -77,11 +83,11 @@ const Navbar = () => {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex space-x-8 flex-1 justify-center">
-            <ul className="flex space-x-6">
+            <ul className="flex space-x-8">
               {navItems.map((item, idx) => (
                 <li
                   key={idx}
-                  className="relative group"
+                  className="relative group text-lg"
                   onMouseEnter={() => {
                     clearTimeout(dropdownTimeout.current);
                     setOpenDropdown(idx);
@@ -93,7 +99,7 @@ const Navbar = () => {
                   {!!item.submenu ? (
                     <>
                       <button
-                        className={`font-almarai text-base font-bold cursor-pointer transition-colors duration-300 ${isSubmenuActive(item.submenu)
+                        className={`font-almarai text-lg font-bold cursor-pointer transition-colors duration-300 ${isSubmenuActive(item.submenu)
                           ? "text-[#f5bc00]"
                           : "text-black group-hover:text-[#f5bc00]"
                           }`}
@@ -111,7 +117,7 @@ const Navbar = () => {
                         </svg>
                       </button>
                       {openDropdown === idx && (
-                        <ul className="absolute left-0 mt-2 w-48 bg-white border border-[#f5bc00] rounded-md shadow-lg z-50 font-almarai">
+                        <ul className="absolute left-0 mt-2 w-48 bg-white border-2 border-[#f5bc00] rounded-md shadow-lg z-50 font-almarai">
                           {item.submenu.map((sub, subIdx) => (
                             <li key={subIdx}>
                               {sub.external ? (
@@ -119,7 +125,7 @@ const Navbar = () => {
                                   href={sub.path}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="block px-4 py-2 text-black hover:text-[#b8860b] hover:bg-yellow-100 rounded-md transition-colors duration-200"
+                                  className="block px-4 py-2 text-black  hover:text-[#b8860b] hover:bg-yellow-100 rounded-md transition-colors duration-200"
                                   onClick={() => setOpenDropdown(null)}
                                 >
                                   {t(sub.titleKey)}
@@ -127,7 +133,7 @@ const Navbar = () => {
                               ) : (
                                 <Link
                                   to={sub.path}
-                                  className="block px-4 py-2 text-black hover:bg-[#fff8cc] hover:text-[#b8860b] rounded-md transition-colors duration-200"
+                                  className="block  px-4 py-2 font-bold text-black hover:bg-[#fff8cc] hover:text-[#b8860b] rounded-md transition-colors duration-200"
                                   onClick={() => setOpenDropdown(null)}
                                 >
                                   {t(sub.titleKey)}
@@ -143,7 +149,7 @@ const Navbar = () => {
                       to={item.path}
                       className={`font-almarai font-bold transition-colors duration-300 ${isActive(item.path)
                         ? "text-[#f5bc00]"
-                        : "text-black hover:text-[#f5bc00]"
+                        : "text-black hover:text-[#f5bc00] text-lg"
                         }`}
                     >
                       {t(item.titleKey)}
@@ -199,7 +205,7 @@ const Navbar = () => {
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle Menu"
-              className="cursor-pointer text-yellow-400 hover:text-[#f5bc00] transition-colors duration-300 -mr-7"
+              className="cursor-pointer text-yellow-400 hover:text-[#f5bc00] transition-colors duration-300 mr-7"
             >
               {mobileOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
             </button>
@@ -215,12 +221,12 @@ const Navbar = () => {
     ${mobileOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}
   `}
       >
-        <ul className="flex flex-col px-4 py-4 space-y-2">
+        <ul className="flex flex-col px-3 py-4 space-y-2">
           {navItems.map((item, idx) => (
             <li key={idx}>
               {item.submenu ? (
                 <details className="group">
-                  <summary className="flex justify-between items-center px-2 py-2 font-medium cursor-pointer text-black hover:text-[#f5bc00] transition-colors duration-300">
+                  <summary className="flex justify-between items-center px-2 py-2 text-md font-bold  cursor-pointer text-black hover:text-[#f5bc00] transition-colors duration-300">
                     {t(item.titleKey)}
                     <svg
                       className="ml-2 h-4 w-4 group-open:rotate-180 transition-transform duration-300"
@@ -244,7 +250,7 @@ const Navbar = () => {
                             href={sub.path}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="block px-2 py-1 text-black hover:text-[#f5bc00] transition-colors duration-300"
+                            className="block px-2 py-1  text-black hover:text-[#f5bc00] transition-colors duration-300"
                             onClick={() => setMobileOpen(false)}
                           >
                             {t(sub.titleKey)}
@@ -252,7 +258,7 @@ const Navbar = () => {
                         ) : (
                           <Link
                             to={sub.path}
-                            className={`block px-2 py-1 ${isActive(sub.path)
+                            className={`block font-bold text-md px-2 py-1 ${isActive(sub.path)
                               ? 'text-[#f5bc00]'
                               : 'hover:text-[#f5bc00]'
                               } transition-colors duration-300`}
@@ -268,7 +274,7 @@ const Navbar = () => {
               ) : (
                 <Link
                   to={item.path}
-                  className={`block px-2 py-2 font-medium ${isActive(item.path)
+                  className={`block px-2 py-2 text-md font-bold ${isActive(item.path)
                     ? 'text-[#f5bc00]'
                     : 'hover:text-[#f5bc00]'
                     } transition-colors duration-300`}

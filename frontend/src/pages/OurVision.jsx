@@ -24,7 +24,7 @@ const OurVision = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className={`text-4xl font-bold text-center `}>
+          <h1 className={`text-4xl font-bold text-center mt-5 `}>
             {t('vision_title')}
           </h1>
           <span className='bg-yellow-500 w-20 h-1 rounded-full block mt-4 mb-16 mx-auto'></span>
@@ -34,6 +34,7 @@ const OurVision = () => {
             whileInView="visible"
             variants={zoomInVariants}
             className="flex justify-center items-center -mt-10 px-4 sm:px-6 md:px-8 lg:px-10">
+              
             <img
               src={Vision}
               alt="Nursery"

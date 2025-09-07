@@ -40,3 +40,4 @@ router.put('/:id', authenticate, adminOnly, upload.single('image'), updateNews)
 router.delete("/:id", deleteNews);
 
 module.exports = router;
+

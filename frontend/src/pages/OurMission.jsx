@@ -48,6 +48,16 @@ const OurMission = () => {
 
   return (
     <section className="min-h-screen px-6 py-24 bg-yellow-50 overflow-hidden">
+       <motion.h1
+              initial={{ scale: 0.9, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-3 mt-5"
+            >
+              {t("our_mission")}
+            </motion.h1>
+                    <span className="bg-yellow-500 w-16 h-1 rounded-full mx-auto block mb-12"></span>
+
       <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-16">
 
         {/* Left: Text */}
@@ -94,7 +104,7 @@ const OurMission = () => {
           <img
             src={OurMissions}
             alt="Our Mission"
-            className="w-full max-w-md mx-auto lg:max-w-full rounded-xl object-cover transition-transform duration-500 hover:scale-105"
+            className=" max-w-md mx-auto lg:max-w-full rounded-xl object-cover transition-transform duration-500 hover:scale-105"
           />
         </motion.div>
 

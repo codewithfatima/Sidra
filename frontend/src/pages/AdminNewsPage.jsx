@@ -2,16 +2,19 @@ import React, { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+import { useTranslation } from 'react-i18next';
 
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 export default function AdminNewsPage() {
+  const { t, i18n } = useTranslation();
   const [newsList, setNewsList] = useState([]);
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [date, setDate] = useState("");
   const [imageFile, setImageFile] = useState(null);
   const [editingId, setEditingId] = useState(null);
+
 
   useEffect(() => {
     fetchNews();
@@ -36,6 +39,8 @@ export default function AdminNewsPage() {
       formData.append("title", title);
       formData.append("desc", desc);
       formData.append("date", date);
+
+
       if (imageFile) {
         formData.append("image", imageFile);
       }
@@ -79,38 +84,40 @@ export default function AdminNewsPage() {
     setDate(news.date);
     setEditingId(news._id);
     setImageFile(null);
+
+
   };
 
 
   const handleDelete = async (id) => {
-  if (!window.confirm("Are you sure you want to delete this news?")) return;
+    if (!window.confirm("Are you sure you want to delete this news?")) return;
 
-  try {
-    const token = localStorage.getItem("adminToken");
+    try {
+      const token = localStorage.getItem("adminToken");
 
-    const url = `${API_URL.replace(/\/$/, "")}/api/news/${id}`;
-    console.log("Deleting:", url);
+      const url = `${API_URL.replace(/\/$/, "")}/api/news/${id}`;
+      console.log("Deleting:", url);
 
-    const res = await fetch(url, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",   // ✅ add this
-        Authorization: `Bearer ${token}`,     // ✅ token
-      },
-    });
+      const res = await fetch(url, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",   // ✅ add this
+          Authorization: `Bearer ${token}`,     // ✅ token
+        },
+      });
 
-    if (res.ok) {
-      toast.success("News deleted successfully!");
-      fetchNews(); // refresh list
-    } else {
-      const data = await res.json();
-      toast.error(data.message || "Failed to delete news.");
+      if (res.ok) {
+        toast.success("News deleted successfully!");
+        fetchNews(); // refresh list
+      } else {
+        const data = await res.json();
+        toast.error(data.message || "Failed to delete news.");
+      }
+    } catch (err) {
+      console.error("Delete error:", err);
+      toast.error("Server error");
     }
-  } catch (err) {
-    console.error("Delete error:", err);
-    toast.error("Server error");
-  }
-};
+  };
 
 
   return (
@@ -123,6 +130,8 @@ export default function AdminNewsPage() {
         onSubmit={handleSubmit}
         className="space-y-4 bg-gray-900 p-6 rounded-md"
       >
+
+
         <input
           type="text"
           placeholder="Title"

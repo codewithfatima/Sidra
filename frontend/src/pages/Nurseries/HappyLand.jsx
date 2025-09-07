@@ -27,7 +27,7 @@ const HappyLand = () => {
           boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
           transition: { type: 'spring', stiffness: 300, damping: 20 },
         }}
-        className="m-5 w-full max-w-full sm:max-w-xl lg:max-w-6xl px-4 sm:px-8 py-6 sm:py-10  bg-gray-50 border-3 border-yellow-400 rounded-lg text-center"
+        className="m-8 w-full max-w-full sm:max-w-xl lg:max-w-6xl px-4 sm:px-8 py-6 sm:py-10  bg-white border-3 border-yellow-400 rounded-lg text-center"
 
       >
         <img
@@ -36,12 +36,12 @@ const HappyLand = () => {
           className="w-48 h-48 object-cover rounded-lg mb-4 mx-auto"
         />
         <h3 className="text-2xl font-bold text-black mb-5">{school.title}</h3>
-        <p className="text-gray-600 text-xl mb-6">{school.desc}</p>
+        <p className="text-gray-600 text-xl mb-10">{school.desc}</p>
         <a
           href={school.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="px-6 py-2 rounded-full font-bold text-black bg-yellow-500 hover:bg-yellow-400 transition"
+          className="px-6 py-3  rounded-full font-bold text-black bg-yellow-500 hover:bg-yellow-400 transition"
         >
           {t('visit_site')}
         </a>

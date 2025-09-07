@@ -26,7 +26,7 @@ const Locations = () => {
           initial="hidden"
           whileInView="visible"
           variants={zoomInVariants}
-          className="w-full max-w-7xl aspect-[4/3] md:aspect-[16/9] lg:aspect-[21/9] rounded-md overflow-hidden"
+          className="w-full max-w-6xl aspect-[4/3] md:aspect-[16/9] lg:aspect-[21/9] rounded-md overflow-hidden"
         >
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3477.02801282945!2d47.97283468490048!3d29.369468982132922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjnCsDIyJzEwLjEiTiA0N8KwNTgnMTQuMyJF!5e0!3m2!1sar!2skw!4v1756645101422!5m2!1sar!2skw"

@@ -98,7 +98,7 @@ const NewsCard = ({ language = "en" }) => {
         initial="hidden"
         whileInView="visible"
         variants={slideUpVariants}
-        className="text-3xl font-bold text-center text-black mb-10 font-poppins mt-20"
+        className="text-4xl font-bold text-center text-black mb-10 font-poppins mt-20"
       >
         {t('latestNews')}
         <span className="block w-20 h-1 rounded-lg mx-auto bg-yellow-500 mt-3 "></span>

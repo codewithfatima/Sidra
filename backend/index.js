@@ -1,11 +1,9 @@
-// server.js
 const express = require('express');
 const path = require('path');
 require('dotenv').config();
 const multer = require('multer'); 
 require('./config/db');
 const cors = require('cors');
-const fs = require('fs');
 
 const newsRoutes = require('./routes/newsRoutes'); 
 const authRoutes = require('./routes/authRoutes');
@@ -18,7 +16,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));  
 
-// Test email config
+const fs = require('fs');
+
 app.get('/test-email-config', (req, res) => {
   res.json({
     emailUser: process.env.EMAIL_USER || 'not set',
@@ -28,7 +27,7 @@ app.get('/test-email-config', (req, res) => {
 
 // Check critical env vars on startup
 if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
-  console.warn('⚠️ WARNING: EMAIL_USER or EMAIL_PASS is not set in environment variables.');
+  console.warn('WARNING: EMAIL_USER or EMAIL_PASS is not set in environment variables.');
 }
 
 // Ensure uploads folder exists
@@ -48,6 +47,7 @@ app.use('/api/contact', contactRoutes);
 console.log('EMAIL_USER:', process.env.EMAIL_USER);
 console.log('EMAIL_PASS:', process.env.EMAIL_PASS ? '*****' : 'NOT SET');
 
+
 // Error handling middleware
 app.use((err, req, res, next) => {
   if (err) {
@@ -61,5 +61,5 @@ app.use((err, req, res, next) => {
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`🚀 Server is running on : ${PORT}`);
+  console.log(`Server is running on : ${PORT}`);
 });
