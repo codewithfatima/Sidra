@@ -253,15 +253,24 @@
     "events": {
       "palestineDay": "يوم فلسطين",
       "pajamaDay": "يوم البيجاما",
-      "greeningDay": "يوم التشجير",
-      "graduationDay": "يوم التخرج",
-      "careerWeek": "أسبوع المهنة"
-    },
+      "greeningDay": "يوم التخضير",
+      "graduationDay":"حفل التخرج",
+      "careerWeek": "أسبوع المهن" 
+           },
     "images": {
       "childClassroom": "طفل في الصف",
       "childOutside": "طفل يلعب في الخارج",
       "childPlaying": "طفل يلعب",
       "course1": "دورة 1"
     }
+  },
+  "images": {
+    "course1": "Introductory Course",
+    "course2": "Advanced Training",
+    "course3": "Creative Workshop",
+    "course4": "Science Course",
+    "course5": "Team Building Course"
   }
+
+
 }

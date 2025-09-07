@@ -7,18 +7,33 @@ import { motion, AnimatePresence } from "framer-motion";
 import Ch1 from '../../src/assets/Ch1.png';
 import Ch23 from '../../src/assets/Ch23.png';
 import Ch24 from '../../src/assets/Ch24.png';
+import Cour1 from '../../src/assets/Cour1.png';
+import Cour2 from '../../src/assets/Cour2.png';
+import Cour3 from '../../src/assets/Cour3.png';
+import Cour4 from '../../src/assets/Cour4.png';
+import Cour5 from '../../src/assets/Cour5.png';
 
 const imageData = [
+  // Children
   { category: 'galleryy.categories.children', src: Ch1, alt: 'galleryy.images.childClassroom' },
   { category: 'galleryy.categories.children', src: Ch23, alt: 'galleryy.images.childOutside' },
   { category: 'galleryy.categories.children', src: Ch24, alt: 'galleryy.images.childPlaying' },
+
+  // Events (linked as subcategories)
   { category: 'galleryy.categories.events', subcategory: 'galleryy.events.palestineDay' },
   { category: 'galleryy.categories.events', subcategory: 'galleryy.events.pajamaDay' },
   { category: 'galleryy.categories.events', subcategory: 'galleryy.events.greeningDay' },
   { category: 'galleryy.categories.events', subcategory: 'galleryy.events.graduationDay' },
   { category: 'galleryy.categories.events', subcategory: 'galleryy.events.careerWeek' },
-  { category: 'galleryy.categories.courses', src: '/images/course1.jpg', alt: 'galleryy.images.course1' },
+
+  // Courses (Cour)
+  { category: 'galleryy.categories.courses', src: Cour1 },
+  { category: 'galleryy.categories.courses', src: Cour2 },
+  { category: 'galleryy.categories.courses', src: Cour3 },
+  { category: 'galleryy.categories.courses', src: Cour4 },
+  { category: 'galleryy.categories.courses', src: Cour5 },
 ];
+
 
 const ImageGallery = () => {
   const { t } = useTranslation();

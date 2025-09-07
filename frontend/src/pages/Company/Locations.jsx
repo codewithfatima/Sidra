@@ -11,7 +11,7 @@ const Locations = () => {
 
 
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-50">
       <motion.h1
         initial='hidden'
         whileInView='visible'

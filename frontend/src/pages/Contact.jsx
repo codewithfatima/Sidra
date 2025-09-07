@@ -40,7 +40,7 @@ const Contact = () => {
 
   return (
     <div dir={isArabic ? 'rtl' : 'ltr'}>
-      <div className="flex flex-col md:flex-row justify-center items-center px-6 py-12 bg-gray-100 gap-12">
+      <div className="flex flex-col md:flex-row justify-center items-center px-6 py-12 bg-gray-50 gap-12">
 
 
         {/* Contact Info Section */}
