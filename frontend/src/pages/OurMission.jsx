@@ -56,7 +56,7 @@ const OurMission = () => {
       >
         {t("our_mission")}
       </motion.h1>
-      <span className="bg-yellow-500 w-16 h-1 rounded-full mx-auto block mb-12"></span>
+      <span className="bg-yellow-500 w-16 h-1 rounded-full mx-auto block "></span>
 
       <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-16">
 

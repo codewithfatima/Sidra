@@ -59,7 +59,7 @@ const Navbar = () => {
     <nav className="bg-white shadow-md fixed w-full z-50 top-0 font-almarai">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
-        <div className="flex justify-between items-center h-16 px-4 sm:px-8" >
+        <div className="flex justify-between items-center h-16" >
 
           {/* Logo */}
 
@@ -256,7 +256,7 @@ const Navbar = () => {
                             href={sub.path}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="block px-2 py-1  text-black hover:text-[#f5bc00] transition-colors duration-300"
+                            className="block px-2 py-1 text-black hover:text-[#f5bc00] transition-colors duration-300"
                             onClick={() => setMobileOpen(false)}
                           >
                             {t(sub.titleKey)}

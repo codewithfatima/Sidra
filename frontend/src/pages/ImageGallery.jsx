@@ -37,7 +37,7 @@ const imageData = [
 
 const ImageGallery = () => {
   const { t } = useTranslation();
-  const [selectedImg, setSelectedImg] = useState(null); // modal state
+  const [selectedImg, setSelectedImg] = useState(null); 
 
   const sections = [
     'galleryy.categories.children',
@@ -101,7 +101,7 @@ const ImageGallery = () => {
                 {imageData
                   .filter(img => img.category === sectionKey && img.src)
                   .map((img, index) => (
-                    <motion.div 
+                    <motion.div
                       key={index}
                       whileHover={{ scale: 1.05 }}
                       className="cursor-pointer relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer"
@@ -143,7 +143,7 @@ const ImageGallery = () => {
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
               transition={{ duration: 0.3 }}
-              onClick={(e) => e.stopPropagation()} // prevent modal close on image click
+              onClick={(e) => e.stopPropagation()} 
             />
           </motion.div>
         )}

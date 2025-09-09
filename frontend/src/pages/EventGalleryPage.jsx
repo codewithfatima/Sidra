@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import imageData from './ImageData';
 import { Link } from 'react-router-dom'
@@ -8,6 +8,8 @@ import { useTranslation } from 'react-i18next';
 const EventGalleryPage = () => {
     const { t, i18n } = useTranslation();
     const { subcategory } = useParams();
+    const [selectedImage, setSelectedImage] = useState(null);
+
 
     const normalizedSubcategory = subcategory.toLowerCase().replace(/\s+/g, '');
 
@@ -23,7 +25,13 @@ const EventGalleryPage = () => {
     const heading = subcatKey ? t(`galleryy.events.${subcatKey}`) : t('galleryy.title');
 
 
+    const openModal = (img) => {
+        setSelectedImage(img);
+    };
 
+    const closeModal = () => {
+        setSelectedImage(null);
+    };
 
     return (
         <div className="px-4 py-10 max-w-7xl mx-auto mt-15">
@@ -45,15 +53,36 @@ const EventGalleryPage = () => {
                         <img
                             key={index}
                             src={img.src}
-                            alt={img.alt}
-                            className="w-full h-60  object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+                            className="w-full h-60 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer"
+                            onClick={() => openModal(img)}
                         />
                     ))}
                 </div>
             ) : (
-                <p className="text-center text-gray-500 ">No images found for this event.</p>
+                <p className="text-center text-gray-500  ">No images found for this event.</p>
             )}
 
+            {/* Modal */}
+            {selectedImage && (
+                <div
+                    className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+                    onClick={closeModal}
+                >
+                    <div
+                        className="relative bg-white rounded-lg overflow-hidden max-w-3xl w-full p-4"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <button
+                            className="absolute top-2 right-2 text-gray-600 hover:text-black text-2xl font-bold"
+                            onClick={closeModal}
+                        >
+                            &times;
+                        </button>
+                        <img src={selectedImage.src} alt={selectedImage.alt} className="w-full h-auto rounded-md" />
+                        <p className="mt-2 text-center text-gray-700 ">{selectedImage.alt}</p>
+                    </div>
+                </div>
+            )}
 
         </div>
     );

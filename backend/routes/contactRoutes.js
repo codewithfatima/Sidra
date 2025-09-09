@@ -22,7 +22,7 @@ router.post("/", async (req, res) => {
 
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
-      to: "fatima68.05.07@gmail.com", // <-- your inbox
+      to: "info@sidra-kw.com",
       subject: "New Contact Form Submission",
       text: `
 New inquiry received:
