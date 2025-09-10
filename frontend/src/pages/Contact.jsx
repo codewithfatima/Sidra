@@ -36,7 +36,7 @@ const Contact = () => {
         alert('Failed to send message. Please try again later.');
       }
     },
-    
+
 
   });
 

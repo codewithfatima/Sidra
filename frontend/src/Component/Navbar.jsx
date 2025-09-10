@@ -223,7 +223,7 @@ const Navbar = () => {
       <div
         className={`
     md:hidden bg-white border-t border-[#f5bc00] shadow-md font-almarai
-    transition-all duration-500 ease-in-out overflow-hidden
+    transition-all duration-500 ease-in-out overflow-hidden 
     ${mobileOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}
   `}
       >

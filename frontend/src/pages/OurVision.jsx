@@ -15,7 +15,7 @@ const OurVision = () => {
     <>
       <div
         dir={direction}
-        className={`min-h-screen bg-yellow-50 overflow-hidden px-8 py-12 text-black leading-relaxed mt-16 sm:px-6 md:px-10 lg:px-16`}
+        className={`min-h-screen bg-gradient-to-br from-yellow-50 via-white to-yellow-100 overflow-hidden px-6 py-12 text-black mt-16`}
       >
 
         {/* happy land vision */}
@@ -24,7 +24,7 @@ const OurVision = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className={`text-4xl font-bold text-center mt-5 `}>
+          <h1 className={`text-4xl sm:text-5xl font-extrabold text-center text-yellow-700 mt-5 `}>
             {t('vision_title')}
           </h1>
           <span className='bg-yellow-500 w-20 h-1 rounded-full block mt-4 mb-16 mx-auto'></span>
@@ -33,7 +33,7 @@ const OurVision = () => {
             initial="hidden"
             whileInView="visible"
             variants={zoomInVariants}
-            className="flex justify-center items-center -mt-10 px-4 sm:px-6 md:px-8 lg:px-10">
+            className="flex justify-center items-center -mt-10 px-4 sm:px-6 md:px-8 lg:px-10 ">
               
             <img
               src={Vision}
@@ -48,7 +48,7 @@ const OurVision = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true, amount: 0.2 }}
           >
-            <ul className="list-disc list-inside space-y-4 text-lg text-black" dir={direction}>
+            <ul className="list-disc list-inside space-y-4 text-lg text-black  px-4 sm:px-6 md:px-8 lg:px-12" dir={direction}>
               {t('vision_points', { returnObjects: true }).map((point, idx) => (
                 <li key={idx}>{point}</li>
               ))}
@@ -64,8 +64,8 @@ const OurVision = () => {
           whileInView="visible"
           variants={slideUpVariants}
         >
-          <h1 className='text-4xl font-bold text-center mt-25'>{t('my_nursery_title')}</h1>
-          <span className='bg-yellow-500 w-20 h-1 rounded-full block mt-3 mx-auto'></span>
+          <h1 className='text-4xl sm:text-5xl font-extrabold text-center text-yellow-700 mt-25'>{t('my_nursery_title')}</h1>
+          <span className='bg-yellow-500 w-20 h-1 rounded-full block mt-3 mx-auto '></span>
 
           <motion.div
             initial="hidden"
@@ -81,13 +81,13 @@ const OurVision = () => {
               initial='hidden'
               whileInView='visible'
               variants={slideUpVariants}
-              className='text-2xl font-bold mb-5 text-yellow-700 ml-5'>{t('training_section_title')}</motion.h2>
+              className='text-2xl font-bold mb-5 text-yellow-700 ml-5  px-4 sm:px-6 md:px-8 lg:px-12'>{t('training_section_title')}</motion.h2>
             <motion.ul
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true, amount: 0.3 }}
-              className='list-disc list-inside space-y-4 text-lg' dir={direction}>
+              className='list-disc list-inside space-y-4 text-lg  px-4 sm:px-6 md:px-8 lg:px-12 ' dir={direction}>
               {t('training_points', { returnObjects: true }).map((point, idx) => (
                 <li key={idx}>{point}</li>
               ))}
@@ -95,7 +95,7 @@ const OurVision = () => {
           </section>
 
           <section className='mt-10'>
-            <h2 className='text-2xl font-bold mb-5 text-yellow-700 ml-5'>{t('consulting_section_title')}</h2>
+            <h2 className='text-2xl font-bold mb-5 text-yellow-700 ml-5  px-4 sm:px-6 md:px-8 lg:px-12'>{t('consulting_section_title')}</h2>
 
             <motion.div
               initial="hidden"
@@ -111,7 +111,7 @@ const OurVision = () => {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true, amount: 0.5 }}
-              className='list-disc list-inside space-y-4 text-lg' dir={direction}>
+              className='list-disc list-inside space-y-4 text-lg  px-4 sm:px-6 md:px-8 lg:px-12' dir={direction}>
               {t('consulting_points', { returnObjects: true }).map((point, idx) => (
                 <li key={idx}>{point}</li>
               ))}
@@ -119,27 +119,28 @@ const OurVision = () => {
           </section>
 
           <section className='mt-10'>
-            <h2 className='text-2xl font-bold mb-5 text-yellow-700 ml-5'>{t('education_section_title')}</h2>
+            <h2 className='text-2xl font-bold mb-5 text-yellow-700 ml-5  px-4 sm:px-6 md:px-8 lg:px-12'>{t('education_section_title')}</h2>
 
-            <h3 className='text-xl font-bold text-yellow-700 mb-3'>{t('license_title')}</h3>
+            <h3 className='text-xl font-bold text-yellow-700 mb-3  px-4 sm:px-6 md:px-8 lg:px-12'>{t('license_title')}</h3>
             <motion.ul
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true, amount: 0.3 }}
-              className='list-disc list-inside space-y-4 text-lg' dir={direction}>
+              className='list-disc list-inside space-y-4 text-lg px-4 sm:px-6 md:px-8 lg:px-12' dir={direction}>
               <li>{t('license_point')}</li>
             </motion.ul>
 
-            <h3 className='text-xl font-bold text-yellow-700 mb-3 mt-8'>{t('preparation_title')}</h3>
-            <ul className='list-disc list-inside space-y-4 text-lg' dir={direction}>
+            <h3 className='text-xl font-bold text-yellow-700 mb-3 mt-8 px-4 sm:px-6 md:px-8 lg:px-12'>
+              {t('preparation_title')}</h3>
+            <ul className='list-disc list-inside space-y-4 text-lg px-13' dir={direction}>
               <li>{t('preparation_point')}</li>
             </ul>
           </section>
 
           <section className='mt-10'>
-            <h2 className='text-xl font-bold text-yellow-700 mb-3'>{t('external_relations_title')}</h2>
-            <ul className='list-disc list-inside text-lg space-y-4' dir={direction}>
+            <h2 className='text-xl font-bold text-yellow-700 mb-3 px-13'>{t('external_relations_title')}</h2>
+            <ul className='list-disc list-inside text-lg space-y-4 px-4 sm:px-6 md:px-8 lg:px-12' dir={direction}>
               {t('external_points', { returnObjects: true }).map((point, idx) => (
                 <li key={idx}>{point}</li>
               ))}
@@ -154,7 +155,7 @@ const OurVision = () => {
             initial="hidden"
             whileInView="visible"
             variants={slideUpVariants}
-            className='text-4xl text-center font-bold mb-3'>{t('perp_title')}</motion.h2>
+            className='text-4xl sm:text-5xl font-extrabold text-center text-yellow-700 mt-5'>{t('perp_title')}</motion.h2>
           <span className='bg-yellow-500 w-20 h-1 rounded-full block mt-4 mb-15 mx-auto'></span>
 
           <motion.div
@@ -174,7 +175,7 @@ const OurVision = () => {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true, amount: 0.2 }}
-            className='animate-fade-in list-disc list-inside text-lg space-y-4 mt-10' >
+            className='animate-fade-in list-disc list-inside text-lg space-y-4 mt-10 px-4 sm:px-6 md:px-8 lg:px-12' >
             {t('perp_points', { returnObjects: true }).map((point, idx) => (
 
               <li key={idx}>{point}</li>
@@ -187,3 +188,5 @@ const OurVision = () => {
 };
 
 export default OurVision;
+
+

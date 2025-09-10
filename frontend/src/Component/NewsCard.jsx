@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import { slideUpVariants, zoomInVariants } from './variants';
 import { FaCalendarAlt } from "react-icons/fa";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_URL = "https://sidra-backend.onrender.com";
+
 const ITEMS_PER_PAGE = 6;
 
 

@@ -62,14 +62,36 @@ const OurMission = () => {
 
         {/* Left: Text */}
         <div className={`flex-1 ${isRTL ? 'text-right' : 'text-left'} space-y-8`}>
-          <motion.h2
+          {/* <motion.h2
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500"
           >
             {t('ourMission.title')}
+          </motion.h2> */}
+
+          <motion.h2
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8 }}
+            className="
+           text-2xl            /* Base (small screens) */
+           sm:text-3xl         /* ≥640px */
+           md:text-4xl         /* ≥768px */
+           lg:text-5xl         /* ≥1024px */
+           font-extrabold 
+           text-transparent 
+           bg-clip-text 
+           bg-gradient-to-r 
+           from-yellow-400 
+           to-orange-500 
+           text-center0 "
+          >
+            {t('ourMission.title')}
           </motion.h2>
+
 
           {[t('ourMission.paragraph1'), t('ourMission.paragraph2'), t('ourMission.paragraph3'), t('ourMission.paragraph4')].map((text, index) => {
             const icons = [
