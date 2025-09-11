@@ -61,16 +61,7 @@ const OurMission = () => {
       <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-16">
 
         {/* Left: Text */}
-        <div className={`flex-1 ${isRTL ? 'text-right' : 'text-left'} space-y-8`}>
-          {/* <motion.h2
-            initial={{ opacity: 0, y: -30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500"
-          >
-            {t('ourMission.title')}
-          </motion.h2> */}
-
+        <div className={`flex-1 ${isRTL ? 'text-right' : 'text-left'} space-y-9 `}>
           <motion.h2
             initial={{ opacity: 0, y: -30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -87,7 +78,7 @@ const OurMission = () => {
            bg-gradient-to-r 
            from-yellow-400 
            to-orange-500 
-           text-center0 "
+           text-center0  "
           >
             {t('ourMission.title')}
           </motion.h2>

@@ -36,12 +36,12 @@ const EventGalleryPage = () => {
     return (
         <div className="px-4 py-10 max-w-7xl mx-auto mt-15">
 
-            <h2 className="text-3xl font-bold mb-6 text-center">{heading}
-                <span className='bg-yellow-500 w-20 h-1 block text-center rounded-lg mx-auto mt-2' ></span>
+            <h2 className="text-3xl font-bold mb-6 mt-10 text-center">{heading}
+                <span className='bg-yellow-500 w-20 h-1 block text-center rounded-lg mx-auto mt-4' ></span>
             </h2>
 
             <Link to='/gallery' className=' '>
-                <span className='w-60 bg-yellow-500 rounded-lg px-3 py-2 flex items-center gap-3 text-black font-bold mb-5 cursor-pointer hover:bg-yellow-500'>
+                <span className='w-60 bg-yellow-500 rounded-lg px-3 py-2 flex items-center gap-3 text-black font-bold mb-15 cursor-pointer hover:bg-yellow-500'>
                     <FaArrowLeftLong />
                     {t('gallerys')}
                 </span>
