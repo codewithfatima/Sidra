@@ -92,7 +92,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import { useTranslation } from 'react-i18next';
 import 'react-toastify/dist/ReactToastify.css';
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const  VITE_API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 export default function AdminLogin() {
   const [username, setUsername] = useState('');
@@ -114,7 +114,7 @@ export default function AdminLogin() {
     setError('');
 
     try {
-      const res = await fetch(`${API_URL}/api/admin/login`, {
+      const res = await fetch(`${VITE_API_URL}/api/admin/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password }),

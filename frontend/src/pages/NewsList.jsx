@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const  VITE_API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 const NewsList = () => {
   const { t, i18n } = useTranslation();
@@ -16,7 +16,7 @@ const NewsList = () => {
 
   const fetchNews = async () => {
     try {
-      const res = await fetch(`${API_URL}/api/news`);
+      const res = await fetch(`${ VITE_API_URL}/api/news`);
       const data = await res.json();
       setNewsList(data);
     } catch (err) {

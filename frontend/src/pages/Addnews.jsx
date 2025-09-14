@@ -4,7 +4,7 @@ import { FaEdit, FaTrashAlt, FaPlusCircle, FaSave } from "react-icons/fa";
 import "react-toastify/dist/ReactToastify.css";
 import { useTranslation } from 'react-i18next';
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const  VITE_API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 export default function AdminNewsPage() {
   const { t, i18n } = useTranslation();
@@ -112,7 +112,7 @@ export default function AdminNewsPage() {
 
     try {
       const token = localStorage.getItem("adminToken");
-      const res = await fetch(`${API_URL}/api/news/${id}`, {
+      const res = await fetch(`${VITE_API_URL}/api/news/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
