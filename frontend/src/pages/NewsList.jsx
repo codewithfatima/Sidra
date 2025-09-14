@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
-const  VITE_API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 const NewsList = () => {
   const { t, i18n } = useTranslation();
@@ -16,7 +16,7 @@ const NewsList = () => {
 
   const fetchNews = async () => {
     try {
-      const res = await fetch(`${ VITE_API_URL}/api/news`);
+      const res = await fetch(`${API_URL}/api/news`);
       const data = await res.json();
       setNewsList(data);
     } catch (err) {
@@ -34,31 +34,34 @@ const NewsList = () => {
     } catch {
       return dateStr?.split("T")[0] || "";
     }
+  
+
   };
 
+  // Get excerpt (one line, ~100 chars)
   const getExcerpt = (text) => {
     if (!text) return "";
     return text.length > 100 ? text.slice(0, 100) + "…" : text;
   };
 
-  const isArabic = currentLang === "ar";
-
   return (
-    <div className="overflow-x-hidden"> {/* Prevent horizontal overflow */}
+    <div>
+
       <motion.h1
         initial={{ scale: 0.9, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.6 }}
-        className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-3 mt-24"
+        className="text-3xl md:text-4xl font-bold text-center text-gray-900
+         mb-3 mt-25 "
       >
         {t("latestNews")}
       </motion.h1>
+      <span className="bg-yellow-500 w-16 h-1 rounded-full mx-auto block "></span>
+      <div className="bg-yellow-500 mb-10">
 
-      <span className="bg-yellow-500 w-16 h-1 rounded-full mx-auto block mb-6"></span>
 
-      <div className="bg-yellow-500 pb-10">
         <div
-          className="max-w-5xl mx-auto py-10 px-4 space-y-6"
+          className="max-w-5xl mx-auto py-10 px-4 space-y-6 mt-15"
           dir={currentLang === "ar" ? "rtl" : "ltr"}
         >
           {newsList.length === 0 ? (
@@ -70,42 +73,46 @@ const NewsList = () => {
               const imageUrl = news.image ? `${API_URL}/uploads/${news.image}` : null;
               const videoUrl = news.video ? `${API_URL}/uploads/${news.video}` : null;
 
+
+              // Layout: image right if Arabic, left if English
+              const isArabic = currentLang === "ar";
+
               return (
                 <div
                   key={news._id}
-                  className={`flex flex-col ${isArabic ? 'md:flex-row-reverse' : 'md:flex-row'} items-start md:items-center gap-4 md:gap-6 bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300`}
+                  className={`flex items-center gap-6 bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300`}
+                  style={{ flexDirection: isArabic ? "row-reverse" : "row" }}
                 >
                   {(imageUrl || videoUrl) && (
                     imageUrl ? (
                       <img
                         src={imageUrl}
                         alt={title}
-                        className="w-full sm:w-40 md:w-48 h-auto max-h-40 object-cover rounded-md flex-shrink-0"
+                        className="w-48 h-32 object-cover rounded-md flex-shrink-0"
                       />
                     ) : (
                       <video
                         src={videoUrl}
                         controls
-                        className="w-full sm:w-40 md:w-48 h-auto max-h-40 object-cover rounded-md flex-shrink-0"
+                        className="w-48 h-32 object-cover rounded-md flex-shrink-0"
                       />
                     )
                   )}
 
-                  <div className="flex flex-col flex-grow w-full overflow-hidden ">
-                    <span className="text-sm text-black bg-yellow-500 w-fit px-3 py-1 rounded-xl shadow-md mb-2">
-                      {formatDate(news.date)}
-                    </span>
-                    <h2 className="font-semibold text-lg sm:text-xl mb-1">{title}</h2>
+                  <div className="flex flex-col flex-grow">
+                    <span className="text-sm text-black mb-1 bg-yellow-500 w-30 px-3 py-1 rounded-xl shadow-md mb-4">{formatDate(news.date)}</span>
+                    <h2 className="font-semibold text-xl mb-1">{title}</h2>
                     <hr className="border-gray-300 mb-2" />
-                    <p className="text-gray-700 mb-3">{getExcerpt(desc)}</p>
+                    <p className="text-gray-700 mb-3 truncate">{getExcerpt(desc)}</p>
                     <Link
-                      to={`/news-detail/${news._id}`}
-                      className="text-red-600 font-semibold hover:underline"
+                      to={`/news/${news._id}`}
+                      className="text-red-600 font-semibold hover:underline self-start"
                     >
                       {t("Read more")}
                     </Link>
                   </div>
                 </div>
+
               );
             })
           )}

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-const  VITE_API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const  VITE_API = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 const NewsDetail = () => {
   const { t, i18n } = useTranslation();
@@ -14,7 +14,7 @@ const NewsDetail = () => {
   useEffect(() => {
     const fetchNewsDetail = async () => {
       try {
-        const res = await fetch(`${VITE_API_URL}/api/news/${id}`);
+        const res = await fetch(`${VITE_API}/api/news/${id}`);
         
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
