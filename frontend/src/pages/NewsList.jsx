@@ -105,7 +105,7 @@ const NewsList = () => {
                     <hr className="border-gray-300 mb-2" />
                     <p className="text-gray-700 mb-3 truncate">{getExcerpt(desc)}</p>
                     <Link
-                      to={`/news/${news._id}`}
+                      to={`/news-detail/${news._id}`}
                       className="text-red-600 font-semibold hover:underline self-start"
                     >
                       {t("Read more")}
