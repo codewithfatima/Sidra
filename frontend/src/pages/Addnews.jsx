@@ -35,6 +35,8 @@ export default function AdminNewsPage() {
     } catch (err) {
       console.error("fetchNews error:", err);
       toast.error(t("Failed to fetch news."));
+      console.log("API URL:", API_URL);
+
     }
   };
 
