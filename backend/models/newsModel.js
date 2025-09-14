@@ -1,67 +1,15 @@
 const mongoose = require('mongoose');
 
-// const newsSchema = new mongoose.Schema({
-//   title: {
-//     type: String,
-//     required: [true, 'Title is required'],
-//     trim: true,
-//   },
-//   desc: {
-//     type: String,
-//     required: [true, 'Description is required'],
-//     trim: true,
-//   },
-//   image: {
-//     type: String,
-//     required: [true, 'Image is required'],
-//   },
-//   type: {
-//     type: String,
-//     default: 'news',
-//   },
-//   date: {
-//     type: String,
-//     required: [true, 'Date is required'], 
-//   },
-// }, { timestamps: true });
-
-// const News = mongoose.model('News', newsSchema);
-
-
 const newsSchema = new mongoose.Schema({
-  title: {
-    type: String,
-    required: [true, 'Title is required'],
-    trim: true,
-  },
-  title_ar: {
-    type: String,
-    trim: true,
-  },
-  desc: {
-    type: String,
-    required: [true, 'Description is required'],
-    trim: true,
-  },
-  desc_ar: {
-    type: String,
-    trim: true,
-  },
-  image: {
-    type: String,
-    required: [true, 'Image is required'],
-  },
-  type: {
-    type: String,
-    default: 'news',
-  },
-  date: {
-    type: String,
-    required: [true, 'Date is required'],
-  },
+  title_en: { type: String, required: [true, 'Title (English) is required'] },
+  title_ar: { type: String, required: [true, 'Title (Arabic) is required'] },
+  desc_en: { type: String, required: [true, 'Description (English) is required'] },
+  desc_ar: { type: String, required: [true, 'Description (Arabic) is required'] },
+  date: { type: Date, required: [true, 'Date is required'] },
+  image: { type: String },
+  video: { type: String },
+  type: { type: String, default: 'news' },
 }, { timestamps: true });
 
+module.exports = mongoose.model('News', newsSchema);
 
-const News = mongoose.model('News', newsSchema);
-
-module.exports = News;

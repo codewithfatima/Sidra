@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from "framer-motion";
 
-import Ch1 from '../../src/assets/Ch1.png';
-import Ch23 from '../../src/assets/Ch23.png';
-import Ch24 from '../../src/assets/Ch24.png';
-import Cour1 from '../../src/assets/Cour1.png';
-import Cour2 from '../../src/assets/Cour2.png';
-import Cour3 from '../../src/assets/Cour3.png';
-import Cour4 from '../../src/assets/Cour4.png';
-import Cour5 from '../../src/assets/Cour5.png';
+import Ch1 from '../../src/assets/Ch1.webp';
+import Ch23 from '../../src/assets/Ch23.webp';
+import Ch24 from '../../src/assets/Ch24.webp';
+import Cour1 from '../../src/assets/Cour1.webp';
+import Cour2 from '../../src/assets/Cour2.webp';
+import Cour3 from '../../src/assets/Cour3.webp';
+import Cour4 from '../../src/assets/Cour4.webp';
+import Cour5 from '../../src/assets/Cour5.webp';
 
 const imageData = [
   // Children
@@ -37,7 +37,7 @@ const imageData = [
 
 const ImageGallery = () => {
   const { t } = useTranslation();
-  const [selectedImg, setSelectedImg] = useState(null); 
+  const [selectedImg, setSelectedImg] = useState(null);
 
   const sections = [
     'galleryy.categories.children',
@@ -48,9 +48,12 @@ const ImageGallery = () => {
   return (
     <div className="relative px-4 py-16 max-w-7xl mx-auto">
 
+
       {/* Decorative background */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-yellow-200 rounded-full blur-3xl opacity-40 -z-10"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-300 rounded-full blur-3xl opacity-30 -z-10"></div>
+      {/* Decorative background */}
+      <div className="absolute top-0 left-0  w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 bg-yellow-200 rounded-full blur-3xl opacity-40 -z-10"></div>
+
+      <div className="absolute bottom-0 right-0 w-56 h-56 sm:w-72 sm:h-72 md:w-96 md:h-96 bg-yellow-300 rounded-full blur-3xl opacity-30 -z-10"></div>
 
       {/* Section Heading */}
       <motion.h2
@@ -143,7 +146,7 @@ const ImageGallery = () => {
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
               transition={{ duration: 0.3 }}
-              onClick={(e) => e.stopPropagation()} 
+              onClick={(e) => e.stopPropagation()}
             />
           </motion.div>
         )}

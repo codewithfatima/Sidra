@@ -5,7 +5,7 @@ import { IoBook } from "react-icons/io5";
 import { GiBrainstorm } from "react-icons/gi";
 import { AiOutlineGlobal } from "react-icons/ai";
 import { BsFillRocketTakeoffFill } from "react-icons/bs";
-import OurMissions from '../../src/assets/OurMission.png';
+import OurMissions from '../../src/assets/OurMission.webp';
 import { zoomInVariants } from '../Component/variants';
 
 const textVariants = (delay = 0, direction = 'left') => ({
@@ -62,28 +62,7 @@ const OurMission = () => {
 
         {/* Left: Text */}
         <div className={`flex-1 ${isRTL ? 'text-right' : 'text-left'} space-y-9 `}>
-          <motion.h2
-            initial={{ opacity: 0, y: -30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.8 }}
-            className="
-           text-2xl            /* Base (small screens) */
-           sm:text-3xl         /* ≥640px */
-           md:text-4xl         /* ≥768px */
-           lg:text-5xl         /* ≥1024px */
-           font-extrabold 
-           text-transparent 
-           bg-clip-text 
-           bg-gradient-to-r 
-           from-yellow-400 
-           to-orange-500 
-           text-center0  "
-          >
-            {t('ourMission.title')}
-          </motion.h2>
-
-
+         
           {[t('ourMission.paragraph1'), t('ourMission.paragraph2'), t('ourMission.paragraph3'), t('ourMission.paragraph4')].map((text, index) => {
             const icons = [
               <IoBook key="icon1" className="text-yellow-500 mt-1 w-10 h-10" size={40} />,

@@ -42,7 +42,7 @@ const OurValues = () => {
       >
         {t("ourValuesTitle")}
       </motion.h1>
-        <span className="bg-yellow-500 w-16 h-1 rounded-full mx-auto block mb-12"></span>
+      <span className="bg-yellow-500 w-16 h-1 rounded-full mx-auto block mb-12"></span>
 
       <div className='max-w-7xl mx-auto'>
         <SectionCard title={t("competitivenessDimensions")} icon={Lightbulb}>

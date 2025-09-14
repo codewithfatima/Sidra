@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { slideUpVariants, zoomInVariants } from '../../Component/variants.js';;
-import MyNusery from '../../../src/assets/MyNusery.png';
+import { slideUpVariants, zoomInVariants } from '../../Component/variants.js';
+import MyNusery from '../../../src/assets/MyNusery.webp';
 
 const MyNursery = () => {
   const { t } = useTranslation();
@@ -18,7 +18,7 @@ const MyNursery = () => {
 
 
   return (
-    <div className='bg-yellow-50 min-h-screen flex items-center justify-center mt-15'>
+    <div className='bg-yellow-50 min-h-screen flex items-center justify-center lg:pt-25 lg:pb-20'>
       <motion.div
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -29,7 +29,8 @@ const MyNursery = () => {
           boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
           transition: { type: 'spring', stiffness: 300, damping: 20 },
         }}
-        className="m-5 w-full sm:max-w-xl md:max-w-2xl lg:max-w-7xl px-4 sm:px-8 py-6 sm:py-10 bg-white border-3 border-yellow-400 rounded-lg text-center"
+        className="m-10 w-full sm:max-w-xl md:max-w-2xl lg:max-w-6xl px-4 
+        sm:px-8 py-6 sm:py-20 bg-white border-3 border-yellow-400 rounded-lg text-center "
 
       >
         <img

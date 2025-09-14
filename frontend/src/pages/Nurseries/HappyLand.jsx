@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { zoomInVariants } from '../../Component/variants.js';
-import Happyland from '../../../src/assets/Happyland.png';
+import Happyland from '../../../src/assets/Happyland.webp';
 
 const HappyLand = () => {
   const { t } = useTranslation();

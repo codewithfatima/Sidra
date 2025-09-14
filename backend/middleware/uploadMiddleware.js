@@ -1,7 +1,8 @@
 const multer = require('multer');
 const path = require('path');
 
-// Configure storage for uploaded files
+
+// Storage config
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, 'uploads/');
@@ -11,20 +12,31 @@ const storage = multer.diskStorage({
   },
 });
 
-
-// Filter to accept only images
+// Accept image and video
 const fileFilter = (req, file, cb) => {
-  const allowedTypes = /jpeg|jpg|png|gif/;
-  const extName = allowedTypes.test(path.extname(file.originalname).toLowerCase());
-  const mimeType = allowedTypes.test(file.mimetype);
+  const allowedImageTypes = /jpeg|jpg|png|gif/;
+  const allowedVideoTypes = /mp4|avi|mov|mkv/;
+  const ext = path.extname(file.originalname).toLowerCase();
+  const mime = file.mimetype;
 
-  if (extName && mimeType) {
+  if (
+    allowedImageTypes.test(ext) ||
+    allowedVideoTypes.test(ext) ||
+    mime.startsWith('image/') ||
+    mime.startsWith('video/')
+  ) {
     cb(null, true);
   } else {
-    cb(new Error('Only images are allowed'));
+    cb(new Error('Only image and video files are allowed'));
   }
 };
 
 const upload = multer({ storage, fileFilter });
 
-module.exports = upload;
+// ⬅️ This is key: allow both 'image' and 'video' fields
+const uploadFields = upload.fields([
+  { name: 'image', maxCount: 1 },
+  { name: 'video', maxCount: 1 },
+]);
+
+module.exports = { uploadFields };

@@ -1,20 +1,18 @@
 import React from 'react'
 import Slider from '../Component/HeroBanner'
 import ContactForm from './Contact'
-import NewsCard from '../Component/NewsCard'
-import ScroltoTop from '../Component/ScroltoTop'
 import Locations from './Company/Locations'
 import ImageGallery from './ImageGallery'
+import NewsList from './NewsList'
 
 const Home = () => {
   return (
     <div >
       <Slider />
-      <NewsCard />
+      <NewsList />
       <ImageGallery />
       <Locations />
       <ContactForm />
-      <ScroltoTop />
     </div>
   )
 }

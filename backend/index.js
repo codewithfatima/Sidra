@@ -9,12 +9,14 @@ const newsRoutes = require('./routes/newsRoutes');
 const authRoutes = require('./routes/authRoutes');
 const contactRoutes = require('./routes/contactRoutes');
 
+
 const app = express();
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));  
+app.use('/api/news', newsRoutes);
 
 const fs = require('fs');
 
@@ -39,8 +41,15 @@ if (!fs.existsSync(uploadDir)) {
 // Serve uploads folder statically
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
+
+app.get('/list-uploads', (req, res) => {
+  fs.readdir(uploadDir, (err, files) => {
+    if (err) return res.status(500).json({ error: 'Failed to read uploads folder' });
+    res.json(files);
+  });
+});
+
 // Use routes
-app.use('/api/news', newsRoutes);
 app.use('/api/admin', authRoutes); 
 app.use('/api/contact', contactRoutes);
 

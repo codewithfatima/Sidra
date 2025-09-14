@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Vision from '../../src/assets/vision.png';
-import Nusery from '../../src/assets/Nusery.png';
+import Vision from '../../src/assets/vision.webp';
+import Nusery from '../../src/assets/Nusery.webp';
 import { useTranslation } from 'react-i18next';
-import Perp from '../../src/assets/perp.png'
-import Nuser from '../../src/assets/Nuser.png'
+import Perp from '../../src/assets/perp.webp'
+import Nuser from '../../src/assets/Nuser.webp'
 import { slideUpVariants, zoomInVariants } from '../Component/variants';
 
 const OurVision = () => {
