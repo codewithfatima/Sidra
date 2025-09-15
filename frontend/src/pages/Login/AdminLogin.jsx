@@ -15,17 +15,22 @@ export default function AdminLogin() {
 
   const navigate = useNavigate();
 
-  
   const handleSubmit = async (e) => {
   e.preventDefault();
   setError('');
+
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 sec timeout
 
   try {
     const res = await fetch(`${API_URL}/api/admin/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username, password }),
+      signal: controller.signal,
     });
+
+    clearTimeout(timeoutId); // Clear timeout if request finishes
 
     const data = await res.json();
 
@@ -40,9 +45,41 @@ export default function AdminLogin() {
     }
   } catch (err) {
     console.error('Login error:', err);
-    setError('Server error');
+    if (err.name === 'AbortError') {
+      setError('Login timed out. Please try again.');
+    } else {
+      setError('Server error');
+    }
   }
 };
+
+//   const handleSubmit = async (e) => {
+//   e.preventDefault();
+//   setError('');
+
+//   try {
+//     const res = await fetch(`${API_URL}/api/admin/login`, {
+//       method: 'POST',
+//       headers: { 'Content-Type': 'application/json' },
+//       body: JSON.stringify({ username, password }),
+//     });
+
+//     const data = await res.json();
+
+//     if (res.ok) {
+//       localStorage.setItem('adminToken', data.token);
+//       toast.success('Admin login successful!');
+//       setTimeout(() => {
+//         navigate('/add-news');
+//       }, 1000);
+//     } else {
+//       setError(data.message || 'Login failed');
+//     }
+//   } catch (err) {
+//     console.error('Login error:', err);
+//     setError('Server error');
+//   }
+// };
 
 const [showPassword, setShowPassword] = useState(false);
 

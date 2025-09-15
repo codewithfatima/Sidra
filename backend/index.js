@@ -39,7 +39,9 @@ if (!fs.existsSync(uploadDir)) {
 }
 
 // Serve uploads folder statically
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use('/uploads', express.static(path.join(__dirname, 'uploads'),{
+   maxAge: '7d'
+}));
 
 
 app.get('/list-uploads', (req, res) => {
@@ -68,6 +70,10 @@ app.use((err, req, res, next) => {
   next();
 });
 
+
+app.get('/', (req, res) => {
+  res.send('Backend is running...');
+});
 
 
 const PORT = process.env.PORT || 5000;

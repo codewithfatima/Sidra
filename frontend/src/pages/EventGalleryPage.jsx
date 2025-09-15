@@ -55,6 +55,7 @@ const EventGalleryPage = () => {
                             key={i}
                             src={img.src}
                             alt={img.alt}
+                             loading="lazy"  
                             className="w-full h-60 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer"
                             onClick={() => {
                                 setIndex(i);

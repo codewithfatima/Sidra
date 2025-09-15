@@ -52,7 +52,6 @@ const ImageGallery = () => {
       {/* Decorative background */}
       {/* Decorative background */}
       <div className="absolute top-0 left-0  w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 bg-yellow-200 rounded-full blur-3xl opacity-40 -z-10"></div>
-
       <div className="absolute bottom-0 right-0 w-56 h-56 sm:w-72 sm:h-72 md:w-96 md:h-96 bg-yellow-300 rounded-full blur-3xl opacity-30 -z-10"></div>
 
       {/* Section Heading */}
@@ -73,9 +72,9 @@ const ImageGallery = () => {
         return (
           <motion.div
             key={sectionKey}
-            initial="hidden"
-            whileInView="visible"
-            variants={zoomInVariants}
+            // initial="hidden"
+            // whileInView="visible"
+            // variants={zoomInVariants}
             className="mb-16"
           >
             <h3 className="text-2xl md:text-3xl font-bold mb-6 text-yellow-700">
