@@ -30,7 +30,7 @@ const HeroBanner = () => {
           <img
             src={slides[current].image}
             alt={`Slide ${current + 1}`}
-            className="w-full  max-h-[90vh] object-contain transition-opacity duration-700 "
+            className="w-full max-h-[90vh]  transition-opacity duration-700 "
           />
 
         </div>
