@@ -65,7 +65,7 @@ const Footer = () => {
             </a>
             <a
               href="https://www.linkedin.com/company/sidra-int/"
-              target='_blank'
+              target= '_blank'
               className="text-white hover:bg-gray-200 hover:text-black bg-yellow-500 rounded-full p-3 sm:px-4 sm:py-4"
             >
               <FaLinkedinIn />
