@@ -11,7 +11,7 @@ const HappyLand = () => {
     image: Happyland,
     title: t('happy_land'),
     desc: t('happy_land_desc'),
-    link: 'https://www.happylandkw.com/',
+    link: 'https://happylandkw.com/',
   };
 
   return (

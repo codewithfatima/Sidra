@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-const  API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 const NewsDetail = () => {
   const { t, i18n } = useTranslation();
@@ -15,7 +15,7 @@ const NewsDetail = () => {
     const fetchNewsDetail = async () => {
       try {
         const res = await fetch(`${API_URL}/api/news/${id}`);
-        
+
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
         }
@@ -44,8 +44,8 @@ const NewsDetail = () => {
       return dateStr?.split("T")[0] || "";
     }
   };
-console.log("Fetching news detail for ID:", id);
-console.log(`${API_URL}/api/news/${id}`);
+  console.log("Fetching news detail for ID:", id);
+  console.log(`${API_URL}/api/news/${id}`);
 
   const isArabic = currentLang === "ar";
 
@@ -84,6 +84,7 @@ console.log(`${API_URL}/api/news/${id}`);
       <p className="text-gray-800 leading-relaxed whitespace-pre-line text-base md:text-lg">
         {desc}
       </p>
+
     </div>
   );
 };

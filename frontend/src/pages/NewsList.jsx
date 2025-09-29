@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { FaRegCalendarAlt } from 'react-icons/fa';
 
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
@@ -34,11 +35,11 @@ const NewsList = () => {
     } catch {
       return dateStr?.split("T")[0] || "";
     }
-  
+
 
   };
 
-  // Get excerpt (one line, ~100 chars)
+
   const getExcerpt = (text) => {
     if (!text) return "";
     return text.length > 100 ? text.slice(0, 100) + "…" : text;
@@ -74,44 +75,102 @@ const NewsList = () => {
               const videoUrl = news.video ? `${API_URL}/uploads/${news.video}` : null;
 
 
-              // Layout: image right if Arabic, left if English
+
               const isArabic = currentLang === "ar";
 
               return (
-                <div
-                  key={news._id}
-                  className={`flex items-center gap-6 bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300`}
-                  style={{ flexDirection: isArabic ? "row-reverse" : "row" }}
-                >
-                  {(imageUrl || videoUrl) && (
-                    imageUrl ? (
-                      <img
-                        src={imageUrl}
-                        alt={title}
-                        className="w-48 h-32 object-cover rounded-md flex-shrink-0"
-                      />
-                    ) : (
-                      <video
-                        src={videoUrl}
-                        controls
-                        className="w-48 h-32 object-cover rounded-md flex-shrink-0"
-                      />
-                    )
-                  )}
+                // <div
+                //   key={news._id}
+                //   className={`flex items-center gap-6 bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300`}
+                //   style={{ flexDirection: isArabic ? "row-reverse" : "row" }}
+                // >
+                //   {(imageUrl || videoUrl) && (
+                //     imageUrl ? (
+                //       <img
+                //         src={imageUrl}
+                //         alt={title}
+                //         className="w-48 h-32 object-cover rounded-md flex-shrink-0"
+                //       />
+                //     ) : (
+                //       <video
+                //         src={videoUrl}
+                //         controls
+                //         className="w-48 h-32 object-cover rounded-md flex-shrink-0"
+                //       />
+                //     )
+                //   )}
 
-                  <div className="flex flex-col flex-grow">
-                    <span className="text-sm text-black mb-1 bg-yellow-500 w-30 px-3 py-1 rounded-xl shadow-md mb-4">{formatDate(news.date)}</span>
-                    <h2 className="font-semibold text-xl mb-1">{title}</h2>
-                    <hr className="border-gray-300 mb-2" />
-                    <p className="text-gray-700 mb-3 truncate">{getExcerpt(desc)}</p>
-                    <Link
-                      to={`/news-detail/${news._id}`}
-                      className="text-red-600 font-semibold hover:underline self-start"
-                    >
-                      {t("Read more")}
-                    </Link>
-                  </div>
-                </div>
+                //   <div className="flex flex-col flex-grow">
+
+                //     <span className="flex items-center text-sm text-black bg-yellow-500 w-fit px-3 py-1 rounded-xl shadow-md mb-4 space-x-2">
+                //       <FaRegCalendarAlt className="text-black" />
+                //       <span>{formatDate(news.date)}</span>
+                //     </span>
+
+
+                //     <h2 className="font-semibold text-xl mb-1 ">{title}</h2>
+                //     <hr className="border-gray-300 mb-2" />
+                //     <p className="text-gray-700 mb-3 truncate">{getExcerpt(desc)}</p>
+                //     <Link
+                //       to={`/news-detail/${news._id}`}
+                //       className="text-red-600 font-semibold hover:underline self-start"
+                //     >
+                //       {t("Read more")}
+                //     </Link>
+                //   </div>
+                // </div>
+
+
+ 
+
+<div
+  key={news._id}
+  className={`flex bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300
+    flex-col-reverse md:flex-row items-start gap-6`}
+  style={{ flexDirection: isArabic ? undefined : undefined }} // remove inline flexDirection
+>
+  {/* Text content first on mobile because of flex-col-reverse */}
+  <div className="flex flex-col flex-grow">
+
+    <span className="flex items-center text-sm text-black bg-yellow-500 w-fit px-3 py-1 rounded-xl shadow-md mb-4 space-x-2">
+      <FaRegCalendarAlt className="text-black" />
+      <span>{formatDate(news.date)}</span>
+    </span>
+
+    <h2 className="font-semibold text-xl mb-1">{title}</h2>
+    <hr className="border-gray-300 mb-2" />
+    <p className="text-gray-700 mb-3">{getExcerpt(desc)}</p>
+    <Link
+      to={`/news-detail/${news._id}`}
+      className="text-red-600 font-semibold hover:underline self-start"
+    >
+      {t("Read more")}
+    </Link>
+  </div>
+
+  {/* Image or video below text on mobile, side by side on desktop */}
+  {(imageUrl || videoUrl) && (
+    imageUrl ? (
+      <img
+        src={imageUrl}
+        alt={title}
+        className="w-full h-48 object-cover rounded-md flex-shrink-0 md:w-48 md:h-32"
+      />
+    ) : (
+      <video
+        src={videoUrl}
+        controls
+        className="w-full h-48 object-cover rounded-md flex-shrink-0 md:w-48 md:h-32"
+      />
+    )
+  )}
+</div>
+
+
+
+
+
+
 
               );
             })
