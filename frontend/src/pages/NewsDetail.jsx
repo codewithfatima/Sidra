@@ -58,10 +58,8 @@ const NewsDetail = () => {
   const videoUrl = newsItem.video ? `${API_URL}/uploads/${newsItem.video}` : null;
 
   return (
-    <div className="max-w-4xl mx-auto p-4 md:p-8 mt-20" dir={isArabic ? "rtl" : "ltr"}>
-      <Link to="/" className="text-blue-600 hover:underline mb-4 inline-block">
-        ← {t("Back to News List")}
-      </Link>
+    <div className="max-w-4xl mx-auto p-4 md:p-8 mt-20 mb-20" dir={isArabic ? "rtl" : "ltr"}>
+
 
       <span className="text-sm text-black block mb-4 bg-yellow-500 w-30 px-3 py-2 rounded-lg ">{formatDate(newsItem.date)}</span>
       <h1 className="text-2xl md:text-4xl font-bold mb-4">{title}</h1>
@@ -85,6 +83,9 @@ const NewsDetail = () => {
         {desc}
       </p>
 
+      <Link to="/" className="text-blue-600 mt-5 mb-4 float-left bg-yellow-500 rounded-lg px-3 py-2 text-white underline-none">
+             ← {t("Back to News List")}
+      </Link>
     </div>
   );
 };
