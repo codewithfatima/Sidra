@@ -28,9 +28,6 @@
 
 
 
-// //http://localhost:5000  3.
-
-
 
 
 const Admin = require('../models/Admin');
