@@ -7,7 +7,7 @@ dotenv.config();
 
 const createAdmin = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URL);
+    await mongoose.connect(process.env.MONGO_URI);
 
     const username = 'admins';
     const password = 'admin1234';

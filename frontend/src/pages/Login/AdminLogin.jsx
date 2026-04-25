@@ -3,8 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
-
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 
@@ -53,33 +51,6 @@ export default function AdminLogin() {
   }
 };
 
-//   const handleSubmit = async (e) => {
-//   e.preventDefault();
-//   setError('');
-
-//   try {
-//     const res = await fetch(`${API_URL}/api/admin/login`, {
-//       method: 'POST',
-//       headers: { 'Content-Type': 'application/json' },
-//       body: JSON.stringify({ username, password }),
-//     });
-
-//     const data = await res.json();
-
-//     if (res.ok) {
-//       localStorage.setItem('adminToken', data.token);
-//       toast.success('Admin login successful!');
-//       setTimeout(() => {
-//         navigate('/add-news');
-//       }, 1000);
-//     } else {
-//       setError(data.message || 'Login failed');
-//     }
-//   } catch (err) {
-//     console.error('Login error:', err);
-//     setError('Server error');
-//   }
-// };
 
 const [showPassword, setShowPassword] = useState(false);
 
