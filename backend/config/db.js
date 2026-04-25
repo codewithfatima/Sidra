@@ -12,6 +12,7 @@ mongoose.connect(MONGO_URI, {
 })
     .then(() => {
         console.log('✅ Mongodb iS Connected.....')
+        console.log(mongoose.connection.name);
     }).catch((err) => {
         console.log('Mongodb connection errror ', err);
     })    
