@@ -48,23 +48,16 @@ const createNews = async (req, res) => {
 
 
 
-
-
-
-// ✅ Get all news
 const getNews = async (req, res) => {
   try {
-    const { type, limit } = req.query;
-    const filter = type && type !== 'all' ? { type } : {};
-    const query = News.find(filter).sort({ createdAt: -1 });
-    if (limit) query.limit(Number(limit));
-    const news = await query;
-    res.json(news);
+    const news = await News.find({}).sort({ createdAt: -1 });
+
+    res.status(200).json(news); // MUST be array
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    console.log("NEWS ERROR:", error);
+    res.status(500).json([]);
   }
 };
-
 
 
 // ✅ Update news

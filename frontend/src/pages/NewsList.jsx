@@ -16,14 +16,28 @@ const NewsList = () => {
   }, []);
 
   const fetchNews = async () => {
-    try {
-      const res = await fetch(`${API_URL}/api/news`);
-      const data = await res.json();
-      setNewsList(data);
-    } catch (err) {
-      console.error("Failed to fetch news", err);
+  try {
+    const res = await fetch(`${API_URL}/api/news`);
+
+    if (!res.ok) {
+      throw new Error("API Error");
     }
-  };
+
+    const data = await res.json();
+
+    // SAFE CHECK 👇
+    if (Array.isArray(data)) {
+      setNewsList(data);
+    } else {
+      console.error("Invalid API response:", data);
+      setNewsList([]);
+    }
+
+  } catch (err) {
+    console.error("Failed to fetch news", err);
+    setNewsList([]); // prevent crash
+  }
+};
 
   const formatDate = (dateStr) => {
     try {

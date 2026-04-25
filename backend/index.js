@@ -17,6 +17,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));  
 app.use('/api/news', newsRoutes);
+app.use('/api/admin', require('./routes/authRoutes'));
 
 const fs = require('fs');
 
@@ -52,7 +53,7 @@ app.get('/list-uploads', (req, res) => {
 });
 
 // Use routes
-app.use('/api/admin', authRoutes); 
+
 app.use('/api/contact', contactRoutes);
 
 console.log('EMAIL_USER:', process.env.EMAIL_USER);
