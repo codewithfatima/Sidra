@@ -262,4 +262,17 @@
   "photos": "Photos",
    "No news available.": "No news available.",
   "Read more": "Read more"
+  
+},
+
+{
+  "adminLogin": "Admin Login",
+  "username": "Username",
+  "password": "Password",
+  "login": "Login",
+  "showPassword": "Show password",
+  "hidePassword": "Hide password",
+  "loginSuccess": "Login successful!",
+  "invalidCredentials": "Invalid credentials",
+  "serverError": "Server not reachable"
 }
