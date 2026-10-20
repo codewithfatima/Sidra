@@ -275,4 +275,16 @@
   "Read more": "اقرأ المزيد"
 
 
+},
+
+{
+  "adminLogin": "تسجيل دخول المسؤول",
+  "username": "اسم المستخدم",
+  "password": "كلمة المرور",
+  "login": "تسجيل الدخول",
+  "showPassword": "إظهار كلمة المرور",
+  "hidePassword": "إخفاء كلمة المرور",
+  "loginSuccess": "تم تسجيل الدخول بنجاح!",
+  "invalidCredentials": "بيانات الدخول غير صحيحة",
+  "serverError": "تعذر الاتصال بالخادم"
 }
